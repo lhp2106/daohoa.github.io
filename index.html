@@ -1,16 +1,203 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Đào Hoa - Blog Game HTML5</title>
+	<title>Full Web App</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="apple-mobile-web-app-title" content="ThanDen.Club" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+
+	<link rel="apple-touch-icon" href="img/webapp/touch-icon-iphone.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/webapp/touch-icon-ipad.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/webapp/touch-icon-iphone-retina.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="img/webapp/touch-icon-ipad-retina.png">
+
+
+	<!-- iPhone Xs Max (1242px x 2688px) --> 
+	<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" href="/apple-launch-1242x2688.png">
+	<!-- iPhone Xr (828px x 1792px) --> 
+	<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" href="/apple-launch-828x1792.png">
+	<!-- iPhone X, Xs (1125px x 2436px) --> 
+	<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" href="/apple-launch-1125x2436.png">
+	<!-- iPhone 8 Plus, 7 Plus, 6s Plus, 6 Plus (1242px x 2208px) --> 
+	<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)" href="/apple-launch-1242x2208.png">
+	<!-- iPhone 8, 7, 6s, 6 (750px x 1334px) --> 
+	<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/apple-launch-750x1334.png">
+	<!-- iPad Pro 12.9" (2048px x 2732px) --> 
+	<link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" href="/apple-launch-2048x2732.png">
+	<!-- iPad Pro 11” (1668px x 2388px) --> 
+	<link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" href="/apple-launch-1668x2388.png">
+	<!-- iPad Pro 10.5" (1668px x 2224px) --> 
+	<link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" href="/apple-launch-1668x2224.png">
+	<!-- iPad Mini, Air (1536px x 2048px) --> 
+	<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" href="/apple-launch-1536x2048.png">
+
 	<style type="text/css">
+		*{
+			-webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    -ms-box-sizing: border-box;
+		    -o-box-sizing: border-box;
+		    box-sizing: border-box;
+		}
 		html, body{
-			background: #e91e63;
-			margin: 0; padding: 0;
+			margin:0;
+			padding: 0;
+			position: relative;
+			width: 100%;
+			height: 100%;
+			background: #000;
+		}
+
+
+
+		html{
+			/*border: 1px solid blue;*/
+		}
+
+		body{
+			display: block;
+			/*border: 1px solid yellow;*/
+			/*transform: rotate(90deg);*/
+		}
+
+		body {
+			-webkit-user-select: none;
+			-webkit-tap-highlight-color: transparent;
+			-webkit-touch-callout: none;
+		}
+		#img-cover{
+			display: block;
+			width: auto;
+			height: auto;
+			margin:0;
+			padding: 0;
+		}
+		#info{
+			position: absolute;
+			top: 50px;
+			left:0;
 			color: #fff;
+			z-index: 5;
+		}
+
+		#page-wrap{
+			position: relative;
+			display: block;
+			margin: 0 auto;
+			background: yellow;
+			width: 1280px;
+			height: 720px;
+		}
+		.acol{
+			display: block;
+			width: 30px;
+			height: 150px;
+			position: absolute;
+			top: -50px;
+			background-color: blue;
 		}
 	</style>
 </head>
 <body>
-<h1>Đào Hoa - Blog Game HTML5</h1>
+
+<div class="acol"></div>
+<img id="img-cover" src="img/lobby.png">
+<!-- <div id="page-wrap"></div> -->
+<script type="text/javascript" src="../libs/jquery.min.js"></script>
+<script type="text/javascript">
+	var testExp = new RegExp('Android|webOS|iPhone|iPad|BlackBerry|Windows Phone|Opera Mini|IEMobile|Mobile', 'i');
+	if (testExp.test(navigator.userAgent)){
+		alert('MOBILE');
+	}
+</script>
+<script type="text/javascript">
+	var $body = $('body'),
+		$window = $(window),
+		$wrap = $('#img-cover');
+
+	var MH = {scale:1};
+
+	function scaleWin(){
+		var windowWidth = screen.availWidth,
+			windowHeight = screen.availHeight;
+
+		var x = 0,
+            y = 0;
+
+        if(window.innerHeight > window.innerWidth){// doc
+        	windowWidth = screen.availWidth;
+			windowHeight = screen.availHeight;
+        }else{// ngang
+        	windowWidth = Math.max(screen.availWidth, screen.availHeight),
+			windowHeight = Math.min(screen.availWidth, screen.availHeight);
+        }
+
+        if(window.innerHeight > window.innerWidth){// doc
+        	MH.scale = windowHeight / 720;
+            x = -(1280-1280*MH.scale) / 2;
+            y = (windowHeight - 720) / 2;
+        }else{
+        	if (windowWidth / windowHeight > 1280 / 720) {
+	            MH.scale = windowHeight / 720;
+	            x = windowWidth < 1280 ? (windowWidth - 1280) / 2 : 0;
+	            y = (windowHeight - 720) / 2;
+	        } else {
+	            MH.scale = windowWidth / 1280;
+	            x = windowWidth < 1280 ? (windowWidth - 1280) / 2 : 0;
+	            y = (720 * MH.scale - 720) / 2;
+	        }
+        }
+
+			
+
+	        
+
+        $wrap.css({
+            "height": "720px",
+            "width": "1280px",
+            "-webkit-transform": " translate(" + x + "px," + y + "px) scale(" + MH.scale + "," + MH.scale + ")",
+            "-moz-transform": " translate(" + x + "px," + y + "px) scale(" + MH.scale + "," + MH.scale + ")",
+            "transform": " translate(" + x + "px," + y + "px) scale(" + MH.scale + "," + MH.scale + ")"
+        });
+	}
+
+	var runChangeView;
+
+	function changeView(){
+		var WIDTH = Math.min(screen.availWidth, screen.availHeight) ,//$window.width(),
+			HEIGHT = Math.max(screen.availWidth, screen.availHeight);//$window.height();
+
+		MH.scale = Math.min( WIDTH/720, HEIGHT/1280 );
+
+
+        if( $window.width() < $window.height() ){ // Doc
+        	$wrap.css({
+                'height': '806px',
+                'width': '1280px',
+                'top': -(720-HEIGHT)/2+'px',
+		        'left': -(1280-WIDTH)/2+'px',
+		        'transform': 'scale('+ MH.scale +')'
+            });
+        }else{
+        	$wrap.css({
+        		"height": "720px",
+                "width": "1280px",
+	        	'top': -(720-WIDTH)/2+'px',
+	        	'left': -(1280-HEIGHT)/2+'px',
+	        	'transform': 'scale('+ MH.scale +')'
+    		});
+        }
+		
+	}
+
+	$(window).on('resize', function(){
+		clearTimeout(runChangeView);
+		runChangeView = setTimeout(function(){ scaleWin() },200);
+	});
+
+	scaleWin();
+</script>
 </body>
 </html>
