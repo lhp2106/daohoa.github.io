@@ -26,8 +26,57 @@
     <style type="text/css">
     	.choose{display: none;}
     	.product-overlay{display: none !important;}
-    	.features_items .col-sm-4 {
-		    max-width: 50%;
+    	.single-products:before,
+    	.single-products:after{
+    		content: "";
+			position: absolute;
+			z-index: -10;
+			top:0;
+			left:0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			transition: opacity .3s;
+    	}
+		.single-products.added:before{
+			content: "";
+			position: absolute;
+			z-index: 10;
+			top:0;
+			left:0;
+			width: 100%;
+			height: 100%;
+			background: rgba(255,255,255, 0.75);
+			opacity: 1;
+		}
+
+		.single-products.added:after{
+			content: "";
+			position: absolute;
+			z-index: 12;
+			top:0;
+			left:0;
+			width: 100%;
+		    height: 100%;
+		    background-image: url(images/home/check.png);
+		    background-repeat: no-repeat;
+		    background-position: center;
+		    background-size: 70px auto;
+		    opacity: 1;
+		}
+		#header .your-cart{
+			position: relative;
+		}
+		#header .your-cart .count{
+			position: absolute;
+		    top: -7px;
+		    right: -18px;
+		    color: #fff;
+		    background: red;
+		    line-height: 20px;
+		    min-width: 20px;
+		    border-radius: 100%;
+		    text-align: center;
 		}
     </style>
 </head><!--/head-->
@@ -49,7 +98,7 @@
 								<li><a href=""><i class="fa fa-user"></i> Tài khoản</a></li>
 								<!-- <li><a href=""><i class="fa fa-star"></i> Wishlist</a></li> -->
 								<!-- <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li> -->
-								<li><a href="#"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
+								<li><a href="#" class="your-cart"><i class="fa fa-shopping-cart"></i> Giỏ hàng<span class="count">0</span></a></li>
 								<li><a href="#"><i class="fa fa-lock"></i> Đăng xuất</a></li>
 							</ul>
 						</div>
@@ -279,7 +328,7 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-9 padding-right">
+				<div class="col-sm-9 padding-right" id="content-right">
 					<div class="features_items"><!--features_items-->
 						<h2 class="title text-center">Dành riêng cho bạn</h2>
 						<div class="col-xs-6 col-sm-4">
@@ -287,13 +336,13 @@
 								<div class="single-products">
 										<div class="productinfo text-center">
 											<img src="images/home/product1.jpg" alt="" />
-											<h2>$56</h2>
+											<h2>50.000</h2>
 											<p>Áo thun nữ thời trang</p>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 										</div>
 										<div class="product-overlay">
 											<div class="overlay-content">
-												<h2>$56</h2>
+												<h2>50.000</h2>
 												<p>Áo thun nữ thời trang</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 											</div>
@@ -312,13 +361,13 @@
 								<div class="single-products">
 									<div class="productinfo text-center">
 										<img src="images/home/product2.jpg" alt="" />
-										<h2>$56</h2>
+										<h2>50.000</h2>
 										<p>Áo thun nữ thời trang</p>
 										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 									</div>
 									<div class="product-overlay">
 										<div class="overlay-content">
-											<h2>$56</h2>
+											<h2>50.000</h2>
 											<p>Áo thun nữ thời trang</p>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 										</div>
@@ -337,13 +386,13 @@
 								<div class="single-products">
 									<div class="productinfo text-center">
 										<img src="images/home/product3.jpg" alt="" />
-										<h2>$56</h2>
+										<h2>50.000</h2>
 										<p>Áo thun nữ thời trang</p>
 										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 									</div>
 									<div class="product-overlay">
 										<div class="overlay-content">
-											<h2>$56</h2>
+											<h2>50.000</h2>
 											<p>Áo thun nữ thời trang</p>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 										</div>
@@ -362,13 +411,13 @@
 								<div class="single-products">
 									<div class="productinfo text-center">
 										<img src="images/home/product4.jpg" alt="" />
-										<h2>$56</h2>
+										<h2>50.000</h2>
 										<p>Áo thun nữ thời trang</p>
 										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 									</div>
 									<div class="product-overlay">
 										<div class="overlay-content">
-											<h2>$56</h2>
+											<h2>50.000</h2>
 											<p>Áo thun nữ thời trang</p>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 										</div>
@@ -388,13 +437,13 @@
 								<div class="single-products">
 									<div class="productinfo text-center">
 										<img src="images/home/product5.jpg" alt="" />
-										<h2>$56</h2>
+										<h2>50.000</h2>
 										<p>Áo thun nữ thời trang</p>
 										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 									</div>
 									<div class="product-overlay">
 										<div class="overlay-content">
-											<h2>$56</h2>
+											<h2>50.000</h2>
 											<p>Áo thun nữ thời trang</p>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 										</div>
@@ -414,13 +463,13 @@
 								<div class="single-products">
 									<div class="productinfo text-center">
 										<img src="images/home/product6.jpg" alt="" />
-										<h2>$56</h2>
+										<h2>50.000</h2>
 										<p>Áo thun nữ thời trang</p>
 										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 									</div>
 									<div class="product-overlay">
 										<div class="overlay-content">
-											<h2>$56</h2>
+											<h2>50.000</h2>
 											<p>Áo thun nữ thời trang</p>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 										</div>
@@ -454,7 +503,7 @@
 										<div class="single-products">
 											<div class="productinfo text-center">
 												<img src="images/home/gallery1.jpg" alt="" />
-												<h2>$56</h2>
+												<h2>50.000</h2>
 												<p>Áo thun nữ thời trang</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 											</div>
@@ -467,7 +516,7 @@
 										<div class="single-products">
 											<div class="productinfo text-center">
 												<img src="images/home/gallery2.jpg" alt="" />
-												<h2>$56</h2>
+												<h2>50.000</h2>
 												<p>Áo thun nữ thời trang</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 											</div>
@@ -480,7 +529,7 @@
 										<div class="single-products">
 											<div class="productinfo text-center">
 												<img src="images/home/gallery3.jpg" alt="" />
-												<h2>$56</h2>
+												<h2>50.000</h2>
 												<p>Áo thun nữ thời trang</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 											</div>
@@ -493,7 +542,7 @@
 										<div class="single-products">
 											<div class="productinfo text-center">
 												<img src="images/home/gallery4.jpg" alt="" />
-												<h2>$56</h2>
+												<h2>50.000</h2>
 												<p>Áo thun nữ thời trang</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 											</div>
@@ -509,7 +558,7 @@
 										<div class="single-products">
 											<div class="productinfo text-center">
 												<img src="images/home/gallery4.jpg" alt="" />
-												<h2>$56</h2>
+												<h2>50.000</h2>
 												<p>Áo thun nữ thời trang</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 											</div>
@@ -522,7 +571,7 @@
 										<div class="single-products">
 											<div class="productinfo text-center">
 												<img src="images/home/gallery3.jpg" alt="" />
-												<h2>$56</h2>
+												<h2>50.000</h2>
 												<p>Áo thun nữ thời trang</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 											</div>
@@ -535,7 +584,7 @@
 										<div class="single-products">
 											<div class="productinfo text-center">
 												<img src="images/home/gallery2.jpg" alt="" />
-												<h2>$56</h2>
+												<h2>50.000</h2>
 												<p>Áo thun nữ thời trang</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 											</div>
@@ -548,7 +597,7 @@
 										<div class="single-products">
 											<div class="productinfo text-center">
 												<img src="images/home/gallery1.jpg" alt="" />
-												<h2>$56</h2>
+												<h2>50.000</h2>
 												<p>Áo thun nữ thời trang</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 											</div>
@@ -564,7 +613,7 @@
 										<div class="single-products">
 											<div class="productinfo text-center">
 												<img src="images/home/gallery3.jpg" alt="" />
-												<h2>$56</h2>
+												<h2>50.000</h2>
 												<p>Áo thun nữ thời trang</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 											</div>
@@ -577,7 +626,7 @@
 										<div class="single-products">
 											<div class="productinfo text-center">
 												<img src="images/home/gallery4.jpg" alt="" />
-												<h2>$56</h2>
+												<h2>50.000</h2>
 												<p>Áo thun nữ thời trang</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 											</div>
@@ -590,7 +639,7 @@
 										<div class="single-products">
 											<div class="productinfo text-center">
 												<img src="images/home/gallery1.jpg" alt="" />
-												<h2>$56</h2>
+												<h2>50.000</h2>
 												<p>Áo thun nữ thời trang</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 											</div>
@@ -603,7 +652,7 @@
 										<div class="single-products">
 											<div class="productinfo text-center">
 												<img src="images/home/gallery2.jpg" alt="" />
-												<h2>$56</h2>
+												<h2>50.000</h2>
 												<p>Áo thun nữ thời trang</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 											</div>
@@ -619,7 +668,7 @@
 										<div class="single-products">
 											<div class="productinfo text-center">
 												<img src="images/home/gallery1.jpg" alt="" />
-												<h2>$56</h2>
+												<h2>50.000</h2>
 												<p>Áo thun nữ thời trang</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 											</div>
@@ -632,7 +681,7 @@
 										<div class="single-products">
 											<div class="productinfo text-center">
 												<img src="images/home/gallery2.jpg" alt="" />
-												<h2>$56</h2>
+												<h2>50.000</h2>
 												<p>Áo thun nữ thời trang</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 											</div>
@@ -645,7 +694,7 @@
 										<div class="single-products">
 											<div class="productinfo text-center">
 												<img src="images/home/gallery3.jpg" alt="" />
-												<h2>$56</h2>
+												<h2>50.000</h2>
 												<p>Áo thun nữ thời trang</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 											</div>
@@ -658,7 +707,7 @@
 										<div class="single-products">
 											<div class="productinfo text-center">
 												<img src="images/home/gallery4.jpg" alt="" />
-												<h2>$56</h2>
+												<h2>50.000</h2>
 												<p>Áo thun nữ thời trang</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 											</div>
@@ -674,7 +723,7 @@
 										<div class="single-products">
 											<div class="productinfo text-center">
 												<img src="images/home/gallery2.jpg" alt="" />
-												<h2>$56</h2>
+												<h2>50.000</h2>
 												<p>Áo thun nữ thời trang</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 											</div>
@@ -687,7 +736,7 @@
 										<div class="single-products">
 											<div class="productinfo text-center">
 												<img src="images/home/gallery4.jpg" alt="" />
-												<h2>$56</h2>
+												<h2>50.000</h2>
 												<p>Áo thun nữ thời trang</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 											</div>
@@ -700,7 +749,7 @@
 										<div class="single-products">
 											<div class="productinfo text-center">
 												<img src="images/home/gallery3.jpg" alt="" />
-												<h2>$56</h2>
+												<h2>50.000</h2>
 												<p>Áo thun nữ thời trang</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 											</div>
@@ -713,7 +762,7 @@
 										<div class="single-products">
 											<div class="productinfo text-center">
 												<img src="images/home/gallery1.jpg" alt="" />
-												<h2>$56</h2>
+												<h2>50.000</h2>
 												<p>Áo thun nữ thời trang</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 											</div>
@@ -736,7 +785,7 @@
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<img src="images/home/recommend1.jpg" alt="" />
-													<h2>$56</h2>
+													<h2>50.000</h2>
 													<p>Áo thun nữ thời trang</p>
 													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 												</div>
@@ -749,7 +798,7 @@
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<img src="images/home/recommend2.jpg" alt="" />
-													<h2>$56</h2>
+													<h2>50.000</h2>
 													<p>Áo thun nữ thời trang</p>
 													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 												</div>
@@ -762,7 +811,7 @@
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<img src="images/home/recommend3.jpg" alt="" />
-													<h2>$56</h2>
+													<h2>50.000</h2>
 													<p>Áo thun nữ thời trang</p>
 													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 												</div>
@@ -775,7 +824,7 @@
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<img src="images/home/recommend1.jpg" alt="" />
-													<h2>$56</h2>
+													<h2>50.000</h2>
 													<p>Áo thun nữ thời trang</p>
 													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 												</div>
@@ -788,7 +837,7 @@
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<img src="images/home/recommend2.jpg" alt="" />
-													<h2>$56</h2>
+													<h2>50.000</h2>
 													<p>Áo thun nữ thời trang</p>
 													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 												</div>
@@ -801,7 +850,7 @@
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<img src="images/home/recommend3.jpg" alt="" />
-													<h2>$56</h2>
+													<h2>50.000</h2>
 													<p>Áo thun nữ thời trang</p>
 													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 												</div>
@@ -816,7 +865,7 @@
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<img src="images/home/recommend1.jpg" alt="" />
-													<h2>$56</h2>
+													<h2>50.000</h2>
 													<p>Áo thun nữ thời trang</p>
 													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 												</div>
@@ -829,7 +878,7 @@
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<img src="images/home/recommend2.jpg" alt="" />
-													<h2>$56</h2>
+													<h2>50.000</h2>
 													<p>Áo thun nữ thời trang</p>
 													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 												</div>
@@ -842,7 +891,7 @@
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<img src="images/home/recommend3.jpg" alt="" />
-													<h2>$56</h2>
+													<h2>50.000</h2>
 													<p>Áo thun nữ thời trang</p>
 													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 												</div>
@@ -855,7 +904,7 @@
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<img src="images/home/recommend1.jpg" alt="" />
-													<h2>$56</h2>
+													<h2>50.000</h2>
 													<p>Áo thun nữ thời trang</p>
 													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 												</div>
@@ -868,7 +917,7 @@
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<img src="images/home/recommend2.jpg" alt="" />
-													<h2>$56</h2>
+													<h2>50.000</h2>
 													<p>Áo thun nữ thời trang</p>
 													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 												</div>
@@ -881,7 +930,7 @@
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<img src="images/home/recommend3.jpg" alt="" />
-													<h2>$56</h2>
+													<h2>50.000</h2>
 													<p>Áo thun nữ thời trang</p>
 													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 												</div>
@@ -991,5 +1040,6 @@
 	<script src="js/price-range.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
