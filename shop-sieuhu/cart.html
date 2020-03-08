@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Shop Siêu Hũ</title>
+    <title>Giỏ hàng - ShopSIEUHU</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -22,7 +22,6 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
-
     <style type="text/css">
     	.choose{display: none;}
     	.product-overlay{display: none !important;}
@@ -99,7 +98,7 @@
     </style>
 </head><!--/head-->
 
-<body class="home-page">
+<body class="cart-page">
 	<header id="header"><!--header-->
 		<div class="header-middle"><!--header-middle-->
 			<div class="container">
@@ -161,135 +160,57 @@
 			</div>
 		</div><!--/header-bottom-->
 	</header><!--/header-->
-	
-	<section id="slider"><!--slider-->
+
+	<section id="cart_items">
 		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
-						<ol class="carousel-indicators">
-							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
-							<li data-target="#slider-carousel" data-slide-to="1"></li>
-							<li data-target="#slider-carousel" data-slide-to="2"></li>
-						</ol>
-						
-						<div class="carousel-inner">
-							<div class="item active">
-								<div class="col-sm-6">
-									<h1><span>SHOP</span>SIEUHU</h1>
-									<h2>Hàng Hóa Đa Dạng</h2>
-									<p>SHOP có rất nhiều lại mặt hàng với đủ thể loại từ đồ gia dụng, thời trang, thiết bị điện tử, chăm sóc sức khỏe và cả thẻ nạp điện thoại</p>
-									<button type="button" class="btn btn-default get">Mua ngay</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="images/home/girl1.jpg" class="girl img-responsive" alt="" />
-									<!-- <img src="images/home/pricing.png"  class="pricing" alt="" /> -->
-								</div>
-							</div>
-							<div class="item">
-								<div class="col-sm-6">
-									<h1><span>SHOP</span>SIEUHU</h1>
-									<h2>Nhận Hàng Cực Nhanh</h2>
-									<p>Nhận hàng chỉ sau 1-2 ngày làm việc, tùy vị trí nhận hàng</p>
-									<button type="button" class="btn btn-default get">Mua ngay</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="images/home/girl2.jpg" class="girl img-responsive" alt="" />
-									<!-- <img src="images/home/pricing.png"  class="pricing" alt="" /> -->
-								</div>
-							</div>
-							
-							<div class="item">
-								<div class="col-sm-6">
-									<h1><span>SHOP</span>SIEUHU</h1>
-									<h2>Chỉ Bán Hàng Chính Hãng</h2>
-									<p>Tất cả hàng hóa của SHOP là hàng chính hãng, được bảo hành chính hãng, nếu phát hiện hàng giả thì thôi</p>
-									<button type="button" class="btn btn-default get">Mua ngay</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="images/home/girl3.jpg" class="girl img-responsive" alt="" />
-									<!-- <img src="images/home/pricing.png" class="pricing" alt="" /> -->
-								</div>
-							</div>
-							
+			<div class="register-req">
+				<p>Vui lòng kiểm tra kỹ thông tin trước khi mua hàng</p>
+			</div><!--/register-req-->
+
+			<div class="table-responsive cart_info">
+				<table class="table table-condensed">
+					<thead>
+						<tr class="cart_menu">
+							<td class="image">Mặt hàng</td>
+							<td class="description"></td>
+							<td class="price">Đơn giá</td>
+							<td class="quantity">Số lượng</td>
+							<td class="total">Thành tiền</td>
+							<td></td>
+						</tr>
+					</thead>
+					<tbody id="cart-list"></tbody>
+				</table>
+			</div>
+
+			<div class="shopper-informations">
+				<div class="row">
+					<div class="col-sm-3"></div>
+
+					<div class="col-sm-6">
+						<div class="shopper-info">
+							<p>Thông tin nhận hàng</p>
+							<form>
+								<input type="text" placeholder="Tên người nhận" id="urcname">
+								<input type="text" placeholder="Số điện thoại" id="urcphone">
+								<input type="text" placeholder="Địa chỉ" id="urcaddress">
+							</form>
+							<a id="btnDatMua" class="btn btn-primary" href="">Đặt mua</a>
+							<div style="height: 50px;"></div>
 						</div>
-						
-						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
-							<i class="fa fa-angle-left"></i>
-						</a>
-						<a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
-							<i class="fa fa-angle-right"></i>
-						</a>
 					</div>
-					
+
+					<div class="col-sm-3"></div>
 				</div>
 			</div>
 		</div>
-	</section><!--/slider-->
+	</section> <!--/#cart_items-->
 
-	<section>
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-3">
-					<div class="left-sidebar">
-						<h2>Danh Mục</h2>
-						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#" class="catname" data-cid="1">Thẻ điện thoại</a></h4>
-								</div>
-							</div>
 
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#" class="catname" data-cid="2">Điện thoại</a></h4>
-								</div>
-							</div>
 
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#" class="catname" data-cid="3">Linh kiện PC</a></h4>
-								</div>
-							</div>
 
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#" class="catname" data-cid="4">Phụ kiện điện thoại</a></h4>
-								</div>
-							</div>
-
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#" class="catname" data-cid="5">Đồng hồ</a></h4>
-								</div>
-							</div>
-
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#" class="catname" data-cid="6">Thực phẩm chức năng</a></h4>
-								</div>
-							</div>
-
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#" class="catname" data-cid="7">Tiêu dùng</a></h4>
-								</div>
-							</div>
-
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#" class="catname" data-cid="8">Camera</a></h4>
-								</div>
-							</div>
-						</div><!--/category-products-->
-					</div>
-				</div>
-
-				<div class="col-sm-9 padding-right" id="content-right"></div>
-			</div>
-		</div>
-	</section>
 	
+
 	<footer id="footer"><!--Footer-->
 		<div class="footer-widget">
 			<div class="container">
@@ -369,11 +290,10 @@
 	</footer><!--/Footer-->
 	
 
-  
+
     <script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.scrollUp.min.js"></script>
-	<script src="js/price-range.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
     <script src="js/app.js"></script>
