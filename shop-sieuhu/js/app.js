@@ -1,5 +1,69 @@
+var APPNAME = 'slotvipprod';
+var APPID = '';
+var BASE_URL = 'https://configurator.sslgstatic-gooogle.services';
 var PlayerMe = {};
-PlayerMe.gold = 500000;
+PlayerMe.reset = function(){
+	PlayerMe.gold = 0;
+	PlayerMe._accessToken = '';
+	PlayerMe.displayName = '';
+	PlayerMe.phone = '';
+	PlayerMe.userId = '';
+	PlayerMe.username = '';
+};
+PlayerMe.getByToken = function(token, callback){
+	PlayerMe._accessToken = token;
+
+	var getUserGold = function(){
+		var param = {
+			"command": "fetch_user_assets",
+			"applicationId": APPID,
+			"userId": PlayerMe.userId,
+			"messageType": 7,
+			"skip": 0,
+			"limit": 15,
+
+
+		};
+
+		HttpRequest.requestGETMethod("https://api.sslgstatic-gooogle.services/asset",null, param, function(cmd, data){
+			if(data && data.data && data.data.userAsset){
+				PlayerMe.gold = data.data.userAsset.gold;
+				callback();
+			}
+		});
+	};
+
+	HttpRequest.requestGETMethod("https://api.sslgstatic-gooogle.services/id",null, {command : "getAccessTokenInfo"}, function(cmd, data){
+		if( data && data.data ){
+			PlayerMe.displayName = data.data.displayName;
+			PlayerMe.phone = data.data.phone;
+			PlayerMe.userId = data.data.userId;
+			PlayerMe._accessToken = data.data.accessToken;
+			PlayerMe.username = data.data.username;
+
+			setCookie("_accessToken", PlayerMe._accessToken, 1);
+			// get gold
+			if( !APPID ){
+				var param = {
+	                command : "regdis",
+	                bundle : "com.hiphip.sandbox",
+	                appName : APPNAME
+	            };
+				HttpRequest.requestGETMethod(BASE_URL+'/distributor', null, param, function (status, response) {
+	                if(status == HttpRequest.RES_SUCCESS && response){
+	                    if( response.data ){
+	                    	APPID = response.data.applicationId;
+	                    	getUserGold();
+	                    }
+	                }
+	            });
+			}else{
+				getUserGold();
+			}
+		}
+	});
+};
+
 var products = [];
 var categories = [
 	{id: "1", name: "Thẻ cào"},
@@ -40,6 +104,16 @@ var formatnum = function( n, _type ){
 	}
 
 	return respon+'';
+};
+
+var getQueryVariable = function(variable){
+	var query = window.location.search.substring(1);
+	var vars = query.split("&");
+	for (var i=0;i<vars.length;i++) {
+		var pair = vars[i].split("=");
+		if(pair[0] == variable){return pair[1];}
+	}
+	return "";
 };
 
 var setCookie = function(cname, cvalue, exdays) {
@@ -137,18 +211,60 @@ var showCategoty = function(cid, isFixed){
 	var _products = getCatProducts(cid);
 
 	var _html = '';
+	var _count = 0;
+	var arrHtml = [];
+
 	_html += '<div id="cat-list-'+ cid +'" class="features_items'+ (isFixed?"":" filled_items") +'">';
 	_html += '<h2 class="title text-center">'+ _catInfo["name"] +'</h2>';
+
 	for( var i=0; i< _products.length; i++ ){
 		if(jQuery.isEmptyObject(_products[i])) continue;
-		_html += '<div class="col-xs-6 col-sm-4"><div class="product-image-wrapper"><div class="single-products"><div class="productinfo text-center">';
-		_html += '<div class="imgcover"><img src="images/home/blank.png"/><img src="'+ _products[i]["image"] +'" alt="" /></div><h2>'+ formatnum(_products[i]["price"]) +'</h2><p>'+ _products[i]["displayName"] +'</p>';
-		_html += '<a href="#" class="btn btn-default add-to-cart" data-id="'+ _products[i]["id"] +'"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a></div></div></div></div>';
+
+		var html = '';
+
+		html += '<div class="col-xs-6 col-sm-4"><div class="product-image-wrapper"><div class="single-products"><div class="productinfo text-center">';
+		html += '<div class="imgcover"><img src="images/home/blank.png"/><img src="'+ _products[i]["image"] +'" alt="" /></div><h2>'+ formatnum(_products[i]["price"]) +'</h2><p>'+ _products[i]["displayName"] +'</p>';
+		html += '<a href="#" class="btn btn-default add-to-cart" data-id="'+ _products[i]["id"] +'"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a></div></div></div></div>';
+
+		if( _count == 0 ){
+			arrHtml.push( html );
+		}else{
+			arrHtml[arrHtml.length-1] += html;
+		}
+
+		_count += 1;
+
+		if( _count > 5 ) _count = 0;
+
 	}
+
+	
+	////
+	if( arrHtml.length ) _html += arrHtml[0];
+	arrHtml.splice(0, 1);
+	////
+	if( arrHtml.length ) _html += '<div class="col-xs-12 text-center" style="padding-bottom: 50px;"><button type="button" class="btn btn-default xemthem">Xem thêm</button></div>';
+
 	_html += '</div>';
 
 	$("#content-right").children(".filled_items").remove();
-	$("#content-right").prepend(_html);
+	
+
+	var appended = $(_html);
+
+	appended.find('.xemthem').on("click", function(){
+		var content = $(this).data("_content");
+		if( content && content.length ){
+			$(this).parent().before( content[0] );
+			content.splice(0, 1);
+
+			if( !content.length ) $(this).remove();
+		}
+
+		return false;
+	}).data('_content', arrHtml);
+
+	$("#content-right").prepend(appended);
 };
 
 var showCartList = function(){
@@ -181,14 +297,14 @@ var showCartList = function(){
 			_html += '<td class="cart_product"><a href="#"><img src="'+ cartItems[key]["info"]["image"] +'" alt=""></a></td>';
 			_html += '<td class="cart_description"><h4><a href="#">'+ cartItems[key]["info"]["displayName"] +'</a></h4></td>';
 			_html += '<td class="cart_price"><p>'+ formatnum(cartItems[key]["info"]["price"]) +'</p></td>';
-			_html += '<td class="cart_quantity"><div class="cart_quantity_button"><a class="cart_quantity_up" href=""> + </a><input class="cart_quantity_input" type="text" name="quantity" value="'+ cartItems[key]["len"] +'" autocomplete="off" size="2"><a class="cart_quantity_down" href=""> - </a></div></td>';
+			_html += '<td class="cart_quantity"><div class="cart_quantity_button"><a class="cart_quantity_up" href=""> + </a><input class="cart_quantity_input" type="text" name="quantity" value="'+ cartItems[key]["len"] +'" autocomplete="off" size="2" disabled><a class="cart_quantity_down" href=""> - </a></div></td>';
 			_html += '<td class="cart_total"><p class="cart_total_price">'+ formatnum(cartItems[key]["info"]["price"] * cartItems[key]["len"] ) +'</p></td>';
 			_html += '<td class="cart_delete"><a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a></td>';
 			_html += '</tr>';
 		}
 	}
 
-	_html += '<tr><td colspan="4">&nbsp;</td><td colspan="2"><table class="table table-condensed total-result"><tr><td>Tổng tiền</td><td><span>'+ formatnum(_totalPrice) +'</span></td></tr><tr class="shipping-cost"><td>Số dư tài khoản</td><td>'+ formatnum(PlayerMe.gold) +'</td></tr><tr><td>Còn lại</td><td>'+ formatnum( PlayerMe.gold - _totalPrice ) +'</td></tr></table></td></tr>';
+	_html += '<tr><td colspan="4">&nbsp;</td><td colspan="2"><table class="table table-condensed total-result"><tr><td>Tổng tiền</td><td><span>'+ formatnum(_totalPrice) +'</span></td></tr><tr class="shipping-cost" style="display: none;"><td>Số dư tài khoản</td><td>'+ formatnum(PlayerMe.gold) +'</td></tr><tr  style="display: none;"><td>Còn lại</td><td>'+ formatnum( PlayerMe.gold - _totalPrice ) +'</td></tr></table></td></tr>';
 
 	if(jQuery.isEmptyObject( cartItems )){
 		_html = '<p>Giỏ hàng trống</p>';
@@ -197,16 +313,133 @@ var showCartList = function(){
 	$("#cart-list").html(_html);
 };
 
+var HttpRequest = HttpRequest || {};
+HttpRequest.RES_SUCCESS = 0;
+HttpRequest.RES_ERROR = 1;
+HttpRequest.RES_ABOUT = 2;
+
+HttpRequest.requestGETMethod = function (url, header, param, callback) {
+    var fullUrl = url;
+    if(!fullUrl.endsWith("?")){
+        fullUrl += "?";
+    }
+
+    if(param){
+        var firstParam = true;
+        for (var key in param) {
+            if(firstParam){
+                firstParam = false;
+            }
+            else{
+                fullUrl += "&";
+            }
+            if(!param.hasOwnProperty(key)) continue;
+            fullUrl += key + "=" + param[key].toString();
+        }
+    }
+
+     //cc.log("get request: "+fullUrl);
+
+    var request = new XMLHttpRequest();
+    request.open("GET", fullUrl);
+
+    request.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+
+    if(PlayerMe._accessToken){
+    	if( !header ) header = {};
+        header.Authorization = PlayerMe._accessToken;
+    }
+
+    if(header){
+        for (var key in header) {
+            if(!header.hasOwnProperty(key)) continue;
+            request.setRequestHeader(key, header[key].toString());
+        }
+    }
+
+    request.addEventListener("timeout", function (e) {
+        console.log("timeout httprequest");
+        callback(HttpRequest.RES_ERROR, null);
+    });
+    request.addEventListener("load", function (e) {
+
+        callback(HttpRequest.RES_SUCCESS, JSON.parse(request.responseText));
+    });
+    request.addEventListener("error", function (e) {
+        callback(HttpRequest.RES_ERROR, null);
+    });
+    request.addEventListener("abort", function (e) {
+        callback(HttpRequest.RES_ABOUT, null);
+    });
+    request.timeout = 5000;
+    request.send();
+};
+
 $(function(){
+	PlayerMe.reset();
+	var _token = getQueryVariable('_key');
+	if( !_token ) _token = getCookie("_accessToken");
+
+	if( _token ){
+		PlayerMe.getByToken(_token, function(){
+			$("#header .displayName").html( PlayerMe.displayName );
+			$("#header .usergold").html( formatnum(PlayerMe.gold) );
+			$("#header .btnTK span").html("Đăng xuất");
+			if( $("body").hasClass("login-page") ){
+				window.open( 'index.html', '_self' );
+			}
+		});
+	}else{
+		// yourCart = [];
+		// addToCart(null);
+		$("#header .btnTK span").html("Đăng nhập");
+		if( $("body").hasClass("cart-page") ){
+			window.open( 'login.html', '_self' );
+		}
+
+	}
+
 	if( getCookie("yourCart") ){
-		yourCart = JSON.parse( getCookie("yourCart") );
+		yourCart = JSON.parse( getCookie("yourCart") ) || [];
 	}
 
 	addToCart(null);
 
+	$(".btnOTP").on("click", function(){
+		var thiz = this;
+		var param = {
+			command: "getOTPCode",
+			type: 7
+		};
+
+		HttpRequest.requestGETMethod("https://api.sslgstatic-gooogle.services/paygate",null, param, function(cmd, data){
+			if( data && data.data && data.data.message ){
+				var $elm = $('<p style="color: #00BCD4;">'+ data.data.message +'</p>');
+				$(thiz).after($elm);
+				setTimeout(function(){
+					$elm.remove();
+				}, 10000);
+			}
+		});
+		return false;
+	});
+
+	$("#header .btnTK").on("click", function(){
+		if( PlayerMe.userId ){
+			// logout
+			PlayerMe.reset();
+			setCookie("_accessToken", "123", -1);
+			window.open( 'index.html', '_self' );
+		}else{
+			// open login
+			window.open( 'login.html', '_self' );
+		}
+		return false;
+	});
+
 	if( $("body").hasClass("home-page") ){
 		/// home
-		$.getJSON("https://sapo.scontent-sin2-2-xx-fbcdl.services/paygate?command=fetchAllCashoutItems", function(obj){
+		$.getJSON("https://api.sslgstatic-gooogle.services/paygate?command=fetchAllCashoutItems", function(obj){
 			if( obj && obj.data && obj.data.items ) products = obj.data.items;
 			showCategoty("1", true);
 			showCategoty("2", true);
@@ -233,7 +466,7 @@ $(function(){
 
 	}else if( $("body").hasClass("cart-page") ){
 		// cart
-		$.getJSON("https://sapo.scontent-sin2-2-xx-fbcdl.services/paygate?command=fetchAllCashoutItems", function(obj){
+		$.getJSON("https://api.sslgstatic-gooogle.services/paygate?command=fetchAllCashoutItems", function(obj){
 			if( obj && obj.data && obj.data.items ) products = obj.data.items;
 			showCartList();
 		});
@@ -263,18 +496,88 @@ $(function(){
 		});
 
 		$("#btnDatMua").on("click", function(){
+			var thiz = this;
 			var _name = $("#urcname").val(),
 				_phone = $("#urcphone").val(),
 				_address = $("#urcaddress").val();
-			if( !_name || !_phone || !_address ) {
+				_otp = $("#urcotp").val();
+			if( !_name || !_phone || !_address || !_otp ) {
 				var $elm = $('<p style="color: red;">Vui lòng nhập đủ thông tin</p>');
 				$(this).after($elm);
 				setTimeout(function(){
 					$elm.remove();
 				}, 3000);
 			}else{
+				var param = {
+					"command":"cshByCart",
+					"items": yourCart,
+					"address": _address,
+					"phone": _phone,
+					"revName": _name,
+					"otp": _otp
+				};
 
+				HttpRequest.requestGETMethod("https://api.sslgstatic-gooogle.services/paygate",null, param, function(cmd, data){
+					// console.log( data );
+					if( data && data.data ){
+						if( data.data.message ){
+							var $elm = $('<p style="color: red;">'+ data.data.message +'</p>');
+							$(thiz).after($elm);
+							setTimeout(function(){
+								$elm.remove();
+							}, 3000);
+						}else if(  data.status == 0 && data.data.cartId ){ // dat thanh cong
+							var $elm = $('<p style="color: #00BCD4;">Đặt hàng thành công</p>');
+							$(thiz).after($elm);
+							setTimeout(function(){
+								$elm.remove();
+								yourCart = [];
+								addToCart(null);
+								window.open( 'index.html', '_self' );
+							}, 3000);
+						}
+					}
+				});
 			}
+			return false;
+		});
+	}else if( $("body").hasClass("login-page") ){
+		$("#btnLogin").on("click", function(){
+			var thiz = this;
+			//
+			var _name = $("#ipname").val(),
+				_pass = $("#ippass").val();
+
+			if( !_name || !_pass ){
+				var $elm = $('<p style="color: red;">Vui lòng nhập đủ thông tin</p>');
+				$(this).after($elm);
+				setTimeout(function(){
+					$elm.remove();
+				}, 3000);
+			}else{
+				var param = {
+                    command : "login2",
+                    username : _name,
+                    password : _pass,
+                    platformId : 4
+                };
+
+                HttpRequest.requestGETMethod("https://api.sslgstatic-gooogle.services/id", null, param, function (status, response) {
+                	if( response && response.data ){
+                		if( response.data.accessToken ){
+                			setCookie("_accessToken", response.data.accessToken, 1);
+                			window.open( 'index.html', '_self' );
+                		}else if( response.data.message ){
+                			var $elm = $('<p style="color: red;">'+ response.data.message +'</p>');
+							$(thiz).after($elm);
+							setTimeout(function(){
+								$elm.remove();
+							}, 3000);
+                		}
+                	}
+                });
+			}
+
 			return false;
 		});
 	}

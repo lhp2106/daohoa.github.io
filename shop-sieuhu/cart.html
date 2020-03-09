@@ -95,6 +95,10 @@
 			left: 50%;
 			transform: translateX(-50%);
 		}
+		#cart-list .cart_product img{
+			height: 90px;
+			width: auto;
+		}
     </style>
 </head><!--/head-->
 
@@ -112,11 +116,13 @@
 					<div class="col-md-8 clearfix">
 						<div class="shop-menu clearfix pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href=""><i class="fa fa-user"></i> Tài khoản</a></li>
+								<li><a href="javascript:void(0)"><i class="fa fa-user"></i> <span class="displayName">Tài khoản</span></a></li>
+								<li><a href="javascript:void(0)"><i class="fa fa-money" aria-hidden="true"></i> <span class="usergold">0</span></a></li>
+								
 								<!-- <li><a href=""><i class="fa fa-star"></i> Wishlist</a></li> -->
 								<!-- <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li> -->
 								<li><a href="cart.html" class="your-cart"><i class="fa fa-shopping-cart"></i> Giỏ hàng<span class="count">0</span></a></li>
-								<li><a href="#"><i class="fa fa-lock"></i> Đăng xuất</a></li>
+								<li><a href="javascript:void(0)" class="btnTK"><i class="fa fa-lock"></i> <span>Đăng nhập</span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -194,8 +200,10 @@
 								<input type="text" placeholder="Tên người nhận" id="urcname">
 								<input type="text" placeholder="Số điện thoại" id="urcphone">
 								<input type="text" placeholder="Địa chỉ" id="urcaddress">
+								<input type="text" placeholder="Mã xác nhận" id="urcotp" style="width: 50%;">
+								<a class="btn btn-primary btnOTP" href="javascript:void(0)" style="margin-top: 0;">Nhận mã</a>
 							</form>
-							<a id="btnDatMua" class="btn btn-primary" href="">Đặt mua</a>
+							<a id="btnDatMua" class="btn btn-primary" href="javascript:void(0)">Đặt hàng</a>
 							<div style="height: 50px;"></div>
 						</div>
 					</div>
@@ -205,11 +213,6 @@
 			</div>
 		</div>
 	</section> <!--/#cart_items-->
-
-
-
-
-	
 
 	<footer id="footer"><!--Footer-->
 		<div class="footer-widget">

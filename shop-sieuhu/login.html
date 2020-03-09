@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Shop Siêu Hũ</title>
+    <title>Đăng nhập - Shop Siêu Hũ</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -99,7 +99,7 @@
     </style>
 </head><!--/head-->
 
-<body class="home-page">
+<body class="login-page">
 	<header id="header"><!--header-->
 		<div class="header-middle"><!--header-middle-->
 			<div class="container">
@@ -164,133 +164,33 @@
 		</div><!--/header-bottom-->
 	</header><!--/header-->
 	
-	<section id="slider"><!--slider-->
+	<section id="form"><!--form-->
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12">
-					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
-						<ol class="carousel-indicators">
-							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
-							<li data-target="#slider-carousel" data-slide-to="1"></li>
-							<li data-target="#slider-carousel" data-slide-to="2"></li>
-						</ol>
-						
-						<div class="carousel-inner">
-							<div class="item active">
-								<div class="col-sm-6">
-									<h1><span>SHOP</span>SIEUHU</h1>
-									<h2>Hàng Hóa Đa Dạng</h2>
-									<p>SHOP có rất nhiều lại mặt hàng với đủ thể loại từ đồ gia dụng, thời trang, thiết bị điện tử, chăm sóc sức khỏe và cả thẻ nạp điện thoại</p>
-									<button type="button" class="btn btn-default get">Mua ngay</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="images/home/girl1.jpg" class="girl img-responsive" alt="" />
-									<!-- <img src="images/home/pricing.png"  class="pricing" alt="" /> -->
-								</div>
-							</div>
-							<div class="item">
-								<div class="col-sm-6">
-									<h1><span>SHOP</span>SIEUHU</h1>
-									<h2>Nhận Hàng Cực Nhanh</h2>
-									<p>Nhận hàng chỉ sau 1-2 ngày làm việc, tùy vị trí nhận hàng</p>
-									<button type="button" class="btn btn-default get">Mua ngay</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="images/home/girl2.jpg" class="girl img-responsive" alt="" />
-									<!-- <img src="images/home/pricing.png"  class="pricing" alt="" /> -->
-								</div>
-							</div>
-							
-							<div class="item">
-								<div class="col-sm-6">
-									<h1><span>SHOP</span>SIEUHU</h1>
-									<h2>Chỉ Bán Hàng Chính Hãng</h2>
-									<p>Tất cả hàng hóa của SHOP là hàng chính hãng, được bảo hành chính hãng, nếu phát hiện hàng giả thì thôi</p>
-									<button type="button" class="btn btn-default get">Mua ngay</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="images/home/girl3.jpg" class="girl img-responsive" alt="" />
-									<!-- <img src="images/home/pricing.png" class="pricing" alt="" /> -->
-								</div>
-							</div>
-							
+				<div class="col-sm-4 col-sm-offset-1">
+					<div class="login-form"><!--login form-->
+						<h2>Đăng nhập</h2>
+						<form action="#">
+							<input type="text" placeholder="Tên đăng nhập" id="ipname" />
+							<input type="password" placeholder="Mật khẩu" id="ippass" />
+							<button type="button" class="btn btn-default" id="btnLogin">Đăng nhập</button>
+						</form>
+					</div><!--/login form-->
+				</div>
+				<div class="col-sm-1">
+					<h2 class="or">OR</h2>
+				</div>
+				<div class="col-sm-4">
+					<div class="signup-form"><!--sign up form-->
+						<h2>Đăng ký</h2>
+						<div class="alert alert-warning" role="alert">
+							Nếu bạn chưa có tài khoản, vui lòng mở game và đăng ký tài khoản
 						</div>
-						
-						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
-							<i class="fa fa-angle-left"></i>
-						</a>
-						<a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
-							<i class="fa fa-angle-right"></i>
-						</a>
-					</div>
-					
+					</div><!--/sign up form-->
 				</div>
 			</div>
 		</div>
-	</section><!--/slider-->
-
-	<section>
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-3">
-					<div class="left-sidebar">
-						<h2>Danh Mục</h2>
-						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#" class="catname" data-cid="1">Thẻ điện thoại</a></h4>
-								</div>
-							</div>
-
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#" class="catname" data-cid="2">Điện thoại</a></h4>
-								</div>
-							</div>
-
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#" class="catname" data-cid="3">Linh kiện PC</a></h4>
-								</div>
-							</div>
-
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#" class="catname" data-cid="4">Phụ kiện điện thoại</a></h4>
-								</div>
-							</div>
-
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#" class="catname" data-cid="5">Đồng hồ</a></h4>
-								</div>
-							</div>
-
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#" class="catname" data-cid="6">Thực phẩm chức năng</a></h4>
-								</div>
-							</div>
-
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#" class="catname" data-cid="7">Tiêu dùng</a></h4>
-								</div>
-							</div>
-
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#" class="catname" data-cid="8">Camera</a></h4>
-								</div>
-							</div>
-						</div><!--/category-products-->
-					</div>
-				</div>
-
-				<div class="col-sm-9 padding-right" id="content-right"></div>
-			</div>
-		</div>
-	</section>
+	</section><!--/form-->
 	
 	<footer id="footer"><!--Footer-->
 		<div class="footer-widget">
