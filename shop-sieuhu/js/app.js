@@ -58,6 +58,9 @@ PlayerMe.getByToken = function(token, callback){
 			}else{
 				getUserGold();
 			}
+		}else{
+			setCookie("_accessToken", "123", -1);
+			callback();
 		}
 	});
 };
@@ -417,11 +420,18 @@ $(function(){
 
 	if( _token ){
 		PlayerMe.getByToken(_token, function(){
-			$("#header .displayName").html( PlayerMe.displayName );
-			$("#header .usergold").html( formatnum(PlayerMe.gold) );
-			$("#header .btnTK span").html("Đăng xuất");
-			if( $("body").hasClass("login-page") ){
-				window.open( 'index.html', '_self' );
+			if( PlayerMe.userId ){
+				$("#header .displayName").html( PlayerMe.displayName );
+				$("#header .usergold").html( formatnum(PlayerMe.gold) );
+				$("#header .btnTK span").html("Đăng xuất");
+				if( $("body").hasClass("login-page") ){
+					window.open( 'index.html', '_self' );
+				}
+			}else{
+				$("#header .btnTK span").html("Đăng nhập");
+				if( $("body").hasClass("cart-page") ){
+					window.open( 'login.html', '_self' );
+				}
 			}
 		});
 	}else{
@@ -433,6 +443,15 @@ $(function(){
 		}
 
 	}
+
+	setTimeout(function(){
+		if( !PlayerMe.userId ){
+			setCookie("_accessToken", "123", -1);
+			if( $("body").hasClass("cart-page") ){
+				window.open( 'login.html', '_self' );
+			}
+		}
+	}, 3000);
 
 	if( getCookie("yourCart") ){
 		yourCart = JSON.parse( getCookie("yourCart") ) || [];
