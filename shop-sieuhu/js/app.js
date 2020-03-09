@@ -428,6 +428,8 @@ $(function(){
 					window.open( 'index.html', '_self' );
 				}
 			}else{
+				// yourCart = [];
+				// addToCart(null);
 				$("#header .btnTK span").html("Đăng nhập");
 				if( $("body").hasClass("cart-page") ){
 					window.open( 'login.html', '_self' );
@@ -574,20 +576,21 @@ $(function(){
 				HttpRequest.requestPOSTMethod("https://api.sslgstatic-gooogle.services/paygate/res",null, param, function(cmd, data){
 					// console.log( data );
 					if( data && data.data ){
-						if( data.data.message ){
-							var $elm = $('<p style="color: red;">'+ data.data.message +'</p>');
-							$(thiz).after($elm);
-							setTimeout(function(){
-								$elm.remove();
-							}, 3000);
-						}else if(  data.status == 0 && data.data.cartId ){ // dat thanh cong
-							var $elm = $('<p style="color: #00BCD4;">Đặt hàng thành công</p>');
+						if(  data.status == 0 && data.data.cartId ){ // dat thanh cong
+							var mess = data.data.message || 'Đặt hàng thành công';
+							var $elm = $('<p style="color: #00BCD4;">'+ mess +'</p>');
 							$(thiz).after($elm);
 							setTimeout(function(){
 								$elm.remove();
 								yourCart = [];
 								addToCart(null);
 								window.open( 'index.html', '_self' );
+							}, 3000);
+						}else if( data.data.message ){
+							var $elm = $('<p style="color: red;">'+ data.data.message +'</p>');
+							$(thiz).after($elm);
+							setTimeout(function(){
+								$elm.remove();
 							}, 3000);
 						}
 					}
@@ -637,4 +640,4 @@ $(function(){
 	}
 });
 
-console.log("v1.0.1");
+console.log("v1.0.2");
