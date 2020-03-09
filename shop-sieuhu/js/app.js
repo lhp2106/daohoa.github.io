@@ -20,9 +20,7 @@ PlayerMe.getByToken = function(token, callback){
 			"userId": PlayerMe.userId,
 			"messageType": 7,
 			"skip": 0,
-			"limit": 15,
-
-
+			"limit": 15
 		};
 
 		HttpRequest.requestGETMethod("https://api.sslgstatic-gooogle.services/asset",null, param, function(cmd, data){
@@ -375,6 +373,43 @@ HttpRequest.requestGETMethod = function (url, header, param, callback) {
     request.send();
 };
 
+HttpRequest.requestPOSTMethod = function (url, header, param, callback) {
+    var fullUrl = url;
+
+    var request = new XMLHttpRequest();
+    request.open("POST", fullUrl);
+
+    request.setRequestHeader("Content-Type","application/json");
+
+    if(PlayerMe._accessToken){
+    	if( !header ) header = {};
+        header.Authorization = PlayerMe._accessToken;
+    }
+
+    if(header){
+        for (var key in header) {
+            if(!header.hasOwnProperty(key)) continue;
+            request.setRequestHeader(key, header[key].toString());
+        }
+    }
+    request.addEventListener("timeout", function (e) {
+        console.log("timeout httprequest");
+        callback(HttpRequest.RES_ERROR, null);
+    });
+    request.addEventListener("load", function (e) {
+        //console.log("RES_SUCCESS "+JSON.parse (request.responseText));
+        callback(HttpRequest.RES_SUCCESS, JSON.parse(request.responseText));
+    });
+    request.addEventListener("error", function (e) {
+        callback(HttpRequest.RES_ERROR, null);
+    });
+    request.addEventListener("abort", function (e) {
+        callback(HttpRequest.RES_ABOUT, null);
+    });
+    request.timeout = 5000;
+    request.send( JSON.stringify(param) );
+};
+
 $(function(){
 	PlayerMe.reset();
 	var _token = getQueryVariable('_key');
@@ -439,7 +474,7 @@ $(function(){
 
 	if( $("body").hasClass("home-page") ){
 		/// home
-		$.getJSON("https://api.sslgstatic-gooogle.services/paygate?command=fetchAllCashoutItems", function(obj){
+		jQuery.getJSON("https://api.sslgstatic-gooogle.services/paygate?command=fetchAllCashoutItems", function(obj){
 			if( obj && obj.data && obj.data.items ) products = obj.data.items;
 			showCategoty("1", true);
 			showCategoty("2", true);
@@ -466,7 +501,7 @@ $(function(){
 
 	}else if( $("body").hasClass("cart-page") ){
 		// cart
-		$.getJSON("https://api.sslgstatic-gooogle.services/paygate?command=fetchAllCashoutItems", function(obj){
+		jQuery.getJSON("https://api.sslgstatic-gooogle.services/paygate?command=fetchAllCashoutItems", function(obj){
 			if( obj && obj.data && obj.data.items ) products = obj.data.items;
 			showCartList();
 		});
@@ -517,7 +552,7 @@ $(function(){
 					"otp": _otp
 				};
 
-				HttpRequest.requestGETMethod("https://api.sslgstatic-gooogle.services/paygate",null, param, function(cmd, data){
+				HttpRequest.requestPOSTMethod("https://api.sslgstatic-gooogle.services/paygate/res",null, param, function(cmd, data){
 					// console.log( data );
 					if( data && data.data ){
 						if( data.data.message ){
@@ -582,3 +617,5 @@ $(function(){
 		});
 	}
 });
+
+console.log("v1.0.1");
