@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        body
+        {
+            font-family: Arial;
+            font-size: 30px;
+            padding-top: 100px;
+        }
+        #fileUpload{
+        }
+        #uploadBtn{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="file" id="fileUpload" />
+    <hr />
+    <div id="uploadMsg"></div>
+    <button id="uploadBtn" onclick="postData()" style="display: none;">Tải lên</button>
+    
+    <div id="dvExcel">
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/xlsx.full.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/jszip.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script type="text/javascript">
+        var HttpRequest = HttpRequest || {};
+        HttpRequest.RES_SUCCESS = 0;
+        HttpRequest.RES_ERROR = 1;
+        HttpRequest.RES_ABOUT = 2;
+        HttpRequest.requestPOSTMethod = function (url, header, param, callback) {
+            var fullUrl = url;
+
+            var request = new XMLHttpRequest();
+            request.open("POST", fullUrl);
+
+            request.setRequestHeader("Content-Type","application/json");
+
+            // if(PlayerMe && PlayerMe._accessToken){
+            //     if( !header ) header = {};
+            //     header.Authorization = PlayerMe._accessToken;
+            // }
+
+            if(header){
+                for (var key in header) {
+                    if(!header.hasOwnProperty(key)) continue;
+                    request.setRequestHeader(key, header[key].toString());
+                }
+            }
+            request.addEventListener("timeout", function (e) {
+                console.log("timeout httprequest");
+                callback(HttpRequest.RES_ERROR, null);
+            });
+            request.addEventListener("load", function (e) {
+                //console.log("RES_SUCCESS "+JSON.parse (request.responseText));
+                callback(HttpRequest.RES_SUCCESS, JSON.parse(request.responseText));
+            });
+            request.addEventListener("error", function (e) {
+                callback(HttpRequest.RES_ERROR, null);
+            });
+            request.addEventListener("abort", function (e) {
+                callback(HttpRequest.RES_ABOUT, null);
+            });
+            request.timeout = 5000;
+            request.send( JSON.stringify(param) );
+        };
+    </script>
+    <script type="text/javascript">
+        var fileUpload = document.getElementById("fileUpload");
+
+        var dataRow = [];
+        // display file name if file has been selected
+        fileUpload.onchange = function() {
+            Upload();
+        };
+
+        function hasMess(txt){
+            document.getElementById("uploadMsg").innerHTML = txt;
+        }
+
+        function Upload() {
+            //Reference the FileUpload element.
+            var fileUpload = document.getElementById("fileUpload");
+
+            //Validate whether File is valid Excel file.
+            var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.xls|.xlsx)$/;
+            if (regex.test(fileUpload.value.toLowerCase())) {
+                if (typeof (FileReader) != "undefined") {
+                    var reader = new FileReader();
+
+                    //For Browsers other than IE.
+                    if (reader.readAsBinaryString) {
+                        reader.onload = function (e) {
+                            ProcessExcel(e.target.result);
+                        };
+                        reader.readAsBinaryString(fileUpload.files[0]);
+                    } else {
+                        //For IE Browser.
+                        reader.onload = function (e) {
+                            var data = "";
+                            var bytes = new Uint8Array(e.target.result);
+                            for (var i = 0; i < bytes.byteLength; i++) {
+                                data += String.fromCharCode(bytes[i]);
+                            }
+                            ProcessExcel(data);
+                        };
+                        reader.readAsArrayBuffer(fileUpload.files[0]);
+                    }
+                } else {
+                    hasMess("TRÌNH DUYỆT KHÔNG HỖ TRỢ!!!");
+                    document.getElementById("uploadBtn").style.display = "none";
+                }
+            } else {
+                hasMess("Vui lòng chọn đúng file Excel!!!");
+                document.getElementById("uploadBtn").style.display = "none";
+            }
+        };
+        function ProcessExcel(data) {
+            //Read the Excel File data.
+            var workbook = XLSX.read(data, {
+                type: 'binary'
+            });
+
+            //Fetch the name of First Sheet.
+            var firstSheet = workbook.SheetNames[0];
+
+            //Read all rows from First Sheet into an JSON array.
+            var excelRows = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[firstSheet]);
+
+            dataRow = excelRows;
+
+            if( !dataRow.length ){
+                hasMess("Dữ liệu trống!!!");
+                document.getElementById("uploadBtn").style.display = "none";
+            }else{
+                hasMess("BẠN MUỐN TẢI LÊN "+ excelRows.length +" dòng??");
+                document.getElementById("uploadBtn").style.display = "block";
+            }
+
+            console.log("excelRows", excelRows);
+            // postData(excelRows);    
+        };
+
+        function postData(){
+            // POST: /paygate/res
+            // {
+            //    "command":"upsertMultiCashoutItem",
+            //    "items":"[{
+            //                       "name":"tên vật phẩm",
+            //                       "displayName":"tên hiển thị",
+            //                        "price": giá (kiểu int),
+            //                        "type":2,
+            //                         "image":"url ảnh"
+            //                         }]
+            // }
+            var arr = dataRow;
+            var url = "https://dev.anxndjejxjdjejxndjeifucn.info/paygate/res";
+
+            var _arr = [];
+            for( var i=0; i<arr.length; i++ ){
+                _arr.push({name: arr[i]["Name"], displayName: arr[i]["Name"], price: parseInt(arr[i]["Price"]), type:2, image: arr[i]["IMAGE"]});
+            }
+
+            var res = {
+                command:"upsertMultiCashoutItem",
+                items: _arr
+            };
+
+            HttpRequest.requestPOSTMethod(url, null, res, function(a, b){
+                console.log(a, b);
+                if( b && b.data && b.data.message ) hasMess(b.data.message);
+                if( b && b.status == 0 ){
+                    document.getElementById("uploadBtn").style.display = "none"; 
+                    dataRow = [];
+                }
+            });
+        }
+    </script>
+</body>
+</html>

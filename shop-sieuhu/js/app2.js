@@ -169,11 +169,18 @@ var getCatInfo = function(cid){
 	return {};
 };
 
-var getProInfo = function(pid){
-	for( var i=0; i<products.length; i++ ){
-		if( products[i]["id"] == pid ) return products[i];
-	}
-	return {};
+var getProInfo = function(pid, shopid, callback){
+	// for( var i=0; i<products.length; i++ ){
+	// 	if( products[i]["id"] == pid ) return products[i];
+	// }
+	// return {};
+
+	$.getJSON("http://localhost:8888/test/read.php?type=product&itemid="+ pid +"&shopid="+shopid, function(obj){
+		// console.log("pro info", obj);
+		if(obj && obj.item){
+			callback(obj.item);
+		}
+	});
 };
 
 var addToCart = function(pid){
@@ -199,73 +206,168 @@ var removeFromCart = function(pid, _all){
 };
 
 var showCategoty = function(cid, isFixed){
-	if( $('#cat-list-'+cid).length ){
-		$('html, body').animate({
-	        scrollTop: $('#cat-list-'+cid).offset().top
-	    }, 500);
+	jQuery.getJSON("http://localhost:8888/test/read.php?type=product_list&category="+cid, function(obj){
+		// console.log("products", obj);
+		if( obj && obj.items ){
+			var _catInfo = getCatInfo(cid);
+			var _products = obj.items;
 
-	    return;
-	}
+			var _html = '';
+			var _count = 0;
+			var arrHtml = [];
 
+			_html += '<div id="cat-list-'+ cid +'" class="features_items'+ (isFixed?"":" filled_items") +'">';
+			_html += '<h2 class="title text-center">'+ _catInfo["name"] +'</h2>';
 
-	var _catInfo = getCatInfo(cid);
-	var _products = getCatProducts(cid);
+			for( var i=0; i< _products.length; i++ ){
+				if(jQuery.isEmptyObject(_products[i])) continue;
 
-	var _html = '';
-	var _count = 0;
-	var arrHtml = [];
+				var html = '';
 
-	_html += '<div id="cat-list-'+ cid +'" class="features_items'+ (isFixed?"":" filled_items") +'">';
-	_html += '<h2 class="title text-center">'+ _catInfo["name"] +'</h2>';
+				html += '<div class="col-xs-6 col-sm-4"><div class="product-image-wrapper"><div class="single-products"><div class="productinfo text-center">';
+				html += '<div class="imgcover"><img src="images/home/blank.png"/><img src="https://cf.shopee.vn/file/'+ _products[i]["image"] +'" alt="" /></div><h2>'+ formatnum(_products[i]["price"]/100000) +'</h2><p>'+ _products[i]["name"] +'</p>';
+				html += '<a href="#" class="btn btn-default add-to-cart" data-id="'+ _products[i]["itemid"] +'"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a></div></div></div></div>';
 
-	for( var i=0; i< _products.length; i++ ){
-		if(jQuery.isEmptyObject(_products[i])) continue;
+				if( _count == 0 ){
+					arrHtml.push( html );
+				}else{
+					arrHtml[arrHtml.length-1] += html;
+				}
 
-		var html = '';
+				_count += 1;
 
-		html += '<div class="col-xs-6 col-sm-4"><div class="product-image-wrapper"><div class="single-products"><div class="productinfo text-center">';
-		html += '<div class="imgcover"><img src="images/home/blank.png"/><img src="'+ _products[i]["image"] +'" alt="" /></div><h2>'+ formatnum(_products[i]["price"]) +'</h2><p>'+ _products[i]["displayName"] +'</p>';
-		html += '<a href="#" class="btn btn-default add-to-cart" data-id="'+ _products[i]["id"] +'"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a></div></div></div></div>';
+				if( _count > 5 ) _count = 0;
 
-		if( _count == 0 ){
-			arrHtml.push( html );
-		}else{
-			arrHtml[arrHtml.length-1] += html;
+			}
+
+			////
+			if( arrHtml.length ) _html += arrHtml[0];
+			arrHtml.splice(0, 1);
+			////
+			if( arrHtml.length ) _html += '<div class="col-xs-12 text-center" style="padding-bottom: 50px;"><button type="button" class="btn btn-default xemthem">Xem thêm</button></div>';
+
+			_html += '</div>';
+
+			$("#content-right").children(".filled_items").remove();
+			
+
+			var appended = $(_html);
+
+			appended.find('.xemthem').on("click", function(){
+				var content = $(this).data("_content");
+				if( content && content.length ){
+					$(this).parent().before( content[0] );
+					content.splice(0, 1);
+
+					if( !content.length ) $(this).remove();
+				}
+
+				return false;
+			}).data('_content', arrHtml);
+
+			$("#content-right").prepend(appended);
 		}
+	});
+};
 
-		_count += 1;
+var showCategoty2 = function(cid, isFixed){
+	jQuery.getJSON("http://localhost:8888/test/read.php?type=product_list&category="+cid, function(obj){
+		// console.log("products", obj);
+		if( obj && obj.items ){
+			var _catInfo = getCatInfo(cid);
+			var _products = obj.items;
 
-		if( _count > 5 ) _count = 0;
+			var _html = '';
+			var _count = 0;
+			var arrHtml = [];
 
-	}
+			_html += '<div id="cat-list-'+ cid +'" class="features_items'+ (isFixed?"":" filled_items") +'">';
+			_html += '<h2 class="title text-center">'+ _catInfo["name"] +'</h2>';
+			if( _products.length > 6 ) _html += '<div class="col-xs-12 text-center" style="padding-bottom: 50px;"><button type="button" class="btn btn-default xemthem">Xem thêm</button></div>';
+			_html += '</div>';
 
-	
-	////
-	if( arrHtml.length ) _html += arrHtml[0];
-	arrHtml.splice(0, 1);
-	////
-	if( arrHtml.length ) _html += '<div class="col-xs-12 text-center" style="padding-bottom: 50px;"><button type="button" class="btn btn-default xemthem">Xem thêm</button></div>';
+			var appended = $(_html);
 
-	_html += '</div>';
+			$("#content-right").children(".filled_items").remove();
 
-	$("#content-right").children(".filled_items").remove();
-	
+			appended.find('.xemthem').on("click", function(){
+				var thiz = this;
+				var pros = $(this).data("products");
+				if( pros && pros.length ){
 
-	var appended = $(_html);
+					console.log("click", pros.length);
 
-	appended.find('.xemthem').on("click", function(){
-		var content = $(this).data("_content");
-		if( content && content.length ){
-			$(this).parent().before( content[0] );
-			content.splice(0, 1);
+					// $(this).parent().before( content[0] );
+					for( var i=0; i<6; i++ ){
+						if( pros.length ){
+							getProInfo(pros[0].itemid, pros[0].shopid, function(obj){
+								var html = '';
+								html += '<div class="col-xs-6 col-sm-4"><div class="product-image-wrapper"><div class="single-products"><div class="productinfo text-center">';
+								html += '<div class="imgcover"><img src="images/home/blank.png"/><img src="https://cf.shopee.vn/file/'+ obj["image"] +'" alt="" /></div><h2>'+ formatnum(obj["price"]/100000) +'</h2><p>'+ obj["name"] +'</p>';
+								html += '<a href="#" class="btn btn-default add-to-cart" data-id="'+ obj["itemid"] +'"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a></div></div></div></div>';
+								$(thiz).parent().before( html );
+								if( !pros.length ) $(thiz).hide();
+							});
+							pros.splice(0, 1);
+						}
+					}
+				}
 
-			if( !content.length ) $(this).remove();
+				return false;
+			}).data('products', _products).trigger("click");
+			$("#content-right").prepend(appended);
+
+			$('html, body').animate({
+		        scrollTop: $('#cat-list-'+cid).offset().top
+		    }, 500);
 		}
+	});
+};
 
-		return false;
-	}).data('_content', arrHtml);
+var showRecommend = function(callback){
+	jQuery.getJSON("http://localhost:8888/test/read.php?type=recommend_items", function(obj){
+		// console.log("recommend_items", obj );
+		if(obj && obj.data && obj.data.items){
+			var _products = obj.data.items;
 
-	$("#content-right").prepend(appended);
+			var _html = '';
+			var _count = 0;
+			var arrHtml = [];
+
+			_html += '<div class="features_items">';
+			_html += '<h2 class="title text-center">Gợi ý cho bạn</h2>';
+
+			for( var i=0; i< _products.length; i++ ){
+				if(jQuery.isEmptyObject(_products[i])) continue;
+
+				_html += '<div class="col-xs-6 col-sm-4"><div class="product-image-wrapper"><div class="single-products"><div class="productinfo text-center">';
+				_html += '<div class="imgcover"><img src="images/home/blank.png"/><img src="https://cf.shopee.vn/file/'+ _products[i]["image"] +'" alt="" /></div><h2>'+ formatnum(_products[i]["price"]/100000) +'</h2><p>'+ _products[i]["name"] +'</p>';
+				_html += '<a href="#" class="btn btn-default add-to-cart" data-id="'+ _products[i]["itemid"] +'"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a></div></div></div></div>';
+			}
+
+			_html += '</div>';
+
+			$("#content-right").prepend(_html);
+
+			if( callback ) callback();
+		}
+	});
+};
+
+var showCatList = function(){
+	jQuery.getJSON("http://localhost:8888/test/read.php?type=category_list", function(data){
+		// console.log("category_list", data);
+		if( data && data.data && data.data.category_list ){
+			categories = [];
+			var _html = "";
+			for( var i=0; i<data.data.category_list.length; i++ ){
+				_html += '<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a href="#" class="catname" data-cid="'+data.data.category_list[i].catid+'">'+ data.data.category_list[i].display_name +'</a></h4></div></div>';
+				categories.push({id: data.data.category_list[i].catid, name: data.data.category_list[i].display_name, img: data.data.category_list[i].image});
+			}
+
+			jQuery("#accordian").html(_html);
+		}
+	});
 };
 
 var showCartList = function(){
@@ -514,12 +616,9 @@ $(function(){
 
 	if( $("body").hasClass("home-page") ){
 		/// home
-		jQuery.getJSON("https://api.sslgstatic-gooogle.services/paygate?command=fetchAllCashoutItems", function(obj){
-			if( obj && obj.data && obj.data.items ) products = obj.data.items;
-			showCategoty("1", true);
-			showCategoty("2", true);
-		});
-
+		showCatList();
+		showRecommend();
+		// getProInfo(5014609262,79585888);
 
 		$("body").on("click", ".add-to-cart", function(){
 			var thiz = this;
@@ -533,10 +632,14 @@ $(function(){
 			return false;
 		});
 
-		$("#accordian .catname").on("click", function(){
+		$("#accordian").on("click", ".catname", function(){
 			var cid = $(this).attr("data-cid");
-			showCategoty( cid );
+			showCategoty2( cid );
 			return false;
+		});
+
+		jQuery.getJSON("http://localhost:8888/test/read.php?type=product_list&categoty=78", function(obj){
+			console.log("obj", obj);
 		});
 
 	}else if( $("body").hasClass("cart-page") ){
