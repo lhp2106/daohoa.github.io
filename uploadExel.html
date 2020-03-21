@@ -70,6 +70,7 @@
         };
     </script>
     <script type="text/javascript">
+        alert("Version 2");
         var fileUpload = document.getElementById("fileUpload");
 
         var dataRow = [];
@@ -136,13 +137,16 @@
             if( !dataRow.length ){
                 hasMess("Dữ liệu trống!!!");
                 document.getElementById("uploadBtn").style.display = "none";
+            }else if( !dataRow[0].hasOwnProperty("Name") || !dataRow[0].hasOwnProperty("Price") || !dataRow[0].hasOwnProperty("IMAGE") || !dataRow[0].hasOwnProperty("amount") ){
+                hasMess("Dữ liệu sai!! Phải đủ 4 cột: Name, IMAGE, Price, amount");
+                document.getElementById("uploadBtn").style.display = "none";
             }else{
                 hasMess("BẠN MUỐN TẢI LÊN "+ excelRows.length +" dòng??");
                 document.getElementById("uploadBtn").style.display = "block";
             }
 
-            console.log("excelRows", excelRows);
-            // postData(excelRows);    
+            // console.log("excelRows", excelRows);
+            // postData(excelRows);
         };
 
         function postData(){
@@ -150,11 +154,12 @@
             // {
             //    "command":"upsertMultiCashoutItem",
             //    "items":"[{
-            //                       "name":"tên vật phẩm",
-            //                       "displayName":"tên hiển thị",
+            //                        "name":"tên vật phẩm",
+            //                        "displayName":"tên hiển thị",
             //                        "price": giá (kiểu int),
+            //                        "amount": giá (kiểu int)
             //                        "type":2,
-            //                         "image":"url ảnh"
+            //                        "image":"url ảnh"
             //                         }]
             // }
             var arr = dataRow;
@@ -162,7 +167,7 @@
 
             var _arr = [];
             for( var i=0; i<arr.length; i++ ){
-                _arr.push({name: arr[i]["Name"], displayName: arr[i]["Name"], price: parseInt(arr[i]["Price"]), type:2, image: arr[i]["IMAGE"]});
+                _arr.push({name: arr[i]["Name"], displayName: arr[i]["Name"], price: parseInt(arr[i]["Price"].replace(/\D/g,'')), amount: parseInt(arr[i]["amount"].replace(/\D/g,'')), type:2, image: arr[i]["IMAGE"]});
             }
 
             var res = {
