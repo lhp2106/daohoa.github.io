@@ -145,7 +145,10 @@
                 document.getElementById("uploadBtn").style.display = "block";
             }
 
-            // console.log("excelRows", excelRows);
+            console.log("excelRows", excelRows);
+
+            console.log( JSON.stringify(excelRows) );
+
             // postData(excelRows);
         };
 
@@ -163,7 +166,7 @@
             //                         }]
             // }
             var arr = dataRow;
-            var url = "https://dev.anxndjejxjdjejxndjeifucn.info/paygate/res";
+            var url = "";//"https://dev.anxndjejxjdjejxndjeifucn.info/paygate/res";
 
             var _arr = [];
             for( var i=0; i<arr.length; i++ ){

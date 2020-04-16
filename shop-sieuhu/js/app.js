@@ -1,6 +1,7 @@
 var APPNAME = 'slotvipprod';
 var APPID = '';
 var BASE_URL = 'https://configurator.sslgstatic-gooogle.services';
+var API_Prefix = 'https://api.sslgstatic-gooogle.services';
 var PlayerMe = {};
 PlayerMe.reset = function(){
 	PlayerMe.gold = 0;
@@ -23,7 +24,7 @@ PlayerMe.getByToken = function(token, callback){
 			"limit": 15
 		};
 
-		HttpRequest.requestGETMethod("https://api.sslgstatic-gooogle.services/asset",null, param, function(cmd, data){
+		HttpRequest.requestGETMethod(API_Prefix+"/asset",null, param, function(cmd, data){
 			if(data && data.data && data.data.userAsset){
 				PlayerMe.gold = data.data.userAsset.gold;
 				callback();
@@ -31,7 +32,7 @@ PlayerMe.getByToken = function(token, callback){
 		});
 	};
 
-	HttpRequest.requestGETMethod("https://api.sslgstatic-gooogle.services/id",null, {command : "getAccessTokenInfo"}, function(cmd, data){
+	HttpRequest.requestGETMethod(API_Prefix+"/id",null, {command : "getAccessTokenInfo"}, function(cmd, data){
 		if( data && data.data ){
 			PlayerMe.displayName = data.data.displayName;
 			PlayerMe.phone = data.data.phone;
@@ -65,30 +66,962 @@ PlayerMe.getByToken = function(token, callback){
 	});
 };
 
+var productCache = [
+	{
+	    "Name": "Loa Bluetooth A10 mini",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/ba9f1f682ebbf0fa1ce47a626e77a77a.jpg",
+	    "Price": "150000",
+	    "amount": "150000",
+	    "category": "Phụ kiện "
+	},{
+	    "Name": "Loa Bluetooth Led",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/c6e5657994d4df9af96bf777fa44e873.jpg",
+	    "Price": "150000",
+	    "amount": "150000",
+	    "category": "Phụ kiện "
+	}, {
+	    "Name": "Mic Karaoke",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/mic-bluetooth-X6.jpg",
+	    "Price": "350000",
+	    "amount": "350000",
+	    "category": "Phụ kiện "
+	}, {
+	    "Name": "Máy ảnh Lomo dưới nước",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/661cfbf236ce7fa4feef196cbbe28746.jpg",
+	    "Price": "260000",
+	    "amount": "260000",
+	    "category": "Máy ảnh "
+	}, {
+	    "Name": "Máy ảnh Polaroid",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/may-anh-chup-lay-ngay-fujifilm-instax-mini-25.jpg",
+	    "Price": "3750000",
+	    "amount": "3750000",
+	    "category": "Máy ảnh "
+	}, {
+	    "Name": "Thẻ nhớ 32GB",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/592f032539e89553ded8f1d3cee98ef0.jpg",
+	    "Price": "200000",
+	    "amount": "200000",
+	    "category": "Phụ kiện "
+	}, {
+	    "Name": "Thẻ nhớ 16GB",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/Th-Nh-16Gb-Class-10-Tran.jpg",
+	    "Price": "180000",
+	    "amount": "180000",
+	    "category": "Phụ kiện "
+	}, {
+	    "Name": "Thẻ nhớ 64GB",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/binh-giu-nhiet-500ml-dmx-002-1--300x300.jpg",
+	    "Price": "260000",
+	    "amount": "260000",
+	    "category": "Phụ kiện "
+	}, {
+	    "Name": "Tai nghe XIAOMI ",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-48-36.jpg",
+	    "Price": "200000",
+	    "amount": "200000",
+	    "category": "Phụ kiện "
+	}, {
+	    "Name": "Cáp chuyển Type C - Audio 3.5mm",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/tai-xung.jpg",
+	    "Price": "170000",
+	    "amount": "170000",
+	    "category": "Phụ kiện "
+	}, {
+	    "Name": "Giá đỡ điện thoại",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-48-17.jpg",
+	    "Price": "330000",
+	    "amount": "330000",
+	    "category": "Phụ kiện "
+	}, {
+	    "Name": "Bộ kẹp đỡ điện thoại",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-48-14.jpg",
+	    "Price": "150000",
+	    "amount": "150000",
+	    "category": "Phụ kiện "
+	}, {
+	    "Name": "Túi chống nước",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-48-12.jpg",
+	    "Price": "70000",
+	    "amount": "70000",
+	    "category": "Phụ kiện "
+	}, {
+	    "Name": "Cáp sạc iPhone Anker",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-48-10.jpg",
+	    "Price": "240000",
+	    "amount": "240000",
+	    "category": "Phụ kiện "
+	}, {
+	    "Name": "Sạc Anker SMART MINI 2",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-47-42.jpg",
+	    "Price": "225000",
+	    "amount": "225000",
+	    "category": "Sạc dự phòng"
+	}, {
+	    "Name": "Sạc Anker SPEED 5",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-47-39.jpg",
+	    "Price": "1200000",
+	    "amount": "1200000",
+	    "category": "Sạc dự phòng"
+	}, {
+	    "Name": "Đồng hồ thể thao",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/dong-ho-the-thao-doi-skmei-1811.jpg",
+	    "Price": "200000",
+	    "amount": "200000",
+	    "category": "Đồng hồ"
+	}, {
+	    "Name": "Đồng hồ FOURRON JAPAN",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-48-32.jpg",
+	    "Price": "300000",
+	    "amount": "300000",
+	    "category": "Đồng hồ"
+	}, {
+	    "Name": "Đồng hồ  SKMEI THÉP",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-48-28.jpg",
+	    "Price": "500000",
+	    "amount": "500000",
+	    "category": "Đồng hồ"
+	}, {
+	    "Name": "Đồng hồ SKMEI Thể Thao",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-48-21.jpg",
+	    "Price": "260000",
+	    "amount": "260000",
+	    "category": "Đồng hồ"
+	}, {
+	    "Name": "Đồng hồ Halei",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-48-26.jpg",
+	    "Price": "275000",
+	    "amount": "275000",
+	    "category": "Đồng hồ"
+	}, {
+	    "Name": "Đồng hồ Mặt Rồng 3D",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-48-34.jpg",
+	    "Price": "270000",
+	    "amount": "270000",
+	    "category": "Đồng hồ"
+	}, {
+	    "Name": "Đồng hồ CRNAIRA JAPAN",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-48-19.jpg",
+	    "Price": "230000",
+	    "amount": "230000",
+	    "category": "Đồng hồ"
+	}, {
+	    "Name": "Đồng hồ định vị trẻ",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-48-30.jpg",
+	    "Price": "500000",
+	    "amount": "500000",
+	    "category": "Đồng hồ"
+	}, {
+	    "Name": "Đồng hồ APLE",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-48-23.jpg",
+	    "Price": "230000",
+	    "amount": "230000",
+	    "category": "Đồng hồ"
+	}, {
+	    "Name": "Đồng hồ thông minh SANDA",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/3aaa39578d0b73b4569977e1c4adfc66.jpg",
+	    "Price": "210000",
+	    "amount": "210000",
+	    "category": "Đồng hồ"
+	}, {
+	    "Name": "Bình giữ nhiệt 500ml ĐMX ",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/binh-giu-nhiet-500ml-dmx-002-1--110x110.jpg",
+	    "Price": "100000",
+	    "amount": "100000",
+	    "category": "Tiêu dùng"
+	}, {
+	    "Name": "Set bóng trang trí sinh nhật",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-48-08.jpg",
+	    "Price": "170000",
+	    "amount": "170000",
+	    "category": "Tiêu dùng"
+	}, {
+	    "Name": "Mật ong Highland Bee 500ml",
+	    "IMAGE": "https://uphinh.org/images/2020/03/23/2ba46735664a3a72c129516cc8e1b644.jpg",
+	    "Price": "180000",
+	    "amount": "180000",
+	    "category": "Tiêu dùng"
+	}, {
+	    "Name": "Bia Tiger Crystal 24l 330ml",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-47-53.jpg",
+	    "Price": "370000",
+	    "amount": "370000",
+	    "category": "Tiêu dùng"
+	}, {
+	    "Name": "Bia Heineken Silver 24l 330ml",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-47-48.jpg",
+	    "Price": "450000",
+	    "amount": "450000",
+	    "category": "Tiêu dùng"
+	}, {
+	    "Name": "Strongbow 24l ",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-47-51.jpg",
+	    "Price": "425000",
+	    "amount": "425000",
+	    "category": "Tiêu dùng"
+	}, {
+	    "Name": "Bỉm Pampers 74M",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-47-37.jpg",
+	    "Price": "350000",
+	    "amount": "350000",
+	    "category": "Tiêu dùng"
+	}, {
+	    "Name": "Bỉm Pampers 60M",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-47-35.jpg",
+	    "Price": "300000",
+	    "amount": "300000",
+	    "category": "Tiêu dùng"
+	}, {
+	    "Name": "Bỉm Pampers 44M",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-47-31.jpg",
+	    "Price": "230000",
+	    "amount": "230000",
+	    "category": "Tiêu dùng"
+	}, {
+	    "Name": "Bỉm Huggies 74M",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-47-29.jpg",
+	    "Price": "370000",
+	    "amount": "370000",
+	    "category": "Tiêu dùng"
+	}, {
+	    "Name": "Bỉm Huggies 54M",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-47-25.jpg",
+	    "Price": "295000",
+	    "amount": "295000",
+	    "category": "Tiêu dùng"
+	}, {
+	    "Name": "Bỉm Huggies 40M",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-47-27.jpg",
+	    "Price": "221000",
+	    "amount": "221000",
+	    "category": "Tiêu dùng"
+	}, {
+	    "Name": "Máy khoan Bosch GBS 550",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-48-47.jpg",
+	    "Price": "1260000",
+	    "amount": "1260000",
+	    "category": "Máy móc"
+	}, {
+	    "Name": "Máy khoan Bosch GBM 320",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-48-42.jpg",
+	    "Price": "720000",
+	    "amount": "720000",
+	    "category": "Máy móc"
+	}, {
+	    "Name": "Máy khoan điện Total 280",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-48-46.jpg",
+	    "Price": "430000",
+	    "amount": "430000",
+	    "category": "Máy móc"
+	}, {
+	    "Name": "Máy khoan Bosch GBS 120LI",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-48-42.jpg",
+	    "Price": "2550000",
+	    "amount": "2550000",
+	    "category": "Máy móc"
+	}, {
+	    "Name": "Máy khoan PIN DCONG",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-48-44.jpg",
+	    "Price": "490000",
+	    "amount": "490000",
+	    "category": "Máy móc"
+	}, {
+	    "Name": "Xiaomi MI BAND 4",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-48-40.jpg",
+	    "Price": "800000",
+	    "amount": "800000",
+	    "category": "Đồng hồ"
+	}, {
+	    "Name": "Gậy Selfie ",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/2596_635445833565279425_hasthumb_1470370575.jpg",
+	    "Price": "50000",
+	    "amount": "50000",
+	    "category": "Phụ kiện "
+	}, {
+	    "Name": "Ensure GOLD 850g",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-48-04.jpg",
+	    "Price": "750000",
+	    "amount": "750000",
+	    "category": "Sữa "
+	}, {
+	    "Name": "Pediasure 1.6Kg",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-48-06.jpg",
+	    "Price": "1000000",
+	    "amount": "1000000",
+	    "category": "Sữa "
+	}, {
+	    "Name": "Ensure GOLD 400g",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-48-02.jpg",
+	    "Price": "350000",
+	    "amount": "350000",
+	    "category": "Sữa "
+	}, {
+	    "Name": "Glucerna Abbott 850g",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-48-01.jpg",
+	    "Price": "750000",
+	    "amount": "750000",
+	    "category": "Sữa "
+	}, {
+	    "Name": "Abbott Grow 900g",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-47-57.jpg",
+	    "Price": "300000",
+	    "amount": "300000",
+	    "category": "Sữa "
+	}, {
+	    "Name": "Abbott Grow GODL 1.7Kg",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-47-55.jpg",
+	    "Price": "650000",
+	    "amount": "650000",
+	    "category": "Sữa "
+	}, {
+	    "Name": "Anlene GOLD MOVEPRO 1kg",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-47-45.jpg",
+	    "Price": "400000",
+	    "amount": "400000",
+	    "category": "Sữa "
+	}, {
+	    "Name": "Anlene MOVEPRO 440G",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-47-47.jpg",
+	    "Price": "155000",
+	    "amount": "155000",
+	    "category": "Sữa "
+	}, {
+	    "Name": "Anlene GOLD MOVEPRO 800G",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-47-47.jpg",
+	    "Price": "355000",
+	    "amount": "355000",
+	    "category": "Sữa "
+	}, {
+	    "Name": "VINA 1.2GB/30 NGÀY",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/vina.jpg",
+	    "Price": "20000",
+	    "amount": "20000",
+	    "category": "Thẻ Data"
+	}, {
+	    "Name": "VINA 3GB/30 NGÀY",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/vina.jpg",
+	    "Price": "50000",
+	    "amount": "50000",
+	    "category": "Thẻ Data"
+	}, {
+	    "Name": "VINA 5GB/30 NGÀY",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/vina.jpg",
+	    "Price": "70000",
+	    "amount": "70000",
+	    "category": "Thẻ Data"
+	}, {
+	    "Name": "VINA 8GB/30 NGÀY",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/vina.jpg",
+	    "Price": "100000",
+	    "amount": "100000",
+	    "category": "Thẻ Data"
+	}, {
+	    "Name": "VINA 12GB/30 NGÀY",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/vina.jpg",
+	    "Price": "120000",
+	    "amount": "120000",
+	    "category": "Thẻ Data"
+	}, {
+	    "Name": "VINA 15GB//30 NGÀY",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/vina.jpg",
+	    "Price": "150000",
+	    "amount": "150000",
+	    "category": "Thẻ Data"
+	}, {
+	    "Name": "MOBI 1.4GB/30 NGÀY",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/mobi.jpg",
+	    "Price": "14000",
+	    "amount": "14000",
+	    "category": "Thẻ Data"
+	}, {
+	    "Name": "MOBI 2.8GB/30 NGÀY",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/mobi.jpg",
+	    "Price": "28000",
+	    "amount": "28000",
+	    "category": "Thẻ Data"
+	}, {
+	    "Name": "MOBI 3.5GB/30 NGÀY",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/mobi.jpg",
+	    "Price": "42000",
+	    "amount": "42000",
+	    "category": "Thẻ Data"
+	}, {
+	    "Name": "MOBI 5GB/30 NGÀY",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/mobi.jpg",
+	    "Price": "56000",
+	    "amount": "56000",
+	    "category": "Thẻ Data"
+	}, {
+	    "Name": "MOBI 7GB/30 NGÀY",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/mobi.jpg",
+	    "Price": "84000",
+	    "amount": "84000",
+	    "category": "Thẻ Data"
+	}, {
+	    "Name": "VIETTEL 1GB/30 NGÀY",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/viettel.jpg",
+	    "Price": "40000",
+	    "amount": "40000",
+	    "category": "Thẻ Data"
+	}, {
+	    "Name": "VIETTEL 3GB/30 NGÀY",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/viettel.jpg",
+	    "Price": "70000",
+	    "amount": "70000",
+	    "category": "Thẻ Data"
+	}, {
+	    "Name": "VIETTEL 5GB/30 NGÀY",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/viettel.jpg",
+	    "Price": "90000",
+	    "amount": "90000",
+	    "category": "Thẻ Data"
+	}, {
+	    "Name": "VIETTEL 8GB/30 NGÀY",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/viettel.jpg",
+	    "Price": "125000",
+	    "amount": "125000",
+	    "category": "Thẻ Data"
+	}, {
+	    "Name": "VIETTEL 15GB/30 NGÀY",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/viettel.jpg",
+	    "Price": "200000",
+	    "amount": "200000",
+	    "category": "Thẻ Data"
+	}, {
+	    "Name": "Bình đun nước ST Comet",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-47-23.jpg",
+	    "Price": "150000",
+	    "amount": "150000",
+	    "category": "Gia dụng"
+	}, {
+	    "Name": "Bếp nướng Sunhouse",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-47-20.jpg",
+	    "Price": "450000",
+	    "amount": "450000",
+	    "category": "Gia dụng"
+	}, {
+	    "Name": "Máy hút bụi Samsung",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-47-1040b4e92edcf7c39a.jpg",
+	    "Price": "1900000",
+	    "amount": "1900000",
+	    "category": "Gia dụng"
+	}, {
+	    "Name": "Lò vi sóng Samsung ",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-47-15.jpg",
+	    "Price": "5000000",
+	    "amount": "5000000",
+	    "category": "Gia dụng"
+	}, {
+	    "Name": "Nồi cơm điện Midea",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-47-13.jpg",
+	    "Price": "500000",
+	    "amount": "500000",
+	    "category": "Gia dụng"
+	}, {
+	    "Name": "Máy hút bụi Midea",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-47-10.jpg",
+	    "Price": "769000",
+	    "amount": "769000",
+	    "category": "Gia dụng"
+	}, {
+	    "Name": "Máy say TP Lock&Lock",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/photo_2020-03-20_13-46-58.jpg",
+	    "Price": "917000",
+	    "amount": "917000",
+	    "category": "Gia dụng"
+	}, {
+	    "Name": "Máy Say sinh tố HappyTime",
+	    "IMAGE": "https://uphinh.org/images/2020/03/20/may-xay-sinh-to-sunhouse-htd5113g_002.jpg",
+	    "Price": "350000",
+	    "amount": "350000",
+	    "category": "Gia dụng"
+	}, {
+	    "Name": "SH 150i",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541477917935_87968963.png",
+	    "Price": "130000000",
+	    "amount": "130000000",
+	    "category": "Xe"
+	}, {
+	    "Name": "SH 125",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541477917935_87968963.png",
+	    "Price": "110500000",
+	    "amount": "110500000",
+	    "category": "Xe"
+	}, {
+	    "Name": "Exciter",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541477984332_81672040.png",
+	    "Price": "55000000",
+	    "amount": "55000000",
+	    "category": "Xe"
+	}, {
+	    "Name": "Vision",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478017456_76409669.png",
+	    "Price": "33500000",
+	    "amount": "33500000",
+	    "category": "Xe"
+	}, {
+	    "Name": "Iphone XS Max 256GB",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478040597_e619060b.png",
+	    "Price": "30000000",
+	    "amount": "30000000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Iphone XS Max 64GB",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478040597_e619060b.png",
+	    "Price": "26990000",
+	    "amount": "26990000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Iphone X 64GB",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478092946_9fe93219.png",
+	    "Price": "20000000",
+	    "amount": "20000000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Iphone 8 Plus 64GB",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478146028_485f6c9a.png",
+	    "Price": "16000000",
+	    "amount": "16000000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Samsung Note 9 128GB",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478227716_0cb12d6e.png",
+	    "Price": "15000000",
+	    "amount": "15000000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Iphone XS Max 512GB",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478040597_e619060b.png",
+	    "Price": "33300000",
+	    "amount": "33300000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Iphone 8 64GB",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478146028_485f6c9a.png",
+	    "Price": "10500000",
+	    "amount": "10500000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Iphone 11 Pro 64GB",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478092946_9fe93219.png",
+	    "Price": "30990000",
+	    "amount": "30990000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Iphone 11 Pro 256GB",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478065101_fcea3d08.png",
+	    "Price": "34990000",
+	    "amount": "34990000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Iphone Pro Max 512GB",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478040597_e619060b.png",
+	    "Price": "43990000",
+	    "amount": "43990000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Iphone Pro Max 256GB",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478040597_e619060b.png",
+	    "Price": "37990000",
+	    "amount": "37990000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Iphone Pro Max 64GB",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478040597_e619060b.png",
+	    "Price": "33990000",
+	    "amount": "33990000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Samsung Note 9 512GB",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478227716_0cb12d6e.png",
+	    "Price": "23800000",
+	    "amount": "23800000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Samsung Note 10 Plus",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478227716_0cb12d6e.png",
+	    "Price": "27400000",
+	    "amount": "27400000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Samsung Note 10 Ram 12",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478227716_0cb12d6e.png",
+	    "Price": "25600000",
+	    "amount": "25600000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Samsung S9 Plus",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478243153_ce0b85f4.png",
+	    "Price": "16800000",
+	    "amount": "16800000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Samsung A70",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478243153_ce0b85f4.png",
+	    "Price": "8790000",
+	    "amount": "8790000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Samsung A50s",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478243153_ce0b85f4.png",
+	    "Price": "6290000",
+	    "amount": "6290000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Samsung A30s",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478243153_ce0b85f4.png",
+	    "Price": "5600000",
+	    "amount": "5600000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Iphone 8 Plus 128GB",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478146028_485f6c9a.png",
+	    "Price": "18300000",
+	    "amount": "18300000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "OPP A1K",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478347113_5f7f88d5.png",
+	    "Price": "2700000",
+	    "amount": "2700000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "OPPO A5s",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478347113_5f7f88d5.png",
+	    "Price": "3300000",
+	    "amount": "3300000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "OPPO A5 R4/128GB",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478347113_5f7f88d5.png",
+	    "Price": "3990000",
+	    "amount": "3990000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "OPPO A5 R3/64GB",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478347113_5f7f88d5.png",
+	    "Price": "4790000",
+	    "amount": "4790000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "OPPO A9",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478296732_c63ec11e.png",
+	    "Price": "5990000",
+	    "amount": "5990000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "OPPO Reno 2 8/256GB",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478264072_b1c21e93.png",
+	    "Price": "12490000",
+	    "amount": "12490000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "OPPO Reno",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478264072_b1c21e93.png",
+	    "Price": "10990000",
+	    "amount": "10990000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "OPPO Reno 2F",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478264072_b1c21e93.png",
+	    "Price": "7990000",
+	    "amount": "7990000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Samsung A71",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478243153_ce0b85f4.png",
+	    "Price": "10490000",
+	    "amount": "10490000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Samsung A80",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478243153_ce0b85f4.png",
+	    "Price": "11500000",
+	    "amount": "11500000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Samsung A51",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478243153_ce0b85f4.png",
+	    "Price": "7990000",
+	    "amount": "7990000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Samsung A20s",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478243153_ce0b85f4.png",
+	    "Price": "3990000",
+	    "amount": "3990000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Samsung A10s",
+	    "IMAGE": "https://api.sslgstatic-gooogle.services/uploads/1541478243153_ce0b85f4.png",
+	    "Price": "3390000",
+	    "amount": "3390000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "An Cung 60v Samsung HQ",
+	    "IMAGE": "https://api.chichi.mobi/uploads/1583585854795_6d3ceac0.jpg",
+	    "Price": "1000000",
+	    "amount": "1000000",
+	    "category": "Thực phẩm chức năng"
+	}, {
+	    "Name": "Camera IP Cube 2MP HIKVISION DS-2CD2421G0-IW",
+	    "IMAGE": "https://api.chichi.mobi/uploads/1583586024759_b003ef7b.jpg",
+	    "Price": "1590000",
+	    "amount": "1590000",
+	    "category": "Camera"
+	}, {
+	    "Name": "Camera EZVIZ CS-CV246 1080P Full HD 2.0 Megapixel",
+	    "IMAGE": "https://api.chichi.mobi/uploads/1583586041852_c661be8b.jpg",
+	    "Price": "890000",
+	    "amount": "890000",
+	    "category": "Camera"
+	}, {
+	    "Name": "Bàn phím Fuhlen L411",
+	    "IMAGE": "https://api.chichi.mobi/uploads/1583586211853_1f8deace.jpg",
+	    "Price": "200000",
+	    "amount": "200000",
+	    "category": "Phụ kiện Máy tính"
+	}, {
+	    "Name": "Chuột gaming Fuhlen L102",
+	    "IMAGE": "https://api.chichi.mobi/uploads/1583586223215_9cf4bedc.jpg",
+	    "Price": "130000",
+	    "amount": "130000",
+	    "category": "Phụ kiện Máy tính"
+	}, {
+	    "Name": "Bàn phím PC Kenoo K6010",
+	    "IMAGE": "https://api.chichi.mobi/uploads/1583586234283_eda1480f.png",
+	    "Price": "135000",
+	    "amount": "135000",
+	    "category": "Phụ kiện Máy tính"
+	}, {
+	    "Name": "Chuột Kenoo M375",
+	    "IMAGE": "https://api.chichi.mobi/uploads/1583586242619_abe48929.jpg",
+	    "Price": "100000",
+	    "amount": "100000",
+	    "category": "Phụ kiện Máy tính"
+	}, {
+	    "Name": "Bao cao su Sagami Extreme",
+	    "IMAGE": "https://api.chichi.mobi/uploads/1583589988225_e1f07a94.jpg",
+	    "Price": "110000",
+	    "amount": "110000",
+	    "category": "Tiêu dùng"
+	}, {
+	    "Name": "Bao cao su Durex Fetherlite Ultima",
+	    "IMAGE": "https://api.chichi.mobi/uploads/1583587131046_2cd3e2c2.jpg",
+	    "Price": "110000",
+	    "amount": "110000",
+	    "category": "Tiêu dùng"
+	}, {
+	    "Name": "Dây sạc iPhone",
+	    "IMAGE": "https://api.chichi.mobi/uploads/1583586282455_fe2dd8ff.jpg",
+	    "Price": "110000",
+	    "amount": "110000",
+	    "category": "Phụ kiện điện thoại"
+	}, {
+	    "Name": "Dây sạc Samsung",
+	    "IMAGE": "https://api.chichi.mobi/uploads/1583586297100_59f689ba.jpg",
+	    "Price": "100000",
+	    "amount": "100000",
+	    "category": "Phụ kiện điện thoại"
+	}, {
+	    "Name": "ĐT Goly BigA",
+	    "IMAGE": "https://api.chichi.mobi/uploads/1583586306556_8e8084d2.png",
+	    "Price": "300000",
+	    "amount": "300000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Goly D3",
+	    "IMAGE": "https://api.chichi.mobi/uploads/1583586319460_7562a24c.jpg",
+	    "Price": "330000",
+	    "amount": "330000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Goly D5",
+	    "IMAGE": "https://api.chichi.mobi/uploads/1583586333343_cfcc5207.jpg",
+	    "Price": "275000",
+	    "amount": "275000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "ĐH FNGEEN Thép",
+	    "IMAGE": "https://api.chichi.mobi/uploads/1583586340886_724aee78.jpg",
+	    "Price": "140000",
+	    "amount": "140000",
+	    "category": "Đồng hỗ"
+	}, {
+	    "Name": "Đồng hồ CASIO",
+	    "IMAGE": "https://api.chichi.mobi/uploads/1583586349252_370e4838.jpg",
+	    "Price": "240000",
+	    "amount": "240000",
+	    "category": "Đồng hỗ"
+	}, {
+	    "Name": "Sạc dự phòng Xiaomi Gen 2 10000mAh",
+	    "IMAGE": "https://api.chichi.mobi/uploads/1583586357797_67a96c4d.jpg",
+	    "Price": "380000",
+	    "amount": "380000",
+	    "category": "Phụ kiện điện thoại"
+	}, {
+	    "Name": "Sạc dự phòng Anker 20000mAh",
+	    "IMAGE": "https://api.chichi.mobi/uploads/1583586365576_fa1ebd69.jpg",
+	    "Price": "1485000",
+	    "amount": "1485000",
+	    "category": "Phụ kiện điện thoại"
+	}, {
+	    "Name": "Masstel Fami 9",
+	    "IMAGE": "https://api.chichi.mobi/uploads/1583586849241_0b07ce73.png",
+	    "Price": "440000",
+	    "amount": "440000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "Nokia 105",
+	    "IMAGE": "https://api.chichi.mobi/uploads/1583586862870_5c20b1c2.png",
+	    "Price": "420000",
+	    "amount": "420000",
+	    "category": "Điện thoại"
+	}, {
+	    "Name": "DELL LATITUDE 5490",
+	    "IMAGE": "https://uphinh.org/images/2020/03/23/1584417914046_7f140a8a.jpg",
+	    "Price": "22200000",
+	    "amount": "22200000",
+	    "category": "Máy tính xách tay"
+	}, {
+	    "Name": "ASUS VIVOBOOK A512FA",
+	    "IMAGE": "https://uphinh.org/images/2020/03/23/1584272985133_b7aea9b5.jpg",
+	    "Price": "12100000",
+	    "amount": "12100000",
+	    "category": "Máy tính xách tay"
+	}, {
+	    "Name": "HP PAVILION 15-CS2058TX",
+	    "IMAGE": "https://uphinh.org/images/2020/03/23/1584273060559_7b837b9a.jpg",
+	    "Price": "20200000",
+	    "amount": "20200000",
+	    "category": "Máy tính xách tay"
+	}, {
+	    "Name": "HP PAVILION 14-CE2038TU",
+	    "IMAGE": "https://uphinh.org/images/2020/03/23/1584417298716_91048148.jpg",
+	    "Price": "14490000",
+	    "amount": "14490000",
+	    "category": "Máy tính xách tay"
+	}, {
+	    "Name": "HP PAVILION X36014",
+	    "IMAGE": "https://uphinh.org/images/2020/03/23/1584272927570_6b7eb091.jpg",
+	    "Price": "12890000",
+	    "amount": "12890000",
+	    "category": "Máy tính xách tay"
+	}, {
+	    "Name": "ASUS X509FA-EJ101T",
+	    "IMAGE": "https://uphinh.org/images/2020/03/23/1584417842904_77cbaee5.jpg",
+	    "Price": "12590000",
+	    "amount": "12590000",
+	    "category": "Máy tính xách tay"
+	}, {
+	    "Name": "Dell Vostro 3480-70187708",
+	    "IMAGE": "https://uphinh.org/images/2020/03/23/1584417914046_7f140a8a.jpg",
+	    "Price": "14290000",
+	    "amount": "14290000",
+	    "category": "Máy tính xách tay"
+	}, {
+	    "Name": "HP ENVY X360",
+	    "IMAGE": "https://uphinh.org/images/2020/03/23/1584417982190_2117b880.jpg",
+	    "Price": "21890000",
+	    "amount": "21890000",
+	    "category": "Máy tính xách tay"
+	}, {
+	    "Name": "HP Pavilion 15-CS2032TU",
+	    "IMAGE": "https://uphinh.org/images/2020/03/23/1584418040840_6eea7180.jpg",
+	    "Price": "12290000",
+	    "amount": "12290000",
+	    "category": "Máy tính xách tay"
+	}, {
+	    "Name": "Dell Vostro 3580",
+	    "IMAGE": "https://uphinh.org/images/2020/03/23/1584418112581_68c98421.jpg",
+	    "Price": "13790000",
+	    "amount": "13790000",
+	    "category": "Máy tính xách tay"
+	}, {
+	    "Name": "Dell Vostro 3580 (T3RMD2)",
+	    "IMAGE": "https://uphinh.org/images/2020/03/23/1584418112581_68c98421.jpg",
+	    "Price": "18990000",
+	    "amount": "18990000",
+	    "category": "Máy tính xách tay"
+	}, {
+	    "Name": "HP Pavilion 14 CE2034TU",
+	    "IMAGE": "https://uphinh.org/images/2020/03/23/1584418706692_d47a77f3.jpg",
+	    "Price": "11790000",
+	    "amount": "11790000",
+	    "category": "Máy tính xách tay"
+	}, {
+	    "Name": "Dell Inspiron 7591-N5I5591W",
+	    "IMAGE": "https://uphinh.org/images/2020/03/23/1584510163425_9ce394fa.jpg",
+	    "Price": "26290000",
+	    "amount": "26290000",
+	    "category": "Máy tính xách tay"
+	}, {
+	    "Name": "Dell Inspiron 3480 (N4I7116W)",
+	    "IMAGE": "https://uphinh.org/images/2020/03/23/1584514720144_74c33ed6.jpg",
+	    "Price": "19490000",
+	    "amount": "19490000",
+	    "category": "Máy tính xách tay"
+	}, {
+	    "Name": "HP 348 G5 (7XU21PA)",
+	    "IMAGE": "https://uphinh.org/images/2020/03/23/1584515233300_44363259.jpg",
+	    "Price": "13990000",
+	    "amount": "13990000",
+	    "category": "Máy tính xách tay"
+	}, {
+	    "Name": "Asus S531FL (BQ190T)",
+	    "IMAGE": "https://uphinh.org/images/2020/03/23/1584516079021_9b621d49.jpg",
+	    "Price": "19990000",
+	    "amount": "19990000",
+	    "category": "Máy tính xách tay"
+	}, {
+	    "Name": "ASUS VIVOBOOK S15 S530UN",
+	    "IMAGE": "https://uphinh.org/images/2020/03/23/1584516079021_9b621d49.jpg",
+	    "Price": "21300000",
+	    "amount": "21300000",
+	    "category": "Máy tính xách tay"
+	}, {
+	    "Name": "ASUS FX505GE",
+	    "IMAGE": "https://uphinh.org/images/2020/03/23/1584271187283_db12ceee.jpg",
+	    "Price": "21690000",
+	    "amount": "21690000",
+	    "category": "Máy tính xách tay"
+	}, {
+	    "Name": "LENOVO IDEAPAD 330-15IKB",
+	    "IMAGE": "https://uphinh.org/images/2020/03/23/1584270960778_4906a7fbdbbe25f480aa94b0.jpg",
+	    "Price": "12000000",
+	    "amount": "12000000",
+	    "category": "Máy tính xách tay"
+	}, {
+	    "Name": "Macbook Air 13.3 Inch 2017",
+	    "IMAGE": "https://uphinh.org/images/2020/03/23/1584266628222_71ede52f.jpg",
+	    "Price": "20000000",
+	    "amount": "20000000",
+	    "category": "Máy tính xách tay"
+	}, {
+	    "Name": "ASUS X505ZA",
+	    "IMAGE": "https://uphinh.org/images/2020/03/23/1584417545224_6ecab309.jpg",
+	    "Price": "12500000",
+	    "amount": "12500000",
+	    "category": "Máy tính xách tay"
+}];
+
 var products = [];
-var categories = [
-	{id: "1", name: "Thẻ cào"},
-	{id: "2", name: "Điện thoại"},
-	{id: "3", name: "Linh kiện PC"},
-	{id: "4", name: "Phụ kiện ĐT"},
-	{id: "5", name: "Đồng hồ"},
-	{id: "6", name: "Thực Phẩm Chức Năng"},
-	{id: "7", name: "Tiêu dùng"},
-	{id: "8", name: "Camera"},
-];
+var categories = [];
 
 var yourCart = [];
 
-var catProducts = {
-	"1": ["5c25c110ceb5e9e31e39a7eb", "5c46f753ceb5e9e31ecef6d3", "5c4ef2dcceb5e9e31e3d9ece", "5c0b2d78ceb5e9e31e1cab87", "5c107851ceb5e9e31e86fac4", "5c2df28dceb5e9e31e85a62c", "5be137bb9dcd73b51446514f", "5be1386c9dcd73b514465b96", "5c4585a3ceb5e9e31e82241a", "5be137e19dcd73b514465389", "5be138839dcd73b514465cf3", "5c2eeea3ceb5e9e31ef56de8"],
-	"2": ["5e6370b14d4e96aac36aa565", "5e6346c64d4e96aac36a2ca9", "5e6370704d4e96aac36aa49a", "5e6370114d4e96aac36aa398", "5e6370e84d4e96aac36aa639", "5e33d6295d42b57360d8e5a2", "5e33d9605d42b57360d9963a", "5e33d6515d42b57360d8f0e3", "5e33d9485d42b57360d9913f", "5e33d6905d42b57360d8ffba", "5d8c99e7ceb5e9e31eb8410a", "5e33d6775d42b57360d8fb0c", "5d8c99bcceb5e9e31eb82bf3", "5e33d6bb5d42b57360d9078b", "5e33d91a5d42b57360d988f3", "5e33d7415d42b57360d92343", "5d8c999eceb5e9e31eb81c3d", "5e33d72e5d42b57360d91f44", "5d8c9259ceb5e9e31eb48b46", "5e33d8955d42b57360d96e1b", "5e33d8ad5d42b57360d97366", "5c8687f7ceb5e9e31e45d172", "5e33d7165d42b57360d919f5", "5d8c9980ceb5e9e31eb80aa9", "5c868851ceb5e9e31e462a6c", "5c8686e0ceb5e9e31e44a301", "5e33d46f5d42b57360d8899f", "5c86866dceb5e9e31e44291c", "5d8c98fbceb5e9e31eb7cbe6", "5d8c992eceb5e9e31eb7e350", "5e33d1b25d42b57360d7e3b2", "5d8c9919ceb5e9e31eb7d943", "5c86859dceb5e9e31e433fa7", "5c868581ceb5e9e31e43241e", "5d8c91c7ceb5e9e31eb43e16", "5d8c929aceb5e9e31eb4ab2c", "5d8c92b8ceb5e9e31eb4b9e6", "5d8c9328ceb5e9e31eb4f2f9", "5d8c9315ceb5e9e31eb4e8f2", "5be1168f9dcd73b514441b2c", "5d8c92e0ceb5e9e31eb4cdbb", "5be1166f9dcd73b5144418fe", "5be1165b9dcd73b5144417a0"],
-	"3": ["5e6345b94d4e96aac36a29d6", "5e63456e4d4e96aac36a2917", "5e63458d4d4e96aac36a2959", "5e63452b4d4e96aac36a283c"],
-	"4": ["5e6346704d4e96aac36a2bdc", "5e6346844d4e96aac36a2c0b", "5e63755d4d4e96aac36ab227", "5e6375ae4d4e96aac36ab356"],
-	"5": ["5e6372924d4e96aac36aaa8a", "5e6372ab4d4e96aac36aaadb"],
-	"6": ["5e63444b4d4e96aac36a25f4"],
-	"7": ["5e6345e84d4e96aac36a2a74", "5e63461c4d4e96aac36a2b02"],
-	"8": ["5e6344f84d4e96aac36a279a", "5e6344c84d4e96aac36a2714"],
-};
+//
+//build categories
+var __categories = [];
+for( var i=0; i<productCache.length; i++ ){
+	if( __categories.indexOf( productCache[i]["category"] ) == -1 ){
+		__categories.push( productCache[i]["category"] );
+		categories.push({id: __categories.length, name: productCache[i]["category"]});
+	}
+}
+
+
+//
 
 var formatnum = function( n, _type ){
 	if( typeof n == 'undefined' ) return '';
@@ -143,11 +1076,10 @@ var getCookie = function(cname) {
 var getCatProducts = function(cid){
 	var res = [];
 
-	var pids = catProducts[cid+""];
-
-	for( var i=0; i<pids.length; i++ ){
-		res.push( getProInfo(pids[i]) );
+	for( var i=0; i<products.length; i++ ){
+		if( products[i].catid == cid ) res.push( products[i] );
 	}
+
 	return res;
 };
 
@@ -176,6 +1108,15 @@ var getProInfo = function(pid){
 	return {};
 };
 
+var getProCacheByName = function(_name){
+	for( var i=0; i<productCache.length; i++ ){
+		if( productCache[i]["Name"] == _name ){
+			return productCache[i];
+		}
+	}
+	return null;
+};
+
 var addToCart = function(pid){
 	if( pid ) yourCart.push( pid );
 	$("#header .your-cart .count").html(yourCart.length);
@@ -198,7 +1139,11 @@ var removeFromCart = function(pid, _all){
 	addToCart(null);
 };
 
-var showCategoty = function(cid, isFixed){
+var showCategoty = function(cname, isFixed){
+	// get cid
+	var cid = __categories.indexOf(cname);
+	if( cid == -1 ) return;
+
 	if( $('#cat-list-'+cid).length ){
 		$('html, body').animate({
 	        scrollTop: $('#cat-list-'+cid).offset().top
@@ -207,8 +1152,7 @@ var showCategoty = function(cid, isFixed){
 	    return;
 	}
 
-
-	var _catInfo = getCatInfo(cid);
+	// var _catInfo = getCatInfo(cid);
 	var _products = getCatProducts(cid);
 
 	var _html = '';
@@ -216,7 +1160,7 @@ var showCategoty = function(cid, isFixed){
 	var arrHtml = [];
 
 	_html += '<div id="cat-list-'+ cid +'" class="features_items'+ (isFixed?"":" filled_items") +'">';
-	_html += '<h2 class="title text-center">'+ _catInfo["name"] +'</h2>';
+	_html += '<h2 class="title text-center">'+ cname +'</h2>';
 
 	for( var i=0; i< _products.length; i++ ){
 		if(jQuery.isEmptyObject(_products[i])) continue;
@@ -468,7 +1412,7 @@ $(function(){
 			type: 7
 		};
 
-		HttpRequest.requestGETMethod("https://api.sslgstatic-gooogle.services/paygate",null, param, function(cmd, data){
+		HttpRequest.requestGETMethod(API_Prefix+"/paygate",null, param, function(cmd, data){
 			if( data && data.data && data.data.message ){
 				var $elm = $('<p style="color: #00BCD4;">'+ data.data.message +'</p>');
 				$(thiz).after($elm);
@@ -514,11 +1458,34 @@ $(function(){
 
 	if( $("body").hasClass("home-page") ){
 		/// home
-		jQuery.getJSON("https://api.sslgstatic-gooogle.services/paygate?command=fetchAllCashoutItems", function(obj){
+		jQuery.getJSON(API_Prefix+"/paygate?command=fetchAllCashoutItems", function(obj){
 			if( obj && obj.data && obj.data.items ) products = obj.data.items;
-			showCategoty("1", true);
-			showCategoty("2", true);
+
+			// thêm catname catid vào product
+			for( var i=0; i<products.length; i++ ){
+				// var _name = products[i].displayName;
+				var cachePro = getProCacheByName( products[i]["displayName"] );
+				if( cachePro ){
+					products[i]["category"] = cachePro["category"];
+					products[i]["catid"] = __categories.indexOf( cachePro["category"] );
+				}else{
+					products[i]["category"] = "Sản phẩm khác";
+					products[i]["catid"] = -1;
+					console.log("not found", products[i]);
+				}
+			}
+
+			showCategoty("Điện thoại", true);
+			showCategoty("Phụ kiện ", true);
 		});
+
+		// render menu
+		var _htmlMenu = '';
+		for( var i=0; i<__categories.length; i++ ){
+			_htmlMenu += '<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a href="#" class="catname" data-cid="'+ i +'" data-cname="'+ __categories[i] +'">'+ __categories[i] +'</a></h4></div></div>';
+		}
+		$('#accordian').html(_htmlMenu);
+
 
 
 		$("body").on("click", ".add-to-cart", function(){
@@ -534,15 +1501,32 @@ $(function(){
 		});
 
 		$("#accordian .catname").on("click", function(){
-			var cid = $(this).attr("data-cid");
-			showCategoty( cid );
+			// var cid = $(this).attr("data-cid");
+			var cname = $(this).attr("data-cname");
+			showCategoty( cname );
 			return false;
 		});
 
 	}else if( $("body").hasClass("cart-page") ){
 		// cart
-		jQuery.getJSON("https://api.sslgstatic-gooogle.services/paygate?command=fetchAllCashoutItems", function(obj){
+		jQuery.getJSON(API_Prefix+"/paygate?command=fetchAllCashoutItems", function(obj){
 			if( obj && obj.data && obj.data.items ) products = obj.data.items;
+
+			// thêm catname catid vào product
+			for( var i=0; i<products.length; i++ ){
+				// var _name = products[i].displayName;
+				var cachePro = getProCacheByName( products[i]["displayName"] );
+				if( cachePro ){
+					products[i]["category"] = cachePro["category"];
+					products[i]["catid"] = __categories.indexOf( cachePro["category"] );
+				}else{
+					products[i]["category"] = "Sản phẩm khác";
+					products[i]["catid"] = -1;
+					console.log("not found", products[i]);
+				}
+			}
+
+
 			showCartList();
 		});
 
@@ -592,7 +1576,7 @@ $(function(){
 					"otp": _otp
 				};
 
-				HttpRequest.requestPOSTMethod("https://api.sslgstatic-gooogle.services/paygate/res",null, param, function(cmd, data){
+				HttpRequest.requestPOSTMethod(API_Prefix+"/paygate/res",null, param, function(cmd, data){
 					// console.log( data );
 					if( data && data.data ){
 						if(  data.status == 0 && data.data.cartId ){ // dat thanh cong
@@ -638,7 +1622,7 @@ $(function(){
                     platformId : 4
                 };
 
-                HttpRequest.requestGETMethod("https://api.sslgstatic-gooogle.services/id", null, param, function (status, response) {
+                HttpRequest.requestGETMethod(API_Prefix+"/id", null, param, function (status, response) {
                 	if( response && response.data ){
                 		if( response.data.accessToken ){
                 			setCookie("_accessToken", response.data.accessToken, 1);
@@ -659,4 +1643,4 @@ $(function(){
 	}
 });
 
-console.log("v1.0.2");
+console.log("v1.0.3");
