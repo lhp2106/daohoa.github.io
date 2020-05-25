@@ -1,0 +1,16 @@
+{
+	"packageUrl" : "http://daohoa.github.io/B78/resource/",
+	"remoteManifestUrl" : "http://daohoa.github.io/B78/resource/project_dev.manifest",
+	"remoteVersionUrl" : "http://daohoa.github.io/B78/resource/version_dev.manifest",
+	"version" : "1.2.0",
+	"engineVersion" : "3.x",
+
+	"assets" : {
+		"Images/Bird.jpg" : {
+			"md5" : "..."
+		}
+	},
+    
+    "searchPaths" : [
+    ]
+}
