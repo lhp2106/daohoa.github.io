@@ -1,7 +1,7 @@
 {
-	"packageUrl" : "http://daohoa.github.io/B78/resource/",
-	"remoteManifestUrl" : "http://daohoa.github.io/B78/resource/project_dev.manifest",
-	"remoteVersionUrl" : "http://daohoa.github.io/B78/resource/version_dev.manifest",
+	"packageUrl" : "http://127.0.0.1:8888/daohoa.github/B78/resource/",
+	"remoteManifestUrl" : "http://127.0.0.1:8888/daohoa.github/B78/resource/project_dev.manifest",
+	"remoteVersionUrl" : "http://127.0.0.1:8888/daohoa.github/resource/version_dev.manifest",
 	"version" : "1.2.1",
-	"engineVersion" : "3.x",
+	"engineVersion" : "3.x dev",
 }

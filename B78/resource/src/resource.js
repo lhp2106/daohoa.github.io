@@ -23,6 +23,24 @@
  ****************************************************************************/
 
 // resource for loading + lobby + popup + tophu ....
+
+    // "src/view/GameScene.js",
+    // "src/view/GameTopBar.js",
+    // "src/view/GameTLMN.js",
+    // "src/ui/ProgressBar.js",
+    // "src/ui/Slider.js",
+    // "src/ui/MaskLayer.js",
+    // "src/ui/MHSlider.js",
+    // "src/ui/UserAvatar.js",
+    // "src/ui/Column.js",
+    // "src/ui/Card.js",
+    // "src/game/TaiXiu.js",
+    // "src/game/LongVuong.js",
+    // "src/game/DeadOrAlive.js",
+    // "src/game/Minipoker.js",
+    // "src/game/ET.js",
+    // "src/test/MenuTest.js"
+
 var jsList = [
     "src/Dialog/MessageNode.js",
     "src/Dialog/MiniGameLoadingDialog.js",
@@ -51,31 +69,15 @@ var jsList = [
     "src/view/LobbyLayer.js",
     "src/view/GameLayer.js",
     "src/view/PlayLayer.js",
-    "src/view/GameScene.js",
-    "src/view/GameTopBar.js",
-    "src/view/GameTLMN.js",
-    "src/ui/ProgressBar.js",
     "src/ui/LoadingDialog.js",
     "src/ui/Header.js",
     "src/ui/Footer.js",
     "src/ui/Marquee.js",
     "src/ui/MHPopup.js",
-    "src/ui/Slider.js",
-    "src/ui/MaskLayer.js",
     "src/ui/NewUI.js",
-    "src/ui/MHSlider.js",
     "src/ui/GamePlayer.js",
-    "src/ui/UserAvatar.js",
     "src/ui/TopHu.js",
-    "src/ui/Column.js",
-    "src/ui/Card.js",
-    "src/common/SuggestCardMng.js",
-    "src/game/TaiXiu.js",
-    "src/game/LongVuong.js",
-    "src/game/DeadOrAlive.js",
-    "src/game/Minipoker.js",
-    "src/game/ET.js",
-    "src/test/MenuTest.js"
+    "src/common/SuggestCardMng.js"
 ];
 
 var g_resources = [
