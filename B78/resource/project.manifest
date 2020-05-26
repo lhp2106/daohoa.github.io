@@ -12,57 +12,159 @@
         "src/resource.js" : {
             "md5" : "6d7a304245bc27ce637399942990dd15"
         },
-        "src/Dialog/MessageNode.js":{"md5" : "..."},
-        "src/Dialog/MiniGameLoadingDialog.js":{"md5" : "..."},
-        "src/Global/Cmd.js":{"md5" : "..."},
-        "src/Global/Constant.js":{"md5" : "..."},
-        "src/Global/Global.js":{"md5" : "..."},
-        "src/Global/States.js":{"md5" : "..."},
-        "src/Global/Types.js":{"md5" : "..."},
-        "src/Global/Utils.js":{"md5" : "..."},
-        "src/Global/MyHelper.js":{"md5" : "..."},
-        "src/Pixi/PIXI.js":{"md5" : "..."},
-        "src/ServerConfig/ServerConfig.js":{"md5" : "..."},
-        "src/html/MH.js":{"md5" : "..."},
-        "src/html/LobbyRequest.js":{"md5" : "..."},
-        "src/html/Socket/LobbySocket.js":{"md5" : "..."},
-        "src/html/GameHotfix.js":{"md5" : "..."},
-        "src/html/HttpRequest.js":{"md5" : "..."},
-        "src/html/MyRequest.js":{"md5" : "..."},
-        "src/Socket/TopHuClient.js":{"md5" : "..."},
-        "src/Socket/LobbyClient.js":{"md5" : "..."},
-        "src/Socket/MiniGameClient.js":{"md5" : "..."},
-        "src/plugin/MinigamePlugin.js":{"md5" : "..."},
-        "src/plugin/AudioDevice.js":{"md5" : "..."},
-        "src/view/MainScene.js":{"md5" : "..."},
-        "src/view/LoadingLayer.js":{"md5" : "..."},
-        "src/view/LobbyLayer.js":{"md5" : "..."},
-        "src/view/GameLayer.js":{"md5" : "..."},
-        "src/view/PlayLayer.js":{"md5" : "..."},
-        "src/view/GameScene.js":{"md5" : "..."},
-        "src/view/GameTopBar.js":{"md5" : "..."},
-        "src/view/GameTLMN.js":{"md5" : "..."},
-        "src/ui/ProgressBar.js":{"md5" : "..."},
-        "src/ui/LoadingDialog.js":{"md5" : "..."},
-        "src/ui/Header.js":{"md5" : "..."},
-        "src/ui/Footer.js":{"md5" : "..."},
-        "src/ui/Marquee.js":{"md5" : "..."},
-        "src/ui/MHPopup.js":{"md5" : "..."},
-        "src/ui/Slider.js":{"md5" : "..."},
-        "src/ui/MaskLayer.js":{"md5" : "..."},
-        "src/ui/NewUI.js":{"md5" : "..."},
-        "src/ui/MHSlider.js":{"md5" : "..."},
-        "src/ui/GamePlayer.js":{"md5" : "..."},
-        "src/ui/UserAvatar.js":{"md5" : "..."},
-        "src/ui/TopHu.js":{"md5" : "..."},
-        "src/ui/Column.js":{"md5" : "..."},
-        "src/ui/Card.js":{"md5" : "..."},
-        "src/common/SuggestCardMng.js":{"md5" : "..."},
-        "src/game/TaiXiu.js":{"md5" : "..."},
-        "src/game/LongVuong.js":{"md5" : "..."},
-        "src/game/DeadOrAlive.js":{"md5" : "..."},
-        "src/game/Minipoker.js":{"md5" : "..."},
-        "src/game/ET.js":{"md5" : "..."},
+        "src/Dialog/MessageNode.js" : {
+            "md5" : "..."
+        },
+        "src/Dialog/MiniGameLoadingDialog.js" : {
+            "md5" : "..."
+        },
+        "src/Global/Cmd.js" : {
+            "md5" : "..."
+        },
+        "src/Global/Constant.js" : {
+            "md5" : "..."
+        },
+        "src/Global/Global.js" : {
+            "md5" : "..."
+        },
+        "src/Global/States.js" : {
+            "md5" : "..."
+        },
+        "src/Global/Types.js" : {
+            "md5" : "..."
+        },
+        "src/Global/Utils.js" : {
+            "md5" : "..."
+        },
+        "src/Global/MyHelper.js" : {
+            "md5" : "..."
+        },
+        "src/Pixi/PIXI.js" : {
+            "md5" : "..."
+        },
+        "src/ServerConfig/ServerConfig.js" : {
+            "md5" : "..."
+        },
+        "src/html/MH.js" : {
+            "md5" : "..."
+        },
+        "src/html/LobbyRequest.js" : {
+            "md5" : "..."
+        },
+        "src/html/Socket/LobbySocket.js" : {
+            "md5" : "..."
+        },
+        "src/html/GameHotfix.js" : {
+            "md5" : "..."
+        },
+        "src/html/HttpRequest.js" : {
+            "md5" : "..."
+        },
+        "src/html/MyRequest.js" : {
+            "md5" : "..."
+        },
+        "src/Socket/TopHuClient.js" : {
+            "md5" : "..."
+        },
+        "src/Socket/LobbyClient.js" : {
+            "md5" : "..."
+        },
+        "src/Socket/MiniGameClient.js" : {
+            "md5" : "..."
+        },
+        "src/plugin/MinigamePlugin.js" : {
+            "md5" : "..."
+        },
+        "src/plugin/AudioDevice.js" : {
+            "md5" : "..."
+        },
+        "src/view/MainScene.js" : {
+            "md5" : "..."
+        },
+        "src/view/LoadingLayer.js" : {
+            "md5" : "..."
+        },
+        "src/view/LobbyLayer.js" : {
+            "md5" : "..."
+        },
+        "src/view/GameLayer.js" : {
+            "md5" : "..."
+        },
+        "src/view/PlayLayer.js" : {
+            "md5" : "..."
+        },
+        "src/view/GameScene.js" : {
+            "md5" : "..."
+        },
+        "src/view/GameTopBar.js" : {
+            "md5" : "..."
+        },
+        "src/view/GameTLMN.js" : {
+            "md5" : "..."
+        },
+        "src/ui/ProgressBar.js" : {
+            "md5" : "..."
+        },
+        "src/ui/LoadingDialog.js" : {
+            "md5" : "..."
+        },
+        "src/ui/Header.js" : {
+            "md5" : "..."
+        },
+        "src/ui/Footer.js" : {
+            "md5" : "..."
+        },
+        "src/ui/Marquee.js" : {
+            "md5" : "..."
+        },
+        "src/ui/MHPopup.js" : {
+            "md5" : "..."
+        },
+        "src/ui/Slider.js" : {
+            "md5" : "..."
+        },
+        "src/ui/MaskLayer.js" : {
+            "md5" : "..."
+        },
+        "src/ui/NewUI.js" : {
+            "md5" : "..."
+        },
+        "src/ui/MHSlider.js" : {
+            "md5" : "..."
+        },
+        "src/ui/GamePlayer.js" : {
+            "md5" : "..."
+        },
+        "src/ui/UserAvatar.js" : {
+            "md5" : "..."
+        },
+        "src/ui/TopHu.js" : {
+            "md5" : "..."
+        },
+        "src/ui/Column.js" : {
+            "md5" : "..."
+        },
+        "src/ui/Card.js" : {
+            "md5" : "..."
+        },
+        "src/common/SuggestCardMng.js" : {
+            "md5" : "..."
+        },
+        "src/game/TaiXiu.js" : {
+            "md5" : "..."
+        },
+        "src/game/LongVuong.js" : {
+            "md5" : "..."
+        },
+        "src/game/DeadOrAlive.js" : {
+            "md5" : "..."
+        },
+        "src/game/Minipoker.js" : {
+            "md5" : "..."
+        },
+        "src/game/ET.js" : {
+            "md5" : "..."
+        }
     },
     "searchPaths" : [
     ]
