@@ -10,6 +10,9 @@
             "compressed": true,
             "size": 17300714
         },
+        "src/resource.js": {
+            "md5": "9b6b2c0c406ce18c5ed6b5b983a60964"
+        },
         "src/Dialog/MessageNode.js": {
             "md5": "91fefb15e91ead1791a3ebd7632e95c6"
         },
