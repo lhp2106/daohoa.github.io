@@ -39,45 +39,46 @@
     // "src/game/DeadOrAlive.js",
     // "src/game/Minipoker.js",
     // "src/game/ET.js",
-    // "src/test/MenuTest.js"
+    // "src/test/MenuTest.js",
+    // "src/Dialog/MessageNode.js",
+    // "src/Dialog/MiniGameLoadingDialog.js",
+    // "src/Global/Cmd.js",
+    // "src/Global/Constant.js",
+    // "src/Global/Global.js",
+    // "src/Global/States.js",
+    // "src/Global/Types.js",
+    // "src/Global/Utils.js",
+    // "src/Global/MyHelper.js",
+    // "src/Pixi/PIXI.js",
+    // "src/ServerConfig/ServerConfig.js",
+    // "src/html/MH.js",
+    // "src/html/LobbyRequest.js",
+    // "src/html/Socket/LobbySocket.js",
+    // "src/html/GameHotfix.js",
+    // "src/html/HttpRequest.js",
+    // "src/html/MyRequest.js",
+    // "src/Socket/TopHuClient.js",
+    // "src/Socket/LobbyClient.js",
+    // "src/Socket/MiniGameClient.js",
+    // "src/plugin/MinigamePlugin.js",
+    // "src/plugin/AudioDevice.js",
+    
+    // "src/view/LoadingLayer.js",
+    // "src/view/LobbyLayer.js",
+    // "src/view/GameLayer.js",
+    // "src/view/PlayLayer.js",
+    // "src/ui/LoadingDialog.js",
+    // "src/ui/Header.js",
+    // "src/ui/Footer.js",
+    // "src/ui/Marquee.js",
+    // "src/ui/MHPopup.js",
+    // "src/ui/NewUI.js",
+    // "src/ui/GamePlayer.js",
+    // "src/ui/TopHu.js",
+    // "src/common/SuggestCardMng.js"
 
 var jsList = [
-    "src/Dialog/MessageNode.js",
-    "src/Dialog/MiniGameLoadingDialog.js",
-    "src/Global/Cmd.js",
-    "src/Global/Constant.js",
-    "src/Global/Global.js",
-    "src/Global/States.js",
-    "src/Global/Types.js",
-    "src/Global/Utils.js",
-    "src/Global/MyHelper.js",
-    "src/Pixi/PIXI.js",
-    "src/ServerConfig/ServerConfig.js",
-    "src/html/MH.js",
-    "src/html/LobbyRequest.js",
-    "src/html/Socket/LobbySocket.js",
-    "src/html/GameHotfix.js",
-    "src/html/HttpRequest.js",
-    "src/html/MyRequest.js",
-    "src/Socket/TopHuClient.js",
-    "src/Socket/LobbyClient.js",
-    "src/Socket/MiniGameClient.js",
-    "src/plugin/MinigamePlugin.js",
-    "src/plugin/AudioDevice.js",
-    "src/view/MainScene.js",
-    "src/view/LoadingLayer.js",
-    "src/view/LobbyLayer.js",
-    "src/view/GameLayer.js",
-    "src/view/PlayLayer.js",
-    "src/ui/LoadingDialog.js",
-    "src/ui/Header.js",
-    "src/ui/Footer.js",
-    "src/ui/Marquee.js",
-    "src/ui/MHPopup.js",
-    "src/ui/NewUI.js",
-    "src/ui/GamePlayer.js",
-    "src/ui/TopHu.js",
-    "src/common/SuggestCardMng.js"
+    "src/view/MainScene.js"
 ];
 
 var g_resources = [
@@ -216,9 +217,3 @@ var m_resources = {
 var LIST_RESOURCE_SPIN_FILE = [
     "res/spine/skeleton.json",//clock game binh
 ];
-
-if( cc.sys.isNative ){
-    for( var i=0; i<jsList.length; i++ ){
-        require(jsList[i]);
-    }
-}

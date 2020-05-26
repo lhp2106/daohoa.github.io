@@ -5,62 +5,66 @@ var MainScene = cc.Scene.extend({
     ctor: function(pname){
         this._super();
 
-        this.minigameLayer = new cc.Node();
-        this.addChild(this.minigameLayer, 3);
-        this.popupLayer = new cc.Node();
-        this.addChild( this.popupLayer, 5);
+        this.addChild(new cc.Sprite("res/menu-minigame/Icon-MiniGame.png"));
 
-        // Btn Minigame
-        var mngIcon = cc.createSpine("res/menu-minigame/Icon-MiniGame.json", "res/menu-minigame/Icon-MiniGame.atlas");
-        mngIcon.setAnimation(0, 'Idle', true);
-        mngIcon.setPosition( cc.p(1200, 570));
-        this.addChild(mngIcon, 4);
-        var btnOldPos = mngIcon.getPosition();
-        var sprSize = cc.size(105,87);
-        var locationInNode = null;
+        // return;
 
-        cc.eventManager.addListener({
-            event: cc.EventListener.TOUCH_ONE_BY_ONE,
-            swallowTouches: true,
-            onTouchBegan: function(touch, event){
-                locationInNode = mngIcon.convertToNodeSpace(touch.getLocation());
-                var rect = cc.rect(0, 0, sprSize.width, sprSize.height);
-                if (cc.rectContainsPoint(rect, {x: locationInNode.x + sprSize.width/2, y: locationInNode.y + sprSize.height/2 })){
-                    // có thể nó muốn kéo đi nên ko open ở đây
-                    btnOldPos = mngIcon.getPosition();
-                    return true;
-                }
-                return false;
-            },
-            onTouchMoved: function(touch, event){
-                var tL = touch.getLocation();
-                mngIcon.setPosition( tL.x - locationInNode.x, tL.y - locationInNode.y);
-            },
-            onTouchEnded: function(touch, event){
-                var newPos = mngIcon.getPosition();
+        // this.minigameLayer = new cc.Node();
+        // this.addChild(this.minigameLayer, 3);
+        // this.popupLayer = new cc.Node();
+        // this.addChild( this.popupLayer, 5);
 
-                if( (newPos.x-btnOldPos.x)*(newPos.x-btnOldPos.x) + (newPos.y-btnOldPos.y)*(newPos.y-btnOldPos.y) < 200 ){
-                    this._openMenuMNG();
-                }
+        // // Btn Minigame
+        // var mngIcon = cc.createSpine("res/menu-minigame/Icon-MiniGame.json", "res/menu-minigame/Icon-MiniGame.atlas");
+        // mngIcon.setAnimation(0, 'Idle', true);
+        // mngIcon.setPosition( cc.p(1200, 570));
+        // this.addChild(mngIcon, 4);
+        // var btnOldPos = mngIcon.getPosition();
+        // var sprSize = cc.size(105,87);
+        // var locationInNode = null;
 
-                if( newPos.x > cc.winSize.width/2 ) newPos.x = cc.winSize.width - sprSize.width/2;
-                else newPos.x = sprSize.width/2;
+        // cc.eventManager.addListener({
+        //     event: cc.EventListener.TOUCH_ONE_BY_ONE,
+        //     swallowTouches: true,
+        //     onTouchBegan: function(touch, event){
+        //         locationInNode = mngIcon.convertToNodeSpace(touch.getLocation());
+        //         var rect = cc.rect(0, 0, sprSize.width, sprSize.height);
+        //         if (cc.rectContainsPoint(rect, {x: locationInNode.x + sprSize.width/2, y: locationInNode.y + sprSize.height/2 })){
+        //             // có thể nó muốn kéo đi nên ko open ở đây
+        //             btnOldPos = mngIcon.getPosition();
+        //             return true;
+        //         }
+        //         return false;
+        //     },
+        //     onTouchMoved: function(touch, event){
+        //         var tL = touch.getLocation();
+        //         mngIcon.setPosition( tL.x - locationInNode.x, tL.y - locationInNode.y);
+        //     },
+        //     onTouchEnded: function(touch, event){
+        //         var newPos = mngIcon.getPosition();
 
-                if( newPos.y < sprSize.height/2 ) newPos.y = sprSize.height/2;
-                else if( newPos.y > cc.winSize.height-sprSize.height/2 ) newPos.y = cc.winSize.height-sprSize.height/2;
+        //         if( (newPos.x-btnOldPos.x)*(newPos.x-btnOldPos.x) + (newPos.y-btnOldPos.y)*(newPos.y-btnOldPos.y) < 200 ){
+        //             this._openMenuMNG();
+        //         }
 
-                mngIcon.runAction( new cc.MoveTo(0.15, newPos ) );
-            }.bind(this),
+        //         if( newPos.x > cc.winSize.width/2 ) newPos.x = cc.winSize.width - sprSize.width/2;
+        //         else newPos.x = sprSize.width/2;
 
-        }, mngIcon);
-        //
-        this.wrapTimer = new cc.Sprite("res/menu-minigame/minigame-dem-taixiu.png");
-        this.wrapTimer.setPosition(29, 37);
-        mngIcon.addChild( this.wrapTimer );
-        this.wrapTimer.setVisible(false);
-        //
-        if( !pname ) pname = "home";
-        this.changePage(pname);
+        //         if( newPos.y < sprSize.height/2 ) newPos.y = sprSize.height/2;
+        //         else if( newPos.y > cc.winSize.height-sprSize.height/2 ) newPos.y = cc.winSize.height-sprSize.height/2;
+
+        //         mngIcon.runAction( new cc.MoveTo(0.15, newPos ) );
+        //     }.bind(this),
+
+        // }, mngIcon);
+        // //
+        // this.wrapTimer = new cc.Sprite("res/menu-minigame/minigame-dem-taixiu.png");
+        // this.wrapTimer.setPosition(29, 37);
+        // mngIcon.addChild( this.wrapTimer );
+        // this.wrapTimer.setVisible(false);
+        // //
+        // if( !pname ) pname = "home";
+        // this.changePage(pname);
     },
     _openMenuMNG: function(){
         var tagMNG = 11129;
