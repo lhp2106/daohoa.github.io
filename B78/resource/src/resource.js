@@ -59,7 +59,6 @@ var jsList = [
     "src/ui/MHPopup.js",
     "src/ui/MaskLayer.js",
     "src/ui/NewUI.js",
-    "src/ui/MHSlider.js",
     "src/ui/GamePlayer.js",
     "src/ui/UserAvatar.js",
     "src/ui/TopHu.js",
@@ -70,8 +69,7 @@ var jsList = [
     "src/game/LongVuong.js",
     "src/game/DeadOrAlive.js",
     "src/game/Minipoker.js",
-    "src/game/ET.js",
-    "src/ui/MenuMinigame.js"
+    "src/game/ET.js"
 ];
 
 var g_resources = [
