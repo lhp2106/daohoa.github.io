@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MD5 Creator</title>
+</head>
+<body>
+	<h1>Append new md5 manifest code</h1>
+	<textarea id="myTextarea"></textarea>
+	<button onclick="render()">Ok</button>
+	<script type="text/javascript" src="crypto-js.min.js"></script>
+	<script type="text/javascript">
+		var _time = new Date().getTime();
+
+		function render(){
+			var _code = document.getElementById("myTextarea").value;
+			var obj = JSON.parse( _code );
+
+			for( var key in obj.assets ){
+				if( obj.assets.hasOwnProperty(key) && obj.assets[key].hasOwnProperty("md5") ) obj.assets[key].md5 = CryptoJS.MD5(_time.toString()).toString();
+				_time++;
+			}
+
+			document.getElementById("myTextarea").value = JSON.stringify( obj );
+		}
+
+	</script>
+</body>
+</html>
