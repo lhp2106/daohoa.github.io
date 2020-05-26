@@ -1,5 +1,5 @@
 {
-    "packageUrl": "http://daohoa.github.io/B78/resource/05-26",
+    "packageUrl": "http://daohoa.github.io/B78/resource",
     "remoteManifestUrl": "http://daohoa.github.io/B78/resource/project.manifest",
     "remoteVersionUrl": "http://daohoa.github.io/B78/resource/version.manifest",
     "version": "1.2.2",
@@ -7,8 +7,7 @@
     "assets": {
         "res.zip": {
             "md5": "715833cd5523e568c987dffebfca0494",
-            "compressed": true,
-            "size": 17300714
+            "compressed": true
         },
         "src/resource.js": {
             "md5": "6d7a304245bc27ce637399942990dd15"
