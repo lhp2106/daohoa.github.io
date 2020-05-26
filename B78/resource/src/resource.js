@@ -69,7 +69,8 @@ var jsList = [
     "src/game/LongVuong.js",
     "src/game/DeadOrAlive.js",
     "src/game/Minipoker.js",
-    "src/game/ET.js"
+    "src/game/ET.js",
+    "src/view/MainScene.js"
 ];
 
 var g_resources = [
