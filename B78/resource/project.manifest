@@ -2,172 +2,172 @@
     "packageUrl": "http://daohoa.github.io/B78/resource/05-26",
     "remoteManifestUrl": "http://daohoa.github.io/B78/resource/project.manifest",
     "remoteVersionUrl": "http://daohoa.github.io/B78/resource/version.manifest",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "engineVersion": "3.x",
     "assets": {
         "res.zip": {
-            "md5": "b77311f13979a49db3d1e7167602856f",
+            "md5": "715833cd5523e568c987dffebfca0494",
             "compressed": true,
             "size": 17300714
         },
         "src/resource.js": {
-            "md5": "9b6b2c0c406ce18c5ed6b5b983a60964"
+            "md5": "6d7a304245bc27ce637399942990dd15"
         },
         "src/Dialog/MessageNode.js": {
-            "md5": "91fefb15e91ead1791a3ebd7632e95c6"
+            "md5": "b5f9c4057d9dc509ea091ba8761b251e"
         },
         "src/Dialog/MiniGameLoadingDialog.js": {
-            "md5": "ea5a73f40a60aaa8a66f3041e217ff16"
+            "md5": "ca40b06fc22220bee5835d2fec0bc07c"
         },
         "src/Global/Cmd.js": {
-            "md5": "124a7da2e7414dbf945fbf9f595e2c78"
+            "md5": "4c0a758cb1a9a243e3476320f63ab62d"
         },
         "src/Global/Constant.js": {
-            "md5": "f9da2bcb9316c08662c166294598cd82"
+            "md5": "c2f3d63c139fcaeee9848932f39923e0"
         },
         "src/Global/Global.js": {
-            "md5": "d86cbb4e4133216d29f11665487e9ab1"
+            "md5": "203145add455ccf169db794b2d47ca76"
         },
         "src/Global/States.js": {
-            "md5": "9b61cac4f3564803a258bda784f1838e"
+            "md5": "7b1a85e354243eb05c7063da1ffb6e0d"
         },
         "src/Global/Types.js": {
-            "md5": "1a2d2c883433ede6e25a1f390629ca2b"
+            "md5": "7840a85a004149344d404e84bc5d4bdb"
         },
         "src/Global/Utils.js": {
-            "md5": "66abe0dd60b0f627391551f6ab864a39"
+            "md5": "c8a16959c010a668ee6d627693a474c6"
         },
         "src/Global/MyHelper.js": {
-            "md5": "b1120e06299d47cff0177d50b7d893ba"
+            "md5": "f1949fd9f919888a05bef726cb033124"
         },
         "src/Pixi/PIXI.js": {
-            "md5": "8e5e842685aa59b9a5c91cab3c74751b"
+            "md5": "c2e0d965c590e03019e6f945d3f7bdaa"
         },
         "src/ServerConfig/ServerConfig.js": {
-            "md5": "984394d754a8c40d1e4ee36a50abca6f"
+            "md5": "f85d74c259927e5d81f3b37232b572c1"
         },
         "src/html/MH.js": {
-            "md5": "9b4a6a738ada77132f5eff97f20a62cc"
+            "md5": "74a21b0bfbb7a9f084edc55ca7698745"
         },
         "src/html/LobbyRequest.js": {
-            "md5": "4fad828e4c4e81bcba9db9ea7a59ffde"
+            "md5": "95deab61fdc1ca14d77a2d2ed0fdf906"
         },
         "src/html/Socket/LobbySocket.js": {
-            "md5": "37b1e72a32d452f3306a172066ddfdc5"
+            "md5": "69a6c9dc1410356c3945d62fca91a199"
         },
         "src/html/GameHotfix.js": {
-            "md5": "27b057e03c3fc5094b585582068b201e"
+            "md5": "4e9d70fef888d3dd49d420f197b6d049"
         },
         "src/html/HttpRequest.js": {
-            "md5": "10245083435c58c0d211d3997f509725"
+            "md5": "de5b1e91a8fe9983efb9db48509c2fac"
         },
         "src/html/MyRequest.js": {
-            "md5": "858ab5e76c0a298b551ae8bef7f00185"
+            "md5": "b54a8ef1b60f71c2ca0321b4b189d910"
         },
         "src/Socket/TopHuClient.js": {
-            "md5": "82eae1e804c784c2f3a3a9c9b9078c2a"
+            "md5": "2cb447ccf2ff68aa2617d4ee4cde913c"
         },
         "src/Socket/LobbyClient.js": {
-            "md5": "6c29433a9c56b60800f322a640d928c8"
+            "md5": "b5d4959c67d09e1fd8d148a8c0a801c8"
         },
         "src/Socket/MiniGameClient.js": {
-            "md5": "09a500a768d29cac60e77de22b31bc11"
+            "md5": "fad2f22cd68d84b125182c05b7627a61"
         },
         "src/plugin/MinigamePlugin.js": {
-            "md5": "cb7770450d9966c34a90449dceac9ab7"
+            "md5": "b8b25d6b065471bced5f690706519ec7"
         },
         "src/plugin/AudioDevice.js": {
-            "md5": "0b674517159a514aec25d33b30103ba1"
+            "md5": "aa1d0cb4f089b1c56fbd76de942f2611"
         },
         "src/view/MainScene.js": {
-            "md5": "b903c2c714e6e5d22de4c1cc6c0723fc"
+            "md5": "c8019a0182eae8e1400d4eb92fed3058"
         },
         "src/view/LoadingLayer.js": {
-            "md5": "38f61201b5627816a0d28a7e419847eb"
+            "md5": "a9c0051b2a41822c7fc638db56cceaa3"
         },
         "src/view/LobbyLayer.js": {
-            "md5": "5e49a02418930e2169645669d875365e"
+            "md5": "2ab1435cfca8cb63d68399e38e8ca084"
         },
         "src/view/GameLayer.js": {
-            "md5": "51b3729986476032a7b203010d649501"
+            "md5": "ba70c04ae486f840e3299f02009698dd"
         },
         "src/view/PlayLayer.js": {
-            "md5": "d7609cc239dd014bb6b7fd23983abe1e"
+            "md5": "62734221d8674747a0a60cad8b37fad5"
         },
         "src/view/GameScene.js": {
-            "md5": "20de67fd16c36e873a5b68824d1a3387"
+            "md5": "a9e43b1714c030513ca3a124f67fae62"
         },
         "src/view/GameTopBar.js": {
-            "md5": "7ef4ef5e1ec088f3c3e77dc7f419d10f"
+            "md5": "66bfdd3fe782d8c286ff587854aff3f1"
         },
         "src/view/GameTLMN.js": {
-            "md5": "f1db7d1c1e393a019a7a7cb83680e68e"
+            "md5": "33f857dbc1746e3ba502a120e5993268"
         },
         "src/ui/ProgressBar.js": {
-            "md5": "db4d4f96034c467bb8e885568ca46f27"
+            "md5": "d48338e3b0269a20234514a2e085de27"
         },
         "src/ui/LoadingDialog.js": {
-            "md5": "3f3fad7a82276f18155e70ca37a1ec77"
+            "md5": "f547a3932cade52fb89ef63eabbbb24c"
         },
         "src/ui/Header.js": {
-            "md5": "dc80c46c7f9b8707981a8cd712fd218d"
+            "md5": "9c3d55ccacc137e1dcb47b906347196e"
         },
         "src/ui/Footer.js": {
-            "md5": "b255419f07eae835f2eddd4a120fa446"
+            "md5": "93a3653040abc017c986d85de386caa4"
         },
         "src/ui/Marquee.js": {
-            "md5": "9b6b2c0c406ce18c5ed6b5b983a60964"
+            "md5": "3082b5b5a3f2a20016ae49a57dec3a93"
         },
         "src/ui/MHPopup.js": {
-            "md5": "7b2e448cc80888af11ca467e2d4854d1"
+            "md5": "8bb5c53071f60f73f33d1593a365c671"
         },
         "src/ui/Slider.js": {
-            "md5": "ebe671cf3efdf3259ca1d9fda0380ba8"
+            "md5": "0a326ee88e9e8b239fb1e95d0e2e71cf"
         },
         "src/ui/MaskLayer.js": {
-            "md5": "30fd2ea36c2ca9dacaed2798bf481af2"
+            "md5": "c83bbe2bd4c779fa064f15d7b0db4b4d"
         },
         "src/ui/NewUI.js": {
-            "md5": "779bd90e2d4166864ba15ae06e0c8111"
+            "md5": "1a7fe2ba42438b71aaa94a6f8d86a0d4"
         },
         "src/ui/MHSlider.js": {
-            "md5": "cf71f3fef5c06a845669a47f69b1c0ef"
+            "md5": "b27c4c947ffa9b9ebf8d48fe1faa66d4"
         },
         "src/ui/GamePlayer.js": {
-            "md5": "e1c5e2f5b5eaa9c22b3f35e9b9cc72ee"
+            "md5": "53872e46b3566fa7c4e8c70527e1862c"
         },
         "src/ui/UserAvatar.js": {
-            "md5": "7bc7669c3bd295fa9a86321b4205a253"
+            "md5": "26251d7140a02707668ae0a5edceb477"
         },
         "src/ui/TopHu.js": {
-            "md5": "9f42ea65b70e96f4f35725935b5a7a90"
+            "md5": "c09fd9c33244bd8240c0f045b9a79e26"
         },
         "src/ui/Column.js": {
-            "md5": "12bb97fc64b3392940b17e31b7af0f2d"
+            "md5": "d2e7a69d5f8c7047f261da5f25007933"
         },
         "src/ui/Card.js": {
-            "md5": "460a85063055638a8dcdac8f8d679025"
+            "md5": "573a3036b7007648b7a9247f0fcbc189"
         },
         "src/common/SuggestCardMng.js": {
-            "md5": "a90b2d49e2337c2285c00c8420a14d36"
+            "md5": "a73a8ab3f41010d6f5b4fd720acc56fa"
         },
         "src/game/TaiXiu.js": {
-            "md5": "621386f1463f4d39e54bd71058a52c99"
+            "md5": "5e2ce449f63fc35cc03192e5e4a8980f"
         },
         "src/game/LongVuong.js": {
-            "md5": "4639888124fbbdc369c6435c52c79bdc"
+            "md5": "6e0a92a54be58172d240a6bfb8a785f1"
         },
         "src/game/DeadOrAlive.js": {
-            "md5": "f8fa021eaff70b6589faefe3bee1d3e0"
+            "md5": "a01ee98199613e917693a78632a8b614"
         },
         "src/game/Minipoker.js": {
-            "md5": "88ea55267054bb138cc2f145f320426f"
+            "md5": "91899640ff914e8bf931fcfb6c098d8c"
         },
         "src/game/ET.js": {
-            "md5": "45ff4429e35ace3c2c1539a369c2af6a"
+            "md5": "e1c9a392447888664d29e829d84a1a41"
         },
         "src/test/MenuTest.js": {
-            "md5": "a7d48928a59bb12cc9d61b739d25e4c5"
+            "md5": "e80d330ab8fdb51dc6fbffd64a189b2c"
         }
     },
     "searchPaths": []
