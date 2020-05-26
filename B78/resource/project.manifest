@@ -11,6 +11,9 @@
         },
         "src/resource.js" : {
             "md5" : "6d7a304245bc27ce637399942990dd15"
+        },
+        "src/view/MainScene.js" : {
+            "md5" : "..."
         }
     },
     "searchPaths" : [
