@@ -8,16 +8,16 @@ var MenuMinigame = cc.Node.extend({
 		this._createMenu();
 	},
 	_createMenu: function(){
-		var mngIcon = cc.createSpine("res/menu-minigame/Icon-MiniGame.json", "res/menu-minigame/Icon-MiniGame.atlas");
-		mngIcon.setAnimation(0, 'Idle', true);
-		this.addChild(mngIcon);
-		this.btnMenu = mngIcon;
-		mngIcon.setPosition( this._setButtonPosition(cc.p(1280, 570)));
+		// var mngIcon = cc.createSpine("res/menu-minigame/Icon-MiniGame.json", "res/menu-minigame/Icon-MiniGame.atlas");
+		// mngIcon.setAnimation(0, 'Idle', true);
+		// this.addChild(mngIcon);
+		// this.btnMenu = mngIcon;
+		// mngIcon.setPosition( this._setButtonPosition(cc.p(1280, 570)));
 
-		this.wrapTimer = new cc.Sprite("res/menu-minigame/minigame-dem-taixiu.png");
-		this.wrapTimer.setPosition(29, 37);
-		this.btnMenu.addChild( this.wrapTimer );
-		this.wrapTimer.setVisible(false);
+		// this.wrapTimer = new cc.Sprite("res/menu-minigame/minigame-dem-taixiu.png");
+		// this.wrapTimer.setPosition(29, 37);
+		// this.btnMenu.addChild( this.wrapTimer );
+		// this.wrapTimer.setVisible(false);
 	},
 	_open: function(){
 		if( this._isOpen ) return;
@@ -192,6 +192,8 @@ var MenuMinigame = cc.Node.extend({
     },
 	onEnter: function(){
 		this._super();
+
+		return;
 
 		var locationInNode = null;
         var sprSize;
