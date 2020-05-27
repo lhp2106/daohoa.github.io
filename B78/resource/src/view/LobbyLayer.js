@@ -324,7 +324,7 @@ var LobbyLayer = cc.Node.extend({
 
         for( var i = this._dataIcons.length-1; i>=0; i-- ){
             if( !this._dataIcons[i].hasOwnProperty("spine") ) continue;
-            var spineIcon = cc.createSpine(this._dataIcons[i].spine[0], this._dataIcons[i].spine[1]);
+            var spineIcon = new sp.SkeletonAnimation(this._dataIcons[i].spine[0], this._dataIcons[i].spine[1]);
 
             spineIcon.setName(this._dataIcons[i].sN);
 
@@ -389,12 +389,12 @@ var LobbyLayer = cc.Node.extend({
         btnIcon.setPosition(cc.p(298.5,127.5));
         scrollView.addChild(btnIcon, 5);
 
-        var spineIcon1 = cc.createSpine("res/gamelist/Icon-3.json", "res/gamelist/Icon-3.atlas");
+        var spineIcon1 = new sp.SkeletonAnimation("res/gamelist/Icon-3.json", "res/gamelist/Icon-3.atlas");
         spineIcon1.setAnimation(0, 'Idle', true);
         spineIcon1.setPosition(cc.p(80, 70));
         btnIcon.addChild(spineIcon1, 2);
 
-        var spineIcon2 = cc.createSpine("res/gamelist/Icon-4.json", "res/gamelist/Icon-4.atlas");
+        var spineIcon2 = new sp.SkeletonAnimation("res/gamelist/Icon-4.json", "res/gamelist/Icon-4.atlas");
         spineIcon2.setAnimation(0, 'Idle', true);
         spineIcon2.setPosition(cc.p(150, 80));
         spineIcon2.scaleX *= -1;

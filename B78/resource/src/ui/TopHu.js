@@ -143,10 +143,10 @@ var TopHu = cc.Sprite.extend({
     },
     onEnter: function(){
         this._super();
-        TopHuClient.getInstance().addListener( kCMD.TOP_HU , this._updateJackpot, this);
+        //TopHuClient.getInstance().addListener( kCMD.TOP_HU , this._updateJackpot, this);
     },
     onExit: function(){
         this._super();
-        TopHuClient.getInstance().removeListener(this);
+        //TopHuClient.getInstance().removeListener(this);
     }
 });

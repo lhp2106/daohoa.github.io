@@ -30,7 +30,7 @@ var Footer = cc.Sprite.extend({
 		btnOTPApp.setPosition(1147,51);
 		this.addChild(btnOTPApp);
 
-		var spineIcon = cc.createSpine("res/footer/Dai ly.json", "res/footer/Dai ly.atlas");
+		var spineIcon = new sp.SkeletonAnimation("res/footer/Dai ly.json", "res/footer/Dai ly.atlas");
 		spineIcon.setAnimation(0, 'Idle', true);
 		spineIcon.setPosition(640, 0);
 		this.addChild(spineIcon);

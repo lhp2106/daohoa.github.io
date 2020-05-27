@@ -11,7 +11,7 @@ var MainScene = cc.Scene.extend({
         this.addChild( this.popupLayer, 5);
 
         // Btn Minigame
-        var mngIcon = cc.createSpine("res/menu-minigame/Icon-MiniGame.json", "res/menu-minigame/Icon-MiniGame.atlas");
+        var mngIcon = new sp.SkeletonAnimation("res/menu-minigame/Icon-MiniGame.json", "res/menu-minigame/Icon-MiniGame.atlas");
         mngIcon.setAnimation(0, 'Idle', true);
         mngIcon.setPosition( cc.p(1200, 570));
         this.addChild(mngIcon, 4);
@@ -153,9 +153,6 @@ var MainScene = cc.Scene.extend({
         var newLayer = null;
 
         switch( pname ){
-            case "loading":
-                newLayer = new LobbyLayer();
-                break;
             case "home":
                 newLayer = new LobbyLayer();
                 break;

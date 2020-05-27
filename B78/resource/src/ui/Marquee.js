@@ -177,7 +177,7 @@ var Marquee = cc.Sprite.extend({
 	},
 	onExit: function(){
 		this._super();
-		LobbyClient.getInstance().removeListener(this);
-		MiniGameClient.getInstance().removeListener(this);
+		// LobbyClient.getInstance().removeListener(this);
+		// MiniGameClient.getInstance().removeListener(this);
 	}
 });

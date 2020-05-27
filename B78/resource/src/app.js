@@ -63,7 +63,7 @@ var LoadingScene = cc.Scene.extend({
             return;
         }
 
-        this._am = new jsb.AssetsManager("res/project_dev.manifest", jsb.fileUtils.getWritablePath() + "RsEx");
+        this._am = new jsb.AssetsManager("res/project.manifest", jsb.fileUtils.getWritablePath() + "RsEx");
         this._am.retain();
 
         if (!this._am.getLocalManifest().isLoaded()){
@@ -78,7 +78,9 @@ var LoadingScene = cc.Scene.extend({
                         this.doLoadResource();
                         break;
                     case jsb.EventAssetsManager.UPDATE_PROGRESSION:
-                        this.showNotify(event.getPercent() + "%");
+                        // this.showNotify(event.getPercent() + "%");
+                        this.showNotify(event.getPercent());
+                        this.loading_pr.setPercent(event.getPercent());
                         break;
                     case jsb.EventAssetsManager.ERROR_DOWNLOAD_MANIFEST:
                     case jsb.EventAssetsManager.ERROR_PARSE_MANIFEST:
@@ -122,7 +124,6 @@ var LoadingScene = cc.Scene.extend({
 
                         // this._am.release();
 
-
                         this.doLoadResource();
 
                         break;
@@ -149,20 +150,28 @@ var LoadingScene = cc.Scene.extend({
         cc.log(s);
     },
     doLoadResource: function(){
-        MH.loadRes(g_resources, function (result, count, loadedCount) {
-            var percent = ((loadedCount+1) / count * 100) | 0;
-            percent = Math.min(percent, 100);
-            this.loading_pr.setPercent(percent);
-        }.bind(this), function(){
-            // cc.log("load done");
-            cc.director.runScene(new MainScene());
+        if( cc.sys.isNative ){
+            require("src/resource.js");
+            this.goMainScene();
+        }else{
+            MH.loadRes(g_resources, function (result, count, loadedCount) {
+                var percent = ((loadedCount+1) / count * 100) | 0;
+                percent = Math.min(percent, 100);
+                this.loading_pr.setPercent(percent);
+            }.bind(this), function(){
+                this.goMainScene();
+            }.bind(this));
+        }
+    },
+    goMainScene: function(){
+        cc.director.runScene(new MainScene());
+        cc.log("load done");
 
-            LobbyClient.getInstance().login( 'minhhoatest', '123qwe', function(){
-                MH.loginDone( PlayerMe );
-                // MH.openGame("TLMN");
-            }, function(){
-                MessageNode.getInstance().show('Đăng nhập không thành công');
-            });
-        });
+        // LobbyClient.getInstance().login( 'minhhoatest', '123qwe', function(){
+        //     MH.loginDone( PlayerMe );
+        //     // MH.openGame("TLMN");
+        // }, function(){
+        //     MessageNode.getInstance().show('Đăng nhập không thành công');
+        // });
     }
 });

@@ -80,7 +80,7 @@ var Header = cc.Sprite.extend({
         });
         avarWrap.setPosition(cc.p(200, 36));
 
-        var avarUrl = PlayerMe.avatar || "res/header/ava_default.jpg";
+        var avarUrl = "res/header/ava_default.jpg";
 
         var maskAv = new cc.Sprite("res/header/ava_lobby_1.png"); /*mask*/
         var maskedFill = new cc.ClippingNode(maskAv);
@@ -176,7 +176,7 @@ var Header = cc.Sprite.extend({
     onEnter: function(){
         this._super();
         this.setPosition(cc.p(0, 320));
-        MH.header.node = this;
+        // MH.header.node = this;
     },
     onExit: function(){
         this._super();
