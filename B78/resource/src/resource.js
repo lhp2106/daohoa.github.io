@@ -30,8 +30,7 @@ var jsList = [
     "src/ui/Marquee.js",
     "src/ui/Header.js",
     "src/ui/Footer.js",
-    "src/view/LobbyLayer.js",
-    "src/view/MainScene.js"
+    "src/view/LobbyLayer.js"
 ];
 
 var g_resources = [
