@@ -172,6 +172,7 @@ var LIST_RESOURCE_SPIN_FILE = [
 ];
 
 if( cc.sys.isNative ){
+    cc.log("jsList length "+ jsList.length);
     for( var i=0; i<jsList.length; i++ ){
         require(jsList[i]);
     }

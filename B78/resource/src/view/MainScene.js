@@ -60,7 +60,7 @@ var MainScene = cc.Scene.extend({
         this.wrapTimer.setVisible(false);
         //
         if( !pname ) pname = "home";
-        this.changePage(pname);
+        // this.changePage(pname);
     },
     _openMenuMNG: function(){
         var tagMNG = 11129;
