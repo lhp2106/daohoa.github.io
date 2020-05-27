@@ -78,9 +78,6 @@
         "src/plugin/AudioDevice.js" : {
             "md5" : "..."
         },
-        "src/view/MainScene.js" : {
-            "md5" : "..."
-        },
         "src/view/LoadingLayer.js" : {
             "md5" : "..."
         },
