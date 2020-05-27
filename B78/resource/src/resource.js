@@ -24,13 +24,7 @@
 
 // resource for loading + lobby + popup + tophu ....
 var jsList = [
-    "src/html/MH.js",
-    "src/ui/TopHu.js",
-    "src/ui/NewUI.js",
-    "src/ui/Marquee.js",
-    "src/ui/Header.js",
-    "src/ui/Footer.js",
-    "src/view/LobbyLayer.js"
+    
 ];
 
 var g_resources = [
