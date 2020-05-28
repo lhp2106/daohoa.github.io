@@ -11,6 +11,8 @@
 	<script type="text/javascript">
 		var _time = new Date().getTime();
 
+		console.log(">"+ CryptoJS.MD5(_time.toString()).toString() +"<");
+
 		function render(){
 			var _code = document.getElementById("myTextarea").value;
 			var obj = JSON.parse( _code );
