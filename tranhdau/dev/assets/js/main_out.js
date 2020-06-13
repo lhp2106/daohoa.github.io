@@ -62,16 +62,14 @@ var _0x2336 = function (_0x1cdae5, _0x366eb8) {
 			mainCover[_0x2336('0xc')](_0x2336('0xd'), _0x1ed332, ![]);
 			mainCover[_0x2336('0xc')](_0x2336('0xe'), _0x5adf47, ![]);
 
-			_0x5bf20c("#btn-split").off("click").on("click", function(){
+			document.getElementById("btn-split")[_0x2336('0xc')]('touchstart', function(){
 				_0x56991a();
 				_0x1a1501(0x11);
-				return false;
 			});
 
-			_0x5bf20c("#btn-feed").off("click").on("click", function(){
+			document.getElementById("btn-feed")[_0x2336('0xc')]('touchstart', function(){
 				_0x56991a();
 				_0x1a1501(0x15);
-				return false;
 			});
 
 		}
