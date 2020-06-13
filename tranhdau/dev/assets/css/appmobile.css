@@ -84,7 +84,9 @@ html, body{
     filter: blur(10px);
 }
 .on-stop #controls{
-    display: none;
+    display: none!important;
+    visibility: hidden;
+    opacity: 0;
 }
 button{
     margin: 0;
