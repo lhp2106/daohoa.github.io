@@ -20,7 +20,7 @@
         <link href="assets/css/toastr.min.css" rel="stylesheet" type="text/css">
         <style type="text/css" id="mhScale"></style>
     </head>
-    <body>
+    <body class="on-stop">
         <input type="hidden" id="skin" class="form-control" placeholder="Skin Name">
         <div class="modal fade" id="inPageModal" role="dialog">
             <div class="modal-dialog">
@@ -62,6 +62,9 @@
         <div class="wrap-mscore mhscale">Score: <span id="myscore">0</span></div>
         <div id="chatwrap" class="mhscale"></div>
         <input type="text" id="chat_textbox" placeholder="Nhấn Enter để gửi.." maxlength="200" />
+        <button id="btn-sendchat">
+            <img src="assets/img/send-chat.png">
+        </button>
         <div id="leaderboard" class="mhscale"></div>
         <div id="wrapcover"></div>
         <div style="font-family:'Montserrat'">&nbsp;</div>
