@@ -1,0 +1,241 @@
+/* GLOBAL */
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* IDs */
+
+#overlays {
+    display:none; 
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    top: 0; 
+    bottom: 0; 
+    background-color: 
+    rgba(0,0,0,0.5); 
+    z-index: 200;
+}
+
+#title {
+    padding: 10px;
+}
+
+#canvas {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#connecting {
+    display:none;
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    top: 0; 
+    bottom: 0; 
+    z-index: 100; 
+    background-color: rgba(0,0,0,0.5);
+}
+
+#nick {
+    width: 65%;
+    float: left;
+}
+
+#gamemode {
+    width: 33%;
+    float: right;
+}
+
+#helloDialog {
+    margin: 10px auto;
+    border-radius: 15px;
+    padding: 5px 15px 5px 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#chat_textbox {
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    background: rgba(0, 0, 0, .2);
+    border: 0px;
+    outline: none;
+    color: #FFF;
+    height: 30px;
+    text-indent: 12px;
+    left: 10px;
+    width: 300px;
+}
+
+#chat_textbox:focus {
+    background: rgba(0, 0, 0, .5);
+}
+
+#footer {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: -10px;
+}
+
+#play-btn {
+    width: 40%;
+    float: left;
+	margin-right: 10px;
+}
+
+#settings-btn {
+    width: 13%;
+    float: right;
+}
+
+#spectate-btn {
+    margin-top: -5px;
+}
+
+/* CLASSES */
+
+.checkbox label {
+    margin-right: 10px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+}
+
+.center {
+    display: table;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.dialog-left{
+	float: left;
+    width: 350px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+}
+.dialog-right{
+	float: left;
+    width: 300px;
+    margin-left: 10px;
+	 background: #fff;
+    border-radius: 5px;
+}
+.header{
+	text-align: center;
+    background-color: rgba(51, 122, 183, 0.59);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 10%;
+}
+.dialog-right .content{
+	padding: 15px;
+}
+.agario-side-panel {
+    width: 220px;
+    float: left;
+	background: #fff;
+    border-radius: 5px;
+	margin-right: 10px;
+	padding: 15px;
+}
+.agario-profile-panel .agario-profile-picture {
+    float: left;
+    display: block;
+    width: 64px;
+    height: 64px;
+    border-radius: 5px;
+    border: 2px solid #CCC;
+    margin-right: 6px;
+}
+.agario-profile-panel .agario-profile-name-container {
+    float: left;
+    display: table;
+    width: 120px;
+    height: 64px;
+    position: relative;
+}
+.agario-exp-bar {
+    height: 30px;
+    position: relative;
+    border: 2px solid #01612B;
+}
+.progress {
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+.progress-bar-star {
+    position: absolute;
+    top: -13px;
+    right: -16px;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/star.png);
+    background-size: cover;
+    -webkit-transform: rotate3d(0,0,1,10deg);
+    transform: rotate3d(0,0,1,10deg);
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    cursor: default;
+    color: #FFF;
+    text-align: center;
+    line-height: 55px;
+    font-size: 12pt;
+    text-shadow: 0px 0px 3px #000000, -1px 0px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, 0px -1px 0px #000000, -1px -1px 0px #000000, 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000;
+    font-family: 'Ubuntu',sans-serif;
+}
+.agario-exp-bar .progress-bar-text {
+    font-size: 12pt;
+    cursor: default;
+    opacity: 0.75;
+    color: #FFF;
+    text-align: center;
+    line-height: 26px;
+    text-shadow: 0px 0px 3px #000000, -1px 0px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, 0px -1px 0px #000000, -1px -1px 0px #000000, 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: 'Ubuntu',sans-serif;
+}

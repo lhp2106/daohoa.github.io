@@ -1,0 +1,67 @@
+#canvas{
+    background: #000;
+}
+#leaderboard{
+    font-family: "Montserrat";
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, .4);
+    width: 225px;
+    overflow-x: hidden;
+}
+#leaderboard p{
+    margin: 0;
+    padding-left: 15px;
+    line-height: 1.2em;
+    white-space: nowrap;
+    position: relative;
+}
+#leaderboard p:nth-child(2){color: #FF5722;}
+#leaderboard p:nth-child(4){color: #2196F3;}
+#leaderboard p:nth-child(3){color: #FFC107;}
+#leaderboard p:nth-child(5){color: #9C27B0;}
+#leaderboard p:nth-child(6){color: #4CAF50;}
+#leaderboard p:nth-child(7){color: #673AB7;}
+#leaderboard p:nth-child(8){color: #00BCD4;}
+#leaderboard p:nth-child(9){color: #CDDC39;}
+#leaderboard p:nth-child(10){color: #03A9F4;}
+#leaderboard p:nth-child(11){color: #9E9E9E;}
+#leaderboard p span{
+    display: inline-block;
+    width: 25px;
+}
+#leaderboard h6{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 6px;
+    margin-top: 10px;
+}
+
+#wrapcover{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+#chatwrap{
+    position: fixed;
+    bottom: 50px;
+    left: 15px;
+    width: 400px;
+    font-family: "Montserrat";
+    font-size: 20px;
+    color: #ccc;
+    z-index: 2;
+}
+#chatwrap>p{
+    line-height: 1.3em;
+    margin: 0;
+}
+#chat_textbox{
+    z-index: 6;
+}

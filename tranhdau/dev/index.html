@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Eat cells smaller than you and don't get eaten by the bigger ones, as an MMO">
+        <meta name="keywords" content="agario, agar, io, cell, cells, virus, bacteria, blob, game, games, web game, html5, fun, flash">
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <title>APP Tranh Dau</title>
+        <link id="favicon" rel="icon" type="image/png" href="assets/img/favicon.png" />
+        <!-- <link href='https://fonts.googleapis.com/css?family=Ubuntu:700' rel='stylesheet' type='text/css'> -->
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/index.css" rel="stylesheet">
+        <link href="assets/css/appmobile.css" rel="stylesheet">
+        <link href="assets/css/toastr.min.css" rel="stylesheet" type="text/css">
+        <style type="text/css" id="mhScale"></style>
+    </head>
+    <body>
+        <input type="hidden" id="skin" class="form-control" placeholder="Skin Name">
+        <div class="modal fade" id="inPageModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 id="inPageModalTitle" class="modal-title">Failed to Load</h4>
+                    </div>
+                    <div id="inPageModalBody" class="modal-body">
+                        <p>Failed to load. Please check your connection!</p>
+                        <div class="center">
+                            <div class="loader"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="overlays">
+            <div id="wrapstart" class="mhscale">
+                <img src="assets/img/start-logo.png">
+                <button onclick="setNick(''); return false;">
+                    <img src="assets/img/start-play.png">
+                </button>
+            </div>
+            <div class="notification">
+                <div class="header-noti"></div>
+            </div>
+        </div>
+        <div id="connecting">
+            <div style="width: 350px; background-color: #FFFFFF; margin: 100px auto; border-radius: 15px; padding: 5px 15px 5px 15px;">
+                <h2>Connecting</h2>
+                <p> If you cannot connect to the servers, check if you have some anti virus or firewall blocking the connection.</p>
+            </div>
+        </div>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <div class="wrap-mscore mhscale">Score: <span id="myscore">0</span></div>
+        <div id="chatwrap" class="mhscale"></div>
+        <input type="text" id="chat_textbox" placeholder="Nhấn Enter để gửi.." maxlength="200" />
+        <div id="leaderboard" class="mhscale"></div>
+        <div id="wrapcover"></div>
+        <div style="font-family:'Montserrat'">&nbsp;</div>
+
+        <script src="assets/js/jquery-1.11.3.min.js"></script>
+        <script src="assets/js/log.js"></script>
+        <script src="assets/js/vector.js"></script>
+        <script src="assets/js/main_out.js"></script>
+        <script src="assets/js/toastr.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/msgpack.js"></script>
+        <script src="assets/js/map.js"></script>
+        <script>
+            $(document).ready(function ($) {
+                setserver('tranhdau.net:7777');
+                var wrapStyle = document.getElementById('mhScale');
+                var changeSize = function(){
+                    var _scale = window.innerHeight/720;
+                    if( _scale > 1 ) _scale = 1;
+                    wrapStyle.innerHTML = ".mhscale{-webkit-transform:scale("+ _scale +");-moz-transform:scale("+ _scale +");transform:scale("+ _scale +");}";
+                };
+                $(window).on("resize", changeSize);
+                changeSize();
+            });
+        </script>
+    </body>
+</html>
