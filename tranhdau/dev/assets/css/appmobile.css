@@ -88,6 +88,12 @@ html, body{
     visibility: hidden;
     opacity: 0;
 }
+.on-stop #chat_textbox{
+    z-index: 205;
+}
+.on-stop #btn-sendchat{
+    z-index: 206;
+}
 button{
     margin: 0;
     padding: 0;
