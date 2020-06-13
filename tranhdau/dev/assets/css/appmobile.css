@@ -69,7 +69,13 @@
     margin: 0;
 }
 #chat_textbox{
-    z-index: 6;
+    z-index: 12;
+}
+#btn-sendchat{
+    position: absolute;
+    z-index: 14;
+    bottom: 9px;
+    left: 275px;
 }
 /* APPPPP */
 html, body{
@@ -125,12 +131,6 @@ button{
 
 #controls img{
     width: 70px;
-}
-#btn-sendchat{
-    position: absolute;
-    z-index: 7;
-    bottom: 9px;
-    left: 275px;
 }
 /* Mini Map */
 .wrap-minimap{
