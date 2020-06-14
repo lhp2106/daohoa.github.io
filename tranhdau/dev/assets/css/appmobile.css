@@ -168,7 +168,19 @@ button{
     position: absolute;
     top: 50%;
     left: 50%;
-    z-index: 99;
+    z-index: 5;
+}
+#lbversion{
+    font-family: "Montserrat";
+    font-size: 16px;
+    color: #00BCD4;
+    position: absolute;
+    z-index: 6;
+    bottom:5px;
+    right: 10px;
+    -webkit-transform-origin: right bottom;
+    -moz-transform-origin: right bottom;
+    transform-origin: right bottom;
 }
 #wrapstart>img{
     position: absolute;
