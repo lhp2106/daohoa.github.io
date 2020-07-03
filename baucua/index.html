@@ -9,6 +9,51 @@
 	<meta name="keywords" content="bầu cua, bầu cua online, game dân gian, game casino, game slot, chơi game miễn phí">
 	<meta name="description" content="Chơi bầu cua online, game dân gian, game casino, game slot, chơi game miễn phí trực tuyến">
 	<style type="text/css">
+		@-webkit-keyframes shake {
+		  from, to {
+		    -webkit-transform: translate3d(0, 0, 0);
+		    transform: translate3d(0, 0, 0);
+		  }
+
+		  10%, 30%, 50%, 70%, 90% {
+		    -webkit-transform: translate3d(-10px, 0, 0);
+		    transform: translate3d(-10px, 0, 0);
+		  }
+
+		  20%, 40%, 60%, 80% {
+		    -webkit-transform: translate3d(10px, 0, 0);
+		    transform: translate3d(10px, 0, 0);
+		  }
+		}
+		@keyframes shake {
+		  from, to {
+		    -webkit-transform: translate3d(0, 0, 0);
+		    transform: translate3d(0, 0, 0);
+		  }
+
+		  10%, 30%, 50%, 70%, 90% {
+		    -webkit-transform: translate3d(-10px, 0, 0);
+		    transform: translate3d(-10px, 0, 0);
+		  }
+
+		  20%, 40%, 60%, 80% {
+		    -webkit-transform: translate3d(10px, 0, 0);
+		    transform: translate3d(10px, 0, 0);
+		  }
+		}
+
+		.shake {
+		  -webkit-animation-name: shake;
+		  animation-name: shake;
+		}
+		.animated {
+		  -webkit-animation-duration: 1s;
+		  animation-duration: 1s;
+		  -webkit-animation-fill-mode: both;
+		  animation-fill-mode: both;
+		}
+	</style>
+	<style type="text/css">
 		*, ::after, ::before {
 		    box-sizing: border-box;
 		    margin: 0;
@@ -23,6 +68,12 @@
 		body{
 			background-image: url(img/bg.jpg);
 			background-size: 100% 100%;
+		}
+		button.on-disable{
+			-webkit-filter: grayscale(1);
+			-moz-filter: grayscale(1);
+			-ms-filter: grayscale(1);
+			filter: grayscale(1);
 		}
 		#page-title{
 			opacity: 0;
@@ -141,7 +192,7 @@
 	<div id="page-inner">
 		<img src="img/disk.png" style="position: absolute;left: 186px;top: 82px;" alt="đĩa bầu cua">
 		<img src="img/res2.png" style="position: absolute;top: 93px;left: 1105px;" alt="kết quả bầu cua">
-		<img src="img/bowl.png" id="batup" alt="bát úp bầu cua">
+		<img src="img/bowl.png" id="batup" class="shake animated" alt="bát úp bầu cua">
 		<div id="res1"></div>
 		<div id="res2"></div>
 		<div id="cover"></div>
@@ -157,6 +208,20 @@
 
 <script type="text/javascript" src="../libs/jquery.min.js"></script>
 <script type="text/javascript">
+	var resource = [
+		"sound/lac.mp3",
+		"img/c1_0.png","img/c2_0.png","img/c3_0.png","img/c4_0.png","img/c5_0.png","img/c6_0.png",
+		"img/r1.png","img/r2.png","img/r3.png","img/r4.png","img/r5.png","img/r6.png"
+	];
+	for( var i=0; i<resource.length; i++ ){
+		var src = resource[i];
+		if( src.indexOf(".png") != -1 || src.indexOf(".jpg") != -1 ){
+			var img = new Image();
+			img.src = src;
+		}else if( src.indexOf(".mp3") != -1 ){
+			var sound = new Audio(src);
+		}
+	}
 	jQuery(function(){
 		var jwindow = $(window),
 			jpage = $("#page-wrap"),
@@ -164,11 +229,10 @@
 			jbtnMo = $("#btnMo"),
 			jbtnXoc = $("#btnXoc"),
 			jres1 = $("#res1"),
-			jres2 = $("#res2");
+			jres2 = $("#res2"),
+			soundLac = new Audio("sound/lac.mp3");
 
 		var kq = [];
-
-		var animKQ;
 
 		var scaleView = function(){
 			var _W = jwindow.width(),
@@ -188,7 +252,7 @@
 		scaleView();
 
 		var moBat = function(){
-			jbtnMo.off("click").addClass("on-click");
+			jbtnMo.off("click").addClass("on-disable");
 			jbtnXoc.off("click").hide();
 			jbatup.css("left", "-610px");
 
@@ -201,42 +265,44 @@
 				_html2 += '<img src="img/c'+ rand +'_0.png" class="c'+ rand +'">';
 			}
 			jres1.html(_html);
-
 			setTimeout(function(){
-				jbtnMo.removeClass("on-click");
-			}, 300);
-
-			setTimeout(function(){
-				jbtnXoc.show().on("click", xocDia);
-				jbtnMo.hide();
-
 				jres2.html(_html2);
 			}, 500);
+			setTimeout(function(){
+				jbtnXoc.removeClass("on-disable").show().on("click", xocDia);
+				jbtnMo.hide();
+			}, 1500);
 
 			return false;
 		};
 		var xocDia = function(){
 			jbtnMo.off("click").hide();
-			jbtnXoc.off("click").addClass("on-click");
+			jbtnXoc.off("click").show().addClass("on-disable");
 			jbatup.css("left", "184px");
 
 			jres2.empty();
 
 			setTimeout(function(){
-				jbtnXoc.removeClass("on-click");
-			}, 300);
+				jbatup.addClass("shake animated");
+				jres1.empty();
+
+				soundLac.play();
+			}, 700);
 
 			setTimeout(function(){
-				jbtnMo.show().on("click", moBat);
+				jbtnMo.removeClass("on-disable").show().on("click", moBat);
 				jbtnXoc.hide();
-			}, 500);
+
+				jbatup.removeClass("shake animated");
+			}, 2500);
 			return false;
 		};
 
 		//
 		setTimeout(function(){
+			jbatup.removeClass("shake animated");
 			moBat();
-		}, 1000);
+		}, 1500);
 
 		setInterval(function(){
 			jres2.toggle();
