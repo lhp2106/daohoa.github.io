@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bầu Cua Online - game dân gian, game casino, game slot, chơi game miễn phí</title>
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<meta name="keywords" content="bầu cua, bầu cua online, game dân gian, game casino, game slot, chơi game miễn phí">
+	<meta name="description" content="Chơi bầu cua online, game dân gian, game casino, game slot, chơi game miễn phí trực tuyến">
+	<style type="text/css">
+		*, ::after, ::before {
+		    box-sizing: border-box;
+		    margin: 0;
+		    padding: 0;
+		}
+		html, body{
+			position: relative;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		body{
+			background-image: url(img/bg.jpg);
+			background-size: 100% 100%;
+		}
+		#page-title{
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			top:0;
+			left: 0;
+			z-index: -10;
+		}
+		#page-wrap{
+			width: 0;
+			height: 0;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+		}
+		#page-inner{
+			width: 1920px;
+			height: 1080px;
+			position: absolute;
+			left: -960px;
+			top: -540px;
+		}
+		#cover{
+			position: absolute;
+			top:0;
+			left: 0;
+			z-index: 5;
+			width: 100%;
+			height: 100%;
+		}
+		#batup{
+			position: absolute;
+			z-index: 10;
+			top: 82px;
+    		left: 184px;
+    		transition: all 0.3s;
+		}
+		#btnMo, #btnXoc{
+			position: absolute;
+			top: 868px;
+    		left: 395px;
+    		z-index: 10;
+			margin: 0;
+			padding: 0;
+			border: none;
+			outline: none;
+			background: transparent;
+		}
+
+		.on-click{
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			transform: scale(1.05);
+		}
+
+		#res1{
+			position: absolute;
+			top:0;
+			left: 0;
+			z-index: 1;
+		}
+		#res1 img:nth-child(1){
+			position: absolute;
+		    top: 218px;
+		    left: 455px;
+		}
+		#res1 img:nth-child(2){
+			position: absolute;
+		    top: 400px;
+    		left: 354px;
+		}
+		#res1 img:nth-child(3){
+			position: absolute;
+		    top: 393px;
+    		left: 570px;
+		}
+		#res2{
+			position: absolute;
+			top:0;
+			left: 0;
+		}
+		#res2 img{
+			position: absolute;
+			width: 276px;
+			height: 273px;
+		}
+		#res2 .c1{
+			top: 95px;
+    		left: 1106px;
+		}
+		#res2 .c2{
+			top: 402px;
+    		left: 1435px;
+		}
+		#res2 .c3{
+			top: 708px;
+    		left: 1106px;
+		}
+		#res2 .c4{
+			top: 95px;
+    		left: 1435px;
+		}
+		#res2 .c5{
+			top: 402px;
+    		left: 1106px;
+		}
+		#res2 .c6{
+			top: 708px;
+    		left: 1435px;
+		}
+	</style>
+</head>
+<body>
+<div id="page-wrap">
+	<div id="page-inner">
+		<img src="img/disk.png" style="position: absolute;left: 186px;top: 82px;" alt="đĩa bầu cua">
+		<img src="img/res2.png" style="position: absolute;top: 93px;left: 1105px;" alt="kết quả bầu cua">
+		<img src="img/bowl.png" id="batup" alt="bát úp bầu cua">
+		<div id="res1"></div>
+		<div id="res2"></div>
+		<div id="cover"></div>
+		<h1 id="page-title">Bầu Cua Online - game dân gian, game casino, game slot, chơi game miễn phí</h1>
+		<button id="btnMo">
+			<img src="img/btnMo.png">
+		</button>
+		<button id="btnXoc">
+			<img src="img/btnXoc.png">
+		</button>
+	</div>
+</div>
+
+<script type="text/javascript" src="../libs/jquery.min.js"></script>
+<script type="text/javascript">
+	jQuery(function(){
+		var jwindow = $(window),
+			jpage = $("#page-wrap"),
+			jbatup = $("#batup"),
+			jbtnMo = $("#btnMo"),
+			jbtnXoc = $("#btnXoc"),
+			jres1 = $("#res1"),
+			jres2 = $("#res2");
+
+		var kq = [];
+
+		var animKQ;
+
+		var scaleView = function(){
+			var _W = jwindow.width(),
+				_H = jwindow.height();
+
+			var _scale = Math.min( _W/1920, _H/1080 );
+			jpage.css({
+				"-moz-transform": "scale("+ _scale +")",
+				"-webkit-transform": "scale("+ _scale +")",
+				"transform": "scale("+ _scale +")"
+			});
+		};
+
+		jwindow.on("resize", function(){
+			scaleView();
+		});
+		scaleView();
+
+		var moBat = function(){
+			jbtnMo.off("click").addClass("on-click");
+			jbtnXoc.off("click").hide();
+			jbatup.css("left", "-610px");
+
+			var rand, i, _html = "", _html2 = "";
+			kq = [];
+			for( i=0; i<3; i++ ){
+				rand = Math.floor(Math.random()*6) + 1;
+				kq.push(rand);
+				_html += '<img src="img/r'+ rand +'.png">';
+				_html2 += '<img src="img/c'+ rand +'_0.png" class="c'+ rand +'">';
+			}
+			jres1.html(_html);
+
+			setTimeout(function(){
+				jbtnMo.removeClass("on-click");
+			}, 300);
+
+			setTimeout(function(){
+				jbtnXoc.show().on("click", xocDia);
+				jbtnMo.hide();
+
+				jres2.html(_html2);
+			}, 500);
+
+			return false;
+		};
+		var xocDia = function(){
+			jbtnMo.off("click").hide();
+			jbtnXoc.off("click").addClass("on-click");
+			jbatup.css("left", "184px");
+
+			jres2.empty();
+
+			setTimeout(function(){
+				jbtnXoc.removeClass("on-click");
+			}, 300);
+
+			setTimeout(function(){
+				jbtnMo.show().on("click", moBat);
+				jbtnXoc.hide();
+			}, 500);
+			return false;
+		};
+
+		//
+		setTimeout(function(){
+			moBat();
+		}, 1000);
+
+		setInterval(function(){
+			jres2.toggle();
+		}, 500);
+	});
+</script>
+</body>
+</html>
