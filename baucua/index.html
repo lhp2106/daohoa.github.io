@@ -8,6 +8,7 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<meta name="keywords" content="bầu cua, bầu cua online, game dân gian, game casino, game slot, chơi game miễn phí">
 	<meta name="description" content="Chơi bầu cua online, game dân gian, game casino, game slot, chơi game miễn phí trực tuyến">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
 	<style type="text/css">
 		@-webkit-keyframes shake {
 		  from, to {
@@ -64,10 +65,18 @@
 			width: 100%;
 			height: 100%;
 			overflow: hidden;
+			font-family: 'Montserrat', sans-serif;
 		}
 		body{
 			background-image: url(img/bg.jpg);
 			background-size: 100% 100%;
+		}
+		button{
+			margin: 0;
+			padding: 0;
+			border: none;
+			outline: none;
+			background: transparent;
 		}
 		button.on-disable{
 			-webkit-filter: grayscale(1);
@@ -109,7 +118,7 @@
 			position: absolute;
 			z-index: 10;
 			top: 82px;
-    		left: 184px;
+    		left: -610px;
     		transition: all 0.3s;
 		}
 		#btnMo, #btnXoc{
@@ -117,11 +126,6 @@
 			top: 868px;
     		left: 395px;
     		z-index: 10;
-			margin: 0;
-			padding: 0;
-			border: none;
-			outline: none;
-			background: transparent;
 		}
 
 		.on-click{
@@ -155,35 +159,84 @@
 			position: absolute;
 			top:0;
 			left: 0;
+			z-index: 12;
 		}
 		#res2 img{
 			position: absolute;
 			width: 276px;
 			height: 273px;
 		}
-		#res2 .c1{
+		#wrapbet{
+			position: absolute;
+			top:0;
+			left: 0;
+			z-index: 10;
+		}
+		#wrapbet button img{
+			width: 276px;
+			height: 273px;	
+		}
+		#wrapbet button{
+			position: absolute;
+			z-index: 10;
+		}
+		#wrapbet button span{
+			position: absolute;
+		    color: #00BCD4;
+		    top: 8px;
+		    left: 0;
+		    width: 100%;
+		    text-align: center;
+		    font-size: 38px;
+		    font-family: 'Montserrat', sans-serif;
+
+		    -webkit-text-fill-color: #00BCD4; /* Will override color (regardless of order) */
+		  -webkit-text-stroke-width: 1px;
+		  -webkit-text-stroke-color: black;
+		}
+		#res2 .c1, #wrapbet button:nth-child(1){
 			top: 95px;
     		left: 1106px;
 		}
-		#res2 .c2{
+		#res2 .c2, #wrapbet button:nth-child(2){
 			top: 402px;
     		left: 1435px;
 		}
-		#res2 .c3{
+		#res2 .c3, #wrapbet button:nth-child(3){
 			top: 708px;
     		left: 1106px;
 		}
-		#res2 .c4{
+		#res2 .c4, #wrapbet button:nth-child(4){
 			top: 95px;
     		left: 1435px;
 		}
-		#res2 .c5{
+		#res2 .c5, #wrapbet button:nth-child(5){
 			top: 402px;
     		left: 1106px;
 		}
-		#res2 .c6{
+		#res2 .c6, #wrapbet button:nth-child(6){
 			top: 708px;
     		left: 1435px;
+		}
+		#mycoin, #mywin{
+			position: absolute;
+			top:0;
+			left: 1106px;
+			color: #fff;
+			font-size: 72px;
+			width: 600px;
+			text-align: center;
+
+			-webkit-text-fill-color: white; /* Will override color (regardless of order) */
+			  -webkit-text-stroke-width: 1px;
+			  -webkit-text-stroke-color: black;
+		}
+		#mywin{
+			top: 500px;
+			font-size: 90px;
+			z-index: 999;
+			color: #00BCD4;
+			-webkit-text-fill-color: #00BCD4; /* Will override color (regardless of order) */
 		}
 	</style>
 </head>
@@ -191,11 +244,37 @@
 <div id="page-wrap">
 	<div id="page-inner">
 		<img src="img/disk.png" style="position: absolute;left: 186px;top: 82px;" alt="đĩa bầu cua">
-		<img src="img/res2.png" style="position: absolute;top: 93px;left: 1105px;" alt="kết quả bầu cua">
-		<img src="img/bowl.png" id="batup" class="shake animated" alt="bát úp bầu cua">
-		<div id="res1"></div>
+		<!-- <img src="img/res2.png" style="position: absolute;top: 93px;left: 1105px;" alt="kết quả bầu cua"> -->
+		<img src="img/bowl.png" id="batup" class="" alt="bát úp bầu cua">
+		<div id="res1">
+			<img src="img/r4.png">
+			<img src="img/r6.png">
+			<img src="img/r2.png">
+		</div>
 		<div id="res2"></div>
 		<div id="cover"></div>
+		<div id="wrapbet">
+			<button>
+				<img src="img/c1.png">
+			</button>
+			<button>
+				<img src="img/c2.png">
+			</button>
+			<button>
+				<img src="img/c3.png">
+			</button>
+			<button>
+				<img src="img/c4.png">
+			</button>
+			<button>
+				<img src="img/c5.png">
+			</button>
+			<button>
+				<img src="img/c6.png">
+			</button>
+		</div>
+		<span id="mycoin"></span>
+		<span id="mywin"></span>
 		<h1 id="page-title">Bầu Cua Online - game dân gian, game casino, game slot, chơi game miễn phí</h1>
 		<button id="btnMo">
 			<img src="img/btnMo.png">
@@ -230,9 +309,20 @@
 			jbtnXoc = $("#btnXoc"),
 			jres1 = $("#res1"),
 			jres2 = $("#res2"),
-			soundLac = new Audio("sound/lac.mp3");
+			soundLac = new Audio("sound/lac.mp3"),
+			myMoney = 50000,
+			stepBet = 5000,
+			canBet = false,
+			myBet = [0,0,0,0,0,0];
 
 		var kq = [];
+
+		var formatCoin = function(n){
+			return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+		};
+
+		jQuery("#mycoin").html( formatCoin(myMoney) );
+
 
 		var scaleView = function(){
 			var _W = jwindow.width(),
@@ -260,21 +350,36 @@
 		scaleView();
 
 		var moBat = function(){
+			canBet = false;
 			jbtnMo.off("click").addClass("on-disable");
 			jbtnXoc.off("click").hide();
 			jbatup.css("left", "-610px");
 
-			var rand, i, _html = "", _html2 = "";
+			var rand, i, _html = "", _html2 = "", win = 0;
 			kq = [];
 			for( i=0; i<3; i++ ){
 				rand = Math.floor(Math.random()*6) + 1;
 				kq.push(rand);
 				_html += '<img src="img/r'+ rand +'.png">';
 				_html2 += '<img src="img/c'+ rand +'_0.png" class="c'+ rand +'">';
+
+				if( myBet.length ){
+					for( var j=0; j<myBet.length; j++ ){
+						if( myBet[j] && (j+1) === rand ){
+							win += (myBet[j]*2);
+						}
+					}
+				}
 			}
 			jres1.html(_html);
 			setTimeout(function(){
 				jres2.html(_html2);
+				// show KQ
+				if( win ){
+					myMoney += win;
+					jQuery("#mywin").html("+"+formatCoin(win) );
+					jQuery("#mycoin").html(formatCoin(myMoney));
+				}
 			}, 500);
 			setTimeout(function(){
 				jbtnXoc.removeClass("on-disable").show().on("click", xocDia);
@@ -284,6 +389,15 @@
 			return false;
 		};
 		var xocDia = function(){
+			canBet = true;
+			myBet = [0,0,0,0,0,0];
+			if( myMoney == 0 ) myMoney = 50000;
+			jQuery("#mycoin").html(formatCoin(myMoney));
+
+			jQuery("#wrapbet>button>span").remove();
+			jQuery("#mywin").empty();
+			//
+
 			jbtnMo.off("click").hide();
 			jbtnXoc.off("click").show().addClass("on-disable");
 			jbatup.css("left", "184px");
@@ -303,13 +417,32 @@
 
 				jbatup.removeClass("shake animated");
 			}, 2500);
+
+			scaleView();
 			return false;
 		};
+
+		jQuery("#wrapbet button").each(function(index){
+			// console.log(index, "ccc");
+			jQuery(this).off("click").on("click", function(){
+				if( canBet && myMoney >= stepBet ){
+					myMoney -= stepBet;
+					if( !myBet[index] ) myBet[index] = stepBet;
+					else myBet[index] += stepBet;
+					jQuery("#mycoin").html( formatCoin(myMoney) );
+
+					var lb = jQuery(this).children("span");
+					if( !lb.length ) lb = jQuery("<span/>").appendTo(this);
+					lb.html( formatCoin(myBet[index]) );
+				}
+				return false;
+			});
+		});
 
 		//
 		setTimeout(function(){
 			jbatup.removeClass("shake animated");
-			moBat();
+			xocDia();
 		}, 1500);
 
 		setInterval(function(){
