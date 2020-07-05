@@ -236,13 +236,21 @@
 
 		var scaleView = function(){
 			var _W = jwindow.width(),
-				_H = jwindow.height();
+				_H = jwindow.height(),
+				_rotate = "";
+
+			if( _W < _H ){
+				var _tmp = _W;
+				_W = _H;
+				_H = _W;
+				_rotate = " rotate(90deg)";
+			}
 
 			var _scale = Math.min( _W/1920, _H/1080 );
 			jpage.css({
-				"-moz-transform": "scale("+ _scale +")",
-				"-webkit-transform": "scale("+ _scale +")",
-				"transform": "scale("+ _scale +")"
+				"-moz-transform": "scale("+ _scale +")"+_rotate,
+				"-webkit-transform": "scale("+ _scale +")"+_rotate,
+				"transform": "scale("+ _scale +")"+_rotate
 			});
 		};
 
