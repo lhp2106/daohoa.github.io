@@ -246,11 +246,7 @@
 		<img src="img/disk.png" style="position: absolute;left: 186px;top: 82px;" alt="đĩa bầu cua">
 		<!-- <img src="img/res2.png" style="position: absolute;top: 93px;left: 1105px;" alt="kết quả bầu cua"> -->
 		<img src="img/bowl.png" id="batup" class="" alt="bát úp bầu cua">
-		<div id="res1">
-			<img src="img/r4.png">
-			<img src="img/r6.png">
-			<img src="img/r2.png">
-		</div>
+		<div id="res1"></div>
 		<div id="res2"></div>
 		<div id="cover"></div>
 		<div id="wrapbet">
@@ -349,6 +345,16 @@
 		});
 		scaleView();
 
+		var getQueryVariable = function(variable){
+			var query = window.location.search.substring(1);
+			var vars = query.split("&");
+			for (var i=0;i<vars.length;i++) {
+				var pair = vars[i].split("=");
+				if(pair[0] == variable){return pair[1];}
+			}
+			return(false);
+		};
+
 		var moBat = function(){
 			canBet = false;
 			jbtnMo.off("click").addClass("on-disable");
@@ -372,6 +378,7 @@
 				}
 			}
 			jres1.html(_html);
+
 			setTimeout(function(){
 				jres2.html(_html2);
 				// show KQ
@@ -391,9 +398,12 @@
 		var xocDia = function(){
 			canBet = true;
 			myBet = [0,0,0,0,0,0];
-			if( myMoney == 0 ) myMoney = 50000;
-			jQuery("#mycoin").html(formatCoin(myMoney));
 
+			if( myMoney == 0 ){
+				window.open(window.location.pathname+"?t="+ kq.join(""), "_self");
+				return;
+			}
+			jQuery("#mycoin").html(formatCoin(myMoney));
 			jQuery("#wrapbet>button>span").remove();
 			jQuery("#mywin").empty();
 			//
@@ -440,6 +450,28 @@
 		});
 
 		//
+		var _t = getQueryVariable("t"),
+			old = [2,3,4];
+
+		if(_t){
+			var t = _t.split("");
+			if(t.length === 3){
+				t[0] = parseInt(t[0]);
+				t[1] = parseInt(t[1]);
+				t[2] = parseInt(t[2]);
+				if( t[0]>0&&t[0]<7&&t[1]>0&&t[1]<7&&t[2]>0&&t[2]<7 ){
+					old[0] = t[0];	
+					old[1] = t[1];
+					old[2] = t[2];
+				}
+			}
+		}
+		var _html = "";
+		for( var i=0; i<3; i++ ){
+			_html += '<img src="img/r'+old[i]+'.png">';
+		}
+		jres1.html(_html);
+
 		setTimeout(function(){
 			jbatup.removeClass("shake animated");
 			xocDia();
