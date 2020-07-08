@@ -117,14 +117,14 @@
 		#batup{
 			position: absolute;
 			z-index: 10;
-			top: 82px;
-    		left: -610px;
+			top: 70px;
+    		left: -945px;
     		transition: all 0.3s;
 		}
 		#btnMo, #btnXoc{
 			position: absolute;
-			top: 868px;
-    		left: 395px;
+			top: 845px;
+    		left: 318px;
     		z-index: 10;
 		}
 
@@ -143,17 +143,17 @@
 		#res1 img:nth-child(1){
 			position: absolute;
 		    top: 218px;
-		    left: 455px;
+		    left: 380px;
 		}
 		#res1 img:nth-child(2){
 			position: absolute;
 		    top: 400px;
-    		left: 354px;
+    		left: 279px;
 		}
 		#res1 img:nth-child(3){
 			position: absolute;
 		    top: 393px;
-    		left: 570px;
+    		left: 495px;
 		}
 		#res2{
 			position: absolute;
@@ -163,8 +163,8 @@
 		}
 		#res2 img{
 			position: absolute;
-			width: 276px;
-			height: 273px;
+			width: 250px;
+			height: 250px;
 		}
 		#wrapbet{
 			position: absolute;
@@ -173,8 +173,8 @@
 			z-index: 10;
 		}
 		#wrapbet button img{
-			width: 276px;
-			height: 273px;	
+			width: 250px;
+			height: 250px;	
 		}
 		#wrapbet button{
 			position: absolute;
@@ -195,51 +195,56 @@
 		  -webkit-text-stroke-color: black;
 		}
 		#res2 .c1, #wrapbet button:nth-child(1){
-			top: 95px;
-    		left: 1106px;
+			top: 190px;
+    		left: 933px;
 		}
 		#res2 .c2, #wrapbet button:nth-child(2){
-			top: 402px;
-    		left: 1435px;
+			top: 460px;
+    		left: 933px;
 		}
 		#res2 .c3, #wrapbet button:nth-child(3){
-			top: 708px;
-    		left: 1106px;
+			top: 190px;
+    		left: 1200px;
 		}
 		#res2 .c4, #wrapbet button:nth-child(4){
-			top: 95px;
-    		left: 1435px;
+			top: 460px;
+    		left: 1200px;
 		}
 		#res2 .c5, #wrapbet button:nth-child(5){
-			top: 402px;
-    		left: 1106px;
+			top: 190px;
+    		left: 1475px;
 		}
 		#res2 .c6, #wrapbet button:nth-child(6){
-			top: 708px;
-    		left: 1435px;
+			top: 460px;
+    		left: 1475px;
 		}
-		#mycoin, #mywin{
+		#mycoin{
 			position: absolute;
-			top:0;
-			left: 1106px;
+			top:60px;
+			left: 1030px;
 			color: #fff;
-			font-size: 72px;
+			font-size: 80px;
 			width: 600px;
 			text-align: center;
 
 			-webkit-text-fill-color: white; /* Will override color (regardless of order) */
-			  -webkit-text-stroke-width: 1px;
+			  -webkit-text-stroke-width: 3px;
 			  -webkit-text-stroke-color: black;
 		}
-		#mywin{
-			top: 500px;
-			font-size: 90px;
+		#numwin, #numcuoc{
+			position: absolute;
+			top: 852px;
+			left: 1368px;
+			font-size: 68px;
 			z-index: 999;
 			color: #00BCD4;
 			-webkit-text-fill-color: #00BCD4; /* Will override color (regardless of order) */
+			-webkit-text-stroke-width: 2px;
+			  -webkit-text-stroke-color: black;
 		}
 
-		#mywin.fail{
+		#numcuoc{
+			top: 765px;
 			color: #f44336;
 			-webkit-text-fill-color: #f44336; /* Will override color (regardless of order) */
 		}
@@ -248,8 +253,8 @@
 <body>
 <div id="page-wrap">
 	<div id="page-inner">
-		<img src="img/disk.png" style="position: absolute;left: 186px;top: 82px;" alt="đĩa bầu cua">
-		<!-- <img src="img/res2.png" style="position: absolute;top: 93px;left: 1105px;" alt="kết quả bầu cua"> -->
+		<img src="img/disk.png" style="position: absolute;left: 107px;top: 73px;" alt="đĩa bầu cua">
+		<img src="img/text_info.png" style="position: absolute;left: 945px;top: 763px;" alt="kết quả bầu cua">
 		<img src="img/bowl.png" id="batup" class="" alt="bát úp bầu cua">
 		<div id="res1"></div>
 		<div id="res2"></div>
@@ -275,7 +280,8 @@
 			</button>
 		</div>
 		<span id="mycoin"></span>
-		<span id="mywin"></span>
+		<span id="numwin"></span>
+		<span id="numcuoc"></span>
 		<h1 id="page-title">Bầu Cua Online - game dân gian, game casino, game slot, chơi game miễn phí</h1>
 		<button id="btnMo">
 			<img src="img/btnMo.png">
@@ -369,7 +375,7 @@
 			canBet = false;
 			jbtnMo.off("click").addClass("on-disable");
 			jbtnXoc.off("click").hide();
-			jbatup.css("left", "-610px");
+			jbatup.css("left", "-945px");
 
 			var rand, i, _html = "", _html2 = "", win = 0;
 			kq = [];
@@ -395,7 +401,7 @@
 								count++;
 							}
 						}
-						if( count > 0 ) win += count*myBet[j];
+						if( count > 0 ) win += (count+1)*myBet[j];
 					}
 				}
 			}
@@ -405,7 +411,7 @@
 				// show KQ
 				if( win ){
 					myMoney += win;
-					jQuery("#mywin").html("+"+formatCoin(win) );
+					jQuery("#numwin").html(formatCoin(win) );
 					jQuery("#mycoin").html(formatCoin(myMoney));
 				}
 			}, 500);
@@ -426,12 +432,13 @@
 			}
 			jQuery("#mycoin").html(formatCoin(myMoney));
 			jQuery("#wrapbet>button>span").remove();
-			jQuery("#mywin").empty();
+			jQuery("#numwin").html(0);
+			jQuery("#numcuoc").html(0);
 			//
 
 			jbtnMo.off("click").hide();
 			jbtnXoc.off("click").show().addClass("on-disable");
-			jbatup.css("left", "184px");
+			jbatup.css("left", "105px");
 
 			jres2.empty();
 
@@ -470,6 +477,12 @@
 					var lb = jQuery(this).children("span");
 					if( !lb.length ) lb = jQuery("<span/>").appendTo(this);
 					lb.html( formatCoin(myBet[index]) );
+
+					var totalBet = 0;
+					for( var i=0; i<myBet.length; i++ ){
+						if( myBet[i] ) totalBet += myBet[i];
+					}
+					jQuery("#numcuoc").html( formatCoin(totalBet) );
 				}
 				return false;
 			});
@@ -507,7 +520,7 @@
 			jres2.toggle();
 		}, 500);
 
-		console.log("v1.0.8");
+		console.log("v1.1.0");
 	});
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
