@@ -377,13 +377,10 @@
 			// items[Math.floor(Math.random() * items.length)];
 			for( i=0; i<3; i++ ){
 				rand = Math.floor(Math.random() * boKQ.length);
+				kq.push(boKQ[rand]);
+				_html += '<img src="img/r'+ boKQ[rand] +'.png">';
+				_html2 += '<img src="img/c'+ boKQ[rand] +'_0.png" class="c'+ boKQ[rand] +'">';
 				boKQ.splice(rand, 1);
-				rand = boKQ[rand];
-				kq.push(rand);
-				_html += '<img src="img/r'+ rand +'.png">';
-				_html2 += '<img src="img/c'+ rand +'_0.png" class="c'+ rand +'">';
-
-				
 			}
 
 			jres1.html(_html);
@@ -510,7 +507,7 @@
 			jres2.toggle();
 		}, 500);
 
-		console.log("v1.0.6");
+		console.log("v1.0.8");
 	});
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
