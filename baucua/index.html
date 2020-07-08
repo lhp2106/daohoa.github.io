@@ -320,9 +320,6 @@
 		for( var i=0; i<200; i++ ){
 			boKQ.push(1,2,3,4,5,6);
 		}
-		boKQ.sort(function(a, b){
-			return 0.5 - Math.random();
-		});
 
 		var kq = [];
 
@@ -456,6 +453,11 @@
 			}, 2500);
 
 			scaleView();
+
+			boKQ.sort(function(a, b){
+				return 0.5 - Math.random();
+			});
+
 			return false;
 		};
 
