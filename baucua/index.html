@@ -238,6 +238,11 @@
 			color: #00BCD4;
 			-webkit-text-fill-color: #00BCD4; /* Will override color (regardless of order) */
 		}
+
+		#mywin.fail{
+			color: #f44336;
+			-webkit-text-fill-color: #f44336; /* Will override color (regardless of order) */
+		}
 	</style>
 </head>
 <body>
@@ -309,7 +314,15 @@
 			myMoney = 50000,
 			stepBet = 5000,
 			canBet = false,
-			myBet = [0,0,0,0,0,0];
+			myBet = [0,0,0,0,0,0],
+			boKQ = [];
+
+		for( var i=0; i<200; i++ ){
+			boKQ.push(1,2,3,4,5,6);
+		}
+		boKQ.sort(function(a, b){
+			return 0.5 - Math.random();
+		});
 
 		var kq = [];
 
@@ -363,12 +376,19 @@
 
 			var rand, i, _html = "", _html2 = "", win = 0;
 			kq = [];
+
+			// items[Math.floor(Math.random() * items.length)];
 			for( i=0; i<3; i++ ){
-				rand = Math.floor(Math.random()*6) + 1;
+				rand = Math.floor(Math.random() * boKQ.length);
+				boKQ.splice(rand, 1);
+				rand = boKQ[rand];
 				kq.push(rand);
 				_html += '<img src="img/r'+ rand +'.png">';
 				_html2 += '<img src="img/c'+ rand +'_0.png" class="c'+ rand +'">';
+
+				
 			}
+
 			jres1.html(_html);
 
 			if( myBet.length ){
@@ -381,7 +401,7 @@
 								count++;
 							}
 						}
-						if( count > 0 ) win += (count+1)*myBet[j];
+						if( count > 0 ) win += count*myBet[j];
 					}
 				}
 			}
@@ -488,7 +508,7 @@
 			jres2.toggle();
 		}, 500);
 
-		console.log("v1.0.5");
+		console.log("v1.0.6");
 	});
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
