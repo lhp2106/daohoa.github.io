@@ -368,16 +368,23 @@
 				kq.push(rand);
 				_html += '<img src="img/r'+ rand +'.png">';
 				_html2 += '<img src="img/c'+ rand +'_0.png" class="c'+ rand +'">';
+			}
+			jres1.html(_html);
 
-				if( myBet.length ){
-					for( var j=0; j<myBet.length; j++ ){
-						if( myBet[j] && (j+1) === rand ){
-							win += (myBet[j]*2);
+			if( myBet.length ){
+				var count = 0;
+				for( var j=0; j<myBet.length; j++ ){
+					count = 0;
+					if( myBet[j] ){
+						for( var i=0; i<kq.length; i++ ){
+							if( (j+1) === kq[i] ){
+								count++;
+							}
 						}
+						if( count > 0 ) win += (count+1)*myBet[j];
 					}
 				}
 			}
-			jres1.html(_html);
 
 			setTimeout(function(){
 				jres2.html(_html2);
@@ -480,6 +487,8 @@
 		setInterval(function(){
 			jres2.toggle();
 		}, 500);
+
+		console.log("v1.0.5");
 	});
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
