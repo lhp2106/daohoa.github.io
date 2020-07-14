@@ -84,6 +84,16 @@
 			-ms-filter: grayscale(1);
 			filter: grayscale(1);
 		}
+		.btn-toggle img:nth-child(2){
+			display: none;
+		}
+		.btn-toggle.on-selected img:nth-child(2){
+			display: block;
+		}
+		.btn-toggle.on-selected img:nth-child(1){
+			display: none;
+		}
+
 		#page-title{
 			opacity: 0;
 			visibility: hidden;
@@ -126,6 +136,13 @@
 			top: 845px;
     		left: 318px;
     		z-index: 10;
+		}
+		#btnAuto{
+		    position: absolute;
+		    top: 1000px;
+		    left: 315px;
+		    z-index: 10;
+		    display: none;
 		}
 
 		.on-click{
@@ -191,8 +208,8 @@
 		    font-family: 'Montserrat', sans-serif;
 
 		    -webkit-text-fill-color: #00BCD4; /* Will override color (regardless of order) */
-		  -webkit-text-stroke-width: 1px;
-		  -webkit-text-stroke-color: black;
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: black;
 		}
 		#res2 .c1, #wrapbet button:nth-child(1){
 			top: 190px;
@@ -248,6 +265,31 @@
 			color: #f44336;
 			-webkit-text-fill-color: #f44336; /* Will override color (regardless of order) */
 		}
+		#lbTimmer{
+		    font-size: 140px;
+		    color: #fff;
+		    position: absolute;
+		    top: 840px;
+		    left: 358px;
+		    width: 250px;
+		    text-align: center;
+		    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+		    -webkit-text-stroke-width: 3px;
+		    -webkit-text-stroke-color: black;
+		    display: none;
+		}
+		#lbTimmer.red{
+			color: #F44336;
+			-webkit-text-fill-color: #F44336;
+		}
+		.autoPlay #lbTimmer{
+			display: block;
+		}
+		.autoPlay #btnMo, .autoPlay #btnXoc{
+			display: none !important;
+			visibility: hidden !important;
+			z-index: -99999;
+		}
 	</style>
 </head>
 <body>
@@ -282,6 +324,7 @@
 		<span id="mycoin"></span>
 		<span id="numwin"></span>
 		<span id="numcuoc"></span>
+		<span id="lbTimmer">50</span>
 		<h1 id="page-title">Bầu Cua Online - game dân gian, game casino, game slot, chơi game miễn phí</h1>
 		<button id="btnMo">
 			<img src="img/btnMo.png">
@@ -289,6 +332,11 @@
 		<button id="btnXoc">
 			<img src="img/btnXoc.png">
 		</button>
+		<button id="btnAuto" class="btn-toggle">
+			<img src="img/auto-off.png">
+			<img src="img/auto-on.png">
+		</button>
+
 	</div>
 </div>
 
@@ -314,18 +362,20 @@
 			jbatup = $("#batup"),
 			jbtnMo = $("#btnMo"),
 			jbtnXoc = $("#btnXoc"),
+			jbtnAuto = $("#btnAuto"),
+			jlbTimmer = $("#lbTimmer"),
 			jres1 = $("#res1"),
 			jres2 = $("#res2"),
 			soundLac = new Audio("sound/lac.mp3"),
+			autoPlay = false,
 			myMoney = 50000,
 			stepBet = 5000,
+			timeForBet = 20,
+			timeForNew = 10,
 			canBet = false,
+			timmerAuto = null,
 			myBet = [0,0,0,0,0,0],
 			boKQ = [];
-
-		for( var i=0; i<200; i++ ){
-			boKQ.push(1,2,3,4,5,6);
-		}
 
 		var kq = [];
 
@@ -380,7 +430,6 @@
 			var rand, i, _html = "", _html2 = "", win = 0;
 			kq = [];
 
-			// items[Math.floor(Math.random() * items.length)];
 			for( i=0; i<3; i++ ){
 				rand = Math.floor(Math.random() * boKQ.length);
 				kq.push(boKQ[rand]);
@@ -420,6 +469,21 @@
 				jbtnMo.hide();
 			}, 1500);
 
+			if( autoPlay ){
+				var _count = timeForNew;
+				jlbTimmer.html( _count>=10?_count: "0"+_count ).addClass("red");
+				if( timmerAuto ) clearInterval(timmerAuto);
+				timmerAuto = setInterval(function(){
+					if( _count <=0 ){
+						clearInterval(timmerAuto);
+						xocDia();
+					}else{
+						_count -= 1;
+						jlbTimmer.html( _count>=10?_count: "0"+_count );
+					}
+				}, 1000);
+			}
+
 			return false;
 		};
 		var xocDia = function(){
@@ -458,11 +522,47 @@
 
 			scaleView();
 
+			if( boKQ.length < 5 ){
+				for( var i=0; i<200; i++ ){
+					boKQ.push(1,2,3,4,5,6);
+				}
+			}
+
 			boKQ.sort(function(a, b){
 				return 0.5 - Math.random();
 			});
 
+			if( autoPlay ){
+				var _count = timeForBet;
+				jlbTimmer.html( _count>=10?_count: "0"+_count ).removeClass("red");
+				if( timmerAuto ) clearInterval(timmerAuto);
+				timmerAuto = setInterval(function(){
+					if( _count <=0 ){
+						clearInterval(timmerAuto);
+						moBat();
+					}else{
+						_count -= 1;
+						jlbTimmer.html( _count>=10?_count: "0"+_count );
+					}
+				}, 1000);
+			}
+
 			return false;
+		};
+		var setAutoPlay = function(type){
+			console.log("setAuto", type);
+			autoPlay = type;
+			if( timmerAuto ) clearInterval(timmerAuto);
+			if( autoPlay ){
+				jbtnAuto.addClass("on-selected");
+				$("#page-inner").addClass("autoPlay");
+
+				if( canBet ) moBat();
+				else xocDia();
+			}else{
+				jbtnAuto.removeClass("on-selected");
+				$("#page-inner").removeClass("autoPlay");
+			}
 		};
 
 		jQuery("#wrapbet button").each(function(index){
@@ -486,6 +586,11 @@
 				}
 				return false;
 			});
+		});
+
+		jbtnAuto.off("click").on("click", function(){
+			setAutoPlay(!autoPlay);
+			return false;
 		});
 
 		//
@@ -514,6 +619,7 @@
 		setTimeout(function(){
 			jbatup.removeClass("shake animated");
 			xocDia();
+			jbtnAuto.show();
 		}, 1500);
 
 		setInterval(function(){
