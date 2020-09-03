@@ -1,0 +1,34 @@
+
+Icon-MiniGame.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Icon Cong/17-Minigame-NH/Icon-MiniGame/1
+  rotate: false
+  xy: 102, 110
+  size: 85, 85
+  orig: 87, 87
+  offset: 1, 1
+  index: -1
+Icon Cong/17-Minigame-NH/Icon-MiniGame/2
+  rotate: true
+  xy: 2, 2
+  size: 103, 79
+  orig: 105, 81
+  offset: 1, 1
+  index: -1
+Icon Cong/17-Minigame-NH/Icon-MiniGame/3
+  rotate: true
+  xy: 189, 94
+  size: 101, 43
+  orig: 103, 45
+  offset: 1, 1
+  index: -1
+Icon Cong/17-Minigame-NH/Icon-MiniGame/light
+  rotate: false
+  xy: 2, 107
+  size: 98, 88
+  orig: 100, 88
+  offset: 1, 0
+  index: -1

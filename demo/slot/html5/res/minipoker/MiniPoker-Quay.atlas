@@ -1,0 +1,27 @@
+
+MiniPoker-Quay.png
+size: 256,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+can quay 79/1
+  rotate: false
+  xy: 2, 2
+  size: 99, 36
+  orig: 99, 36
+  offset: 0, 0
+  index: -1
+can quay 79/2
+  rotate: false
+  xy: 2, 40
+  size: 129, 39
+  orig: 155, 50
+  offset: 3, 4
+  index: -1
+can quay 79/3
+  rotate: true
+  xy: 133, 55
+  size: 24, 97
+  orig: 24, 97
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,48 @@
+
+Icon-Lieng.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Icon-Lieng-P/1
+  rotate: false
+  xy: 2, 2
+  size: 224, 226
+  orig: 226, 228
+  offset: 1, 1
+  index: -1
+Icon-Lieng-P/2 1
+  rotate: false
+  xy: 277, 190
+  size: 41, 38
+  orig: 43, 40
+  offset: 1, 1
+  index: -1
+Icon-Lieng-P/2 2
+  rotate: false
+  xy: 228, 190
+  size: 47, 38
+  orig: 49, 40
+  offset: 1, 1
+  index: -1
+Icon-Lieng-P/2 3
+  rotate: false
+  xy: 228, 142
+  size: 39, 46
+  orig: 41, 48
+  offset: 1, 1
+  index: -1
+Icon-Lieng-P/2 4
+  rotate: false
+  xy: 269, 151
+  size: 26, 37
+  orig: 28, 39
+  offset: 1, 1
+  index: -1
+Icon-Lieng-P/2 5
+  rotate: false
+  xy: 228, 103
+  size: 31, 37
+  orig: 33, 39
+  offset: 1, 1
+  index: -1

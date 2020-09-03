@@ -1,0 +1,20 @@
+
+Icon-Poker.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 2, 2
+  size: 224, 226
+  orig: 226, 228
+  offset: 1, 1
+  index: -1
+2
+  rotate: false
+  xy: 228, 139
+  size: 203, 89
+  orig: 205, 91
+  offset: 1, 1
+  index: -1

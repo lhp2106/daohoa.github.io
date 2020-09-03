@@ -1,0 +1,188 @@
+
+scatter_anim.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A
+  rotate: false
+  xy: 129, 50
+  size: 25, 26
+  orig: 25, 26
+  offset: 0, 0
+  index: -1
+E
+  rotate: true
+  xy: 156, 50
+  size: 22, 26
+  orig: 22, 26
+  offset: 0, 0
+  index: -1
+Material
+  rotate: false
+  xy: 2, 78
+  size: 158, 176
+  orig: 158, 176
+  offset: 0, 0
+  index: -1
+R
+  rotate: true
+  xy: 184, 47
+  size: 25, 26
+  orig: 25, 26
+  offset: 0, 0
+  index: -1
+S
+  rotate: true
+  xy: 180, 22
+  size: 23, 26
+  orig: 23, 26
+  offset: 0, 0
+  index: -1
+T
+  rotate: true
+  xy: 208, 22
+  size: 23, 26
+  orig: 23, 26
+  offset: 0, 0
+  index: -1
+T2
+  rotate: false
+  xy: 268, 46
+  size: 21, 26
+  orig: 21, 26
+  offset: 0, 0
+  index: -1
+blik
+  rotate: false
+  xy: 492, 239
+  size: 15, 15
+  orig: 15, 15
+  offset: 0, 0
+  index: -1
+c
+  rotate: true
+  xy: 212, 47
+  size: 25, 26
+  orig: 25, 26
+  offset: 0, 0
+  index: -1
+dust1
+  rotate: false
+  xy: 69, 2
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: -1
+dust2
+  rotate: false
+  xy: 111, 2
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: -1
+dust3
+  rotate: false
+  xy: 289, 147
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: -1
+fire_sparks
+  rotate: true
+  xy: 2, 2
+  size: 70, 65
+  orig: 70, 65
+  offset: 0, 0
+  index: -1
+gun_01
+  rotate: false
+  xy: 162, 74
+  size: 125, 113
+  orig: 125, 113
+  offset: 0, 0
+  index: -1
+gun_02
+  rotate: false
+  xy: 344, 142
+  size: 121, 112
+  orig: 121, 112
+  offset: 0, 0
+  index: -1
+light
+  rotate: false
+  xy: 69, 44
+  size: 58, 32
+  orig: 58, 32
+  offset: 0, 0
+  index: -1
+paper
+  rotate: false
+  xy: 289, 88
+  size: 171, 52
+  orig: 171, 52
+  offset: 0, 0
+  index: -1
+rimlight
+  rotate: true
+  xy: 467, 154
+  size: 100, 23
+  orig: 100, 23
+  offset: 0, 0
+  index: -1
+shadow_A
+  rotate: true
+  xy: 240, 47
+  size: 25, 26
+  orig: 25, 26
+  offset: 0, 0
+  index: -1
+shadow_C
+  rotate: false
+  xy: 153, 22
+  size: 25, 26
+  orig: 25, 26
+  offset: 0, 0
+  index: -1
+shadow_E
+  rotate: false
+  xy: 316, 60
+  size: 21, 26
+  orig: 21, 26
+  offset: 0, 0
+  index: -1
+shadow_R
+  rotate: true
+  xy: 236, 20
+  size: 25, 26
+  orig: 25, 26
+  offset: 0, 0
+  index: -1
+shadow_S
+  rotate: true
+  xy: 264, 21
+  size: 23, 26
+  orig: 23, 26
+  offset: 0, 0
+  index: -1
+shadow_T
+  rotate: false
+  xy: 291, 60
+  size: 23, 26
+  orig: 23, 26
+  offset: 0, 0
+  index: -1
+shadow_T2
+  rotate: false
+  xy: 339, 60
+  size: 21, 26
+  orig: 21, 26
+  offset: 0, 0
+  index: -1
+skull
+  rotate: false
+  xy: 162, 189
+  size: 180, 65
+  orig: 180, 65
+  offset: 0, 0
+  index: -1

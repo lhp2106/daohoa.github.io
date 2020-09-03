@@ -1,0 +1,41 @@
+
+Icon-TaiXiu.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Icon Cong/1-Tai Xiu/images/Icon-Taxi-P/1
+  rotate: false
+  xy: 2, 2
+  size: 224, 226
+  orig: 226, 228
+  offset: 1, 1
+  index: -1
+Icon Cong/1-Tai Xiu/images/Icon-Taxi-P/2 1
+  rotate: false
+  xy: 228, 56
+  size: 79, 74
+  orig: 81, 76
+  offset: 1, 1
+  index: -1
+Icon Cong/1-Tai Xiu/images/Icon-Taxi-P/2 2
+  rotate: false
+  xy: 228, 132
+  size: 105, 96
+  orig: 107, 98
+  offset: 1, 1
+  index: -1
+Icon Cong/1-Tai Xiu/images/Icon-Taxi-P/3 1
+  rotate: false
+  xy: 228, 5
+  size: 76, 49
+  orig: 78, 51
+  offset: 1, 1
+  index: -1
+Icon Cong/1-Tai Xiu/images/Icon-Taxi-P/3 2
+  rotate: false
+  xy: 335, 175
+  size: 91, 53
+  orig: 93, 55
+  offset: 1, 1
+  index: -1

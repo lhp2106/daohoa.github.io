@@ -1,0 +1,62 @@
+
+Icon-TLMN.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Icon-Cong/Icon-TLMN/Icon-TLMN-P/Icon-TLMN-P/1
+  rotate: false
+  xy: 2, 273
+  size: 224, 226
+  orig: 226, 228
+  offset: 1, 1
+  index: -1
+Icon-Cong/Icon-TLMN/Icon-TLMN-P/Icon-TLMN-P/2 1
+  rotate: false
+  xy: 418, 396
+  size: 40, 103
+  orig: 42, 105
+  offset: 1, 1
+  index: -1
+Icon-Cong/Icon-TLMN/Icon-TLMN-P/Icon-TLMN-P/2 2
+  rotate: false
+  xy: 2, 2
+  size: 62, 121
+  orig: 64, 123
+  offset: 1, 1
+  index: -1
+Icon-Cong/Icon-TLMN/Icon-TLMN-P/Icon-TLMN-P/2 3
+  rotate: false
+  xy: 137, 134
+  size: 85, 137
+  orig: 87, 139
+  offset: 1, 1
+  index: -1
+Icon-Cong/Icon-TLMN/Icon-TLMN-P/Icon-TLMN-P/2 4
+  rotate: false
+  xy: 2, 125
+  size: 133, 146
+  orig: 135, 148
+  offset: 1, 1
+  index: -1
+Icon-Cong/Icon-TLMN/Icon-TLMN-P/Icon-TLMN-P/2 5
+  rotate: false
+  xy: 228, 363
+  size: 135, 136
+  orig: 137, 138
+  offset: 1, 1
+  index: -1
+Icon-Cong/Icon-TLMN/Icon-TLMN-P/Icon-TLMN-P/3 1
+  rotate: true
+  xy: 365, 345
+  size: 154, 51
+  orig: 156, 53
+  offset: 1, 1
+  index: -1
+Icon-Cong/Icon-TLMN/Icon-TLMN-P/Icon-TLMN-P/3 2
+  rotate: false
+  xy: 228, 318
+  size: 118, 43
+  orig: 120, 45
+  offset: 1, 1
+  index: -1

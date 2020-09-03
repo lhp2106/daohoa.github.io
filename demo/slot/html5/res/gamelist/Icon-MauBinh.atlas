@@ -1,0 +1,62 @@
+
+Icon-MauBinh.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Icon-Cong79/Icon-MauBinh/Icon-MauBinh-P/1 1
+  rotate: false
+  xy: 2, 275
+  size: 224, 226
+  orig: 226, 228
+  offset: 1, 1
+  index: -1
+Icon-Cong79/Icon-MauBinh/Icon-MauBinh-P/1 2
+  rotate: false
+  xy: 116, 141
+  size: 79, 132
+  orig: 81, 134
+  offset: 1, 1
+  index: -1
+Icon-Cong79/Icon-MauBinh/Icon-MauBinh-P/1 3
+  rotate: false
+  xy: 228, 370
+  size: 98, 131
+  orig: 100, 133
+  offset: 1, 1
+  index: -1
+Icon-Cong79/Icon-MauBinh/Icon-MauBinh-P/1 4
+  rotate: false
+  xy: 2, 146
+  size: 112, 127
+  orig: 114, 129
+  offset: 1, 1
+  index: -1
+Icon-Cong79/Icon-MauBinh/Icon-MauBinh-P/1 5
+  rotate: true
+  xy: 328, 431
+  size: 70, 147
+  orig: 72, 149
+  offset: 1, 1
+  index: -1
+Icon-Cong79/Icon-MauBinh/Icon-MauBinh-P/1 6
+  rotate: false
+  xy: 228, 302
+  size: 129, 66
+  orig: 131, 68
+  offset: 1, 1
+  index: -1
+Icon-Cong79/Icon-MauBinh/Icon-MauBinh-P/2 1
+  rotate: false
+  xy: 328, 379
+  size: 139, 50
+  orig: 141, 52
+  offset: 1, 1
+  index: -1
+Icon-Cong79/Icon-MauBinh/Icon-MauBinh-P/2 2
+  rotate: true
+  xy: 2, 2
+  size: 142, 76
+  orig: 144, 78
+  offset: 1, 1
+  index: -1

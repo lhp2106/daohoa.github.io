@@ -1,0 +1,41 @@
+
+Icon-BaCay.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Icon-BaCay-P/1
+  rotate: false
+  xy: 2, 2
+  size: 224, 226
+  orig: 226, 228
+  offset: 1, 1
+  index: -1
+Icon-BaCay-P/2 1
+  rotate: false
+  xy: 228, 92
+  size: 41, 40
+  orig: 43, 42
+  offset: 1, 1
+  index: -1
+Icon-BaCay-P/2 2
+  rotate: false
+  xy: 228, 178
+  size: 47, 50
+  orig: 49, 52
+  offset: 1, 1
+  index: -1
+Icon-BaCay-P/2 3
+  rotate: false
+  xy: 228, 134
+  size: 43, 42
+  orig: 45, 44
+  offset: 1, 1
+  index: -1
+Icon-BaCay-P/2 4
+  rotate: false
+  xy: 277, 186
+  size: 40, 42
+  orig: 42, 44
+  offset: 1, 1
+  index: -1

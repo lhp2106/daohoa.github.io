@@ -1,0 +1,370 @@
+
+ET-Thang-2-Coin.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ET-effect/Coin/B_08
+  rotate: false
+  xy: 2, 824
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_10
+  rotate: false
+  xy: 2, 687
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_11
+  rotate: false
+  xy: 192, 824
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_12
+  rotate: false
+  xy: 2, 550
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_14
+  rotate: false
+  xy: 192, 687
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_16
+  rotate: false
+  xy: 382, 824
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_18
+  rotate: false
+  xy: 2, 413
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_20
+  rotate: false
+  xy: 192, 550
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_22
+  rotate: false
+  xy: 382, 687
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_24
+  rotate: false
+  xy: 572, 824
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_26
+  rotate: false
+  xy: 2, 276
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_28
+  rotate: false
+  xy: 192, 413
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_30
+  rotate: false
+  xy: 382, 550
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_32
+  rotate: false
+  xy: 572, 687
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_34
+  rotate: false
+  xy: 762, 824
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_36
+  rotate: false
+  xy: 2, 139
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_38
+  rotate: false
+  xy: 192, 276
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_40
+  rotate: false
+  xy: 382, 413
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_42
+  rotate: false
+  xy: 572, 550
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_43
+  rotate: false
+  xy: 762, 687
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_44
+  rotate: false
+  xy: 952, 824
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_45
+  rotate: false
+  xy: 2, 2
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_46
+  rotate: false
+  xy: 192, 139
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_47
+  rotate: false
+  xy: 382, 276
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_48
+  rotate: false
+  xy: 572, 413
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_49
+  rotate: false
+  xy: 762, 550
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_50
+  rotate: false
+  xy: 952, 687
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_51
+  rotate: false
+  xy: 1142, 824
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_52
+  rotate: false
+  xy: 192, 2
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_53
+  rotate: false
+  xy: 382, 139
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_54
+  rotate: false
+  xy: 572, 276
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_55
+  rotate: false
+  xy: 762, 413
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_56
+  rotate: false
+  xy: 952, 550
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_57
+  rotate: false
+  xy: 1142, 687
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_58
+  rotate: false
+  xy: 1332, 824
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_59
+  rotate: false
+  xy: 382, 2
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_60
+  rotate: false
+  xy: 572, 139
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_61
+  rotate: false
+  xy: 762, 276
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_62
+  rotate: false
+  xy: 952, 413
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_63
+  rotate: false
+  xy: 1142, 550
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_64
+  rotate: false
+  xy: 1332, 687
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_65
+  rotate: false
+  xy: 1522, 824
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_66
+  rotate: false
+  xy: 572, 2
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_67
+  rotate: false
+  xy: 762, 139
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_68
+  rotate: false
+  xy: 952, 276
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_69
+  rotate: false
+  xy: 1142, 413
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_70
+  rotate: false
+  xy: 1332, 550
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_71
+  rotate: false
+  xy: 1522, 687
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_72
+  rotate: false
+  xy: 1712, 824
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_73
+  rotate: false
+  xy: 762, 2
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_74
+  rotate: false
+  xy: 952, 139
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1
+ET-effect/Coin/B_75
+  rotate: false
+  xy: 1142, 276
+  size: 188, 135
+  orig: 188, 135
+  offset: 0, 0
+  index: -1

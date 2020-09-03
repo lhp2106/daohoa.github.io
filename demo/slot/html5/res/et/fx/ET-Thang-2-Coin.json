@@ -1,0 +1,144 @@
+{
+"skeleton": { "hash": "XK+IhZto2jjdSQkF+raz6TtaqE8", "spine": "3.6.53", "width": 0, "height": 0, "images": "" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "Coin", "parent": "root", "length": 72.1 }
+],
+"slots": [
+	{ "name": "Coin", "bone": "Coin" }
+],
+"skins": {
+	"default": {
+		"Coin": {
+			"ET-effect/Coin/B_08": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_10": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_11": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_12": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_14": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_16": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_18": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_20": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_22": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_24": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_26": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_28": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_30": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_32": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_34": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_36": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_38": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_40": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_42": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_43": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_44": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_45": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_46": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_47": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_48": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_49": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_50": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_51": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_52": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_53": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_54": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_55": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_56": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_57": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_58": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_59": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_60": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_61": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_62": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_63": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_64": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_65": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_66": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_67": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_68": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_69": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_70": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_71": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_72": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_73": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_74": { "width": 750, "height": 540 },
+			"ET-effect/Coin/B_75": { "width": 750, "height": 540 }
+		}
+	}
+},
+"animations": {
+	"NoHu": {
+		"slots": {
+			"Coin": {
+				"color": [
+					{ "time": 1.6667, "color": "ffffffff" },
+					{ "time": 2, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.1, "name": "ET-effect/Coin/B_08" },
+					{ "time": 0.1333, "name": "ET-effect/Coin/B_10" },
+					{ "time": 0.1667, "name": "ET-effect/Coin/B_12" },
+					{ "time": 0.2, "name": "ET-effect/Coin/B_14" },
+					{ "time": 0.2333, "name": "ET-effect/Coin/B_16" },
+					{ "time": 0.2667, "name": "ET-effect/Coin/B_18" },
+					{ "time": 0.3, "name": "ET-effect/Coin/B_20" },
+					{ "time": 0.3333, "name": "ET-effect/Coin/B_22" },
+					{ "time": 0.3667, "name": "ET-effect/Coin/B_24" },
+					{ "time": 0.4, "name": "ET-effect/Coin/B_26" },
+					{ "time": 0.4333, "name": "ET-effect/Coin/B_28" },
+					{ "time": 0.4667, "name": "ET-effect/Coin/B_30" },
+					{ "time": 0.5, "name": "ET-effect/Coin/B_32" },
+					{ "time": 0.5333, "name": "ET-effect/Coin/B_34" },
+					{ "time": 0.5667, "name": "ET-effect/Coin/B_36" },
+					{ "time": 0.6, "name": "ET-effect/Coin/B_38" },
+					{ "time": 0.6333, "name": "ET-effect/Coin/B_40" },
+					{ "time": 0.6667, "name": "ET-effect/Coin/B_42" },
+					{ "time": 0.7, "name": "ET-effect/Coin/B_43" },
+					{ "time": 0.7333, "name": "ET-effect/Coin/B_44" },
+					{ "time": 0.7667, "name": "ET-effect/Coin/B_45" },
+					{ "time": 0.8, "name": "ET-effect/Coin/B_46" },
+					{ "time": 0.8333, "name": "ET-effect/Coin/B_47" },
+					{ "time": 0.8667, "name": "ET-effect/Coin/B_48" },
+					{ "time": 0.9, "name": "ET-effect/Coin/B_49" },
+					{ "time": 0.9333, "name": "ET-effect/Coin/B_50" },
+					{ "time": 0.9667, "name": "ET-effect/Coin/B_51" },
+					{ "time": 1, "name": "ET-effect/Coin/B_52" },
+					{ "time": 1.0333, "name": "ET-effect/Coin/B_53" },
+					{ "time": 1.0667, "name": "ET-effect/Coin/B_54" },
+					{ "time": 1.1, "name": "ET-effect/Coin/B_55" },
+					{ "time": 1.1333, "name": "ET-effect/Coin/B_56" },
+					{ "time": 1.1667, "name": "ET-effect/Coin/B_57" },
+					{ "time": 1.2, "name": "ET-effect/Coin/B_58" },
+					{ "time": 1.2333, "name": "ET-effect/Coin/B_59" },
+					{ "time": 1.2667, "name": "ET-effect/Coin/B_60" },
+					{ "time": 1.3, "name": "ET-effect/Coin/B_61" },
+					{ "time": 1.3333, "name": "ET-effect/Coin/B_62" },
+					{ "time": 1.3667, "name": "ET-effect/Coin/B_63" },
+					{ "time": 1.4, "name": "ET-effect/Coin/B_64" },
+					{ "time": 1.4333, "name": "ET-effect/Coin/B_65" },
+					{ "time": 1.4667, "name": "ET-effect/Coin/B_66" },
+					{ "time": 1.5, "name": "ET-effect/Coin/B_67" },
+					{ "time": 1.5333, "name": "ET-effect/Coin/B_68" },
+					{ "time": 1.5667, "name": "ET-effect/Coin/B_69" },
+					{ "time": 1.6, "name": "ET-effect/Coin/B_70" },
+					{ "time": 1.6333, "name": "ET-effect/Coin/B_71" },
+					{ "time": 1.6667, "name": "ET-effect/Coin/B_72" },
+					{ "time": 1.7, "name": "ET-effect/Coin/B_73" },
+					{ "time": 1.7333, "name": "ET-effect/Coin/B_74" },
+					{ "time": 1.7667, "name": "ET-effect/Coin/B_75" }
+				]
+			}
+		},
+		"bones": {
+			"Coin": {
+				"scale": [
+					{ "time": 0, "x": 0.689, "y": 0.689 }
+				],
+				"shear": [
+					{ "time": 2, "x": 0, "y": 0 }
+				]
+			}
+		}
+	}
+}
+}

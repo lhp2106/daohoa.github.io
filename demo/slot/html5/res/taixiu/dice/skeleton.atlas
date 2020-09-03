@@ -1,0 +1,209 @@
+
+skeleton.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Taxi/adminn/1
+  rotate: true
+  xy: 1730, 825
+  size: 197, 196
+  orig: 356, 400
+  offset: 110, 42
+  index: -1
+Taxi/adminn/10
+  rotate: true
+  xy: 321, 403
+  size: 292, 334
+  orig: 356, 400
+  offset: 35, 37
+  index: -1
+Taxi/adminn/11
+  rotate: true
+  xy: 327, 747
+  size: 275, 329
+  orig: 356, 400
+  offset: 45, 37
+  index: -1
+Taxi/adminn/12
+  rotate: false
+  xy: 657, 418
+  size: 261, 327
+  orig: 356, 400
+  offset: 51, 39
+  index: -1
+Taxi/adminn/13
+  rotate: true
+  xy: 658, 777
+  size: 245, 318
+  orig: 356, 400
+  offset: 59, 41
+  index: -1
+Taxi/adminn/14
+  rotate: true
+  xy: 978, 785
+  size: 237, 304
+  orig: 356, 400
+  offset: 69, 43
+  index: -1
+Taxi/adminn/15
+  rotate: false
+  xy: 924, 211
+  size: 227, 286
+  orig: 356, 400
+  offset: 81, 44
+  index: -1
+Taxi/adminn/16
+  rotate: true
+  xy: 1348, 28
+  size: 220, 266
+  orig: 356, 400
+  offset: 90, 45
+  index: -1
+Taxi/adminn/17
+  rotate: false
+  xy: 1196, 536
+  size: 225, 247
+  orig: 356, 400
+  offset: 87, 46
+  index: -1
+Taxi/adminn/18
+  rotate: true
+  xy: 1284, 794
+  size: 228, 227
+  orig: 356, 400
+  offset: 86, 47
+  index: -1
+Taxi/adminn/19
+  rotate: true
+  xy: 1618, 335
+  size: 229, 208
+  orig: 356, 400
+  offset: 85, 50
+  index: -1
+Taxi/adminn/2
+  rotate: false
+  xy: 1399, 313
+  size: 217, 221
+  orig: 356, 400
+  offset: 101, 35
+  index: -1
+Taxi/adminn/20
+  rotate: true
+  xy: 1423, 566
+  size: 226, 212
+  orig: 356, 400
+  offset: 86, 51
+  index: -1
+Taxi/adminn/21
+  rotate: true
+  xy: 1616, 88
+  size: 223, 215
+  orig: 356, 400
+  offset: 87, 53
+  index: -1
+Taxi/adminn/22
+  rotate: true
+  xy: 1513, 806
+  size: 216, 215
+  orig: 356, 400
+  offset: 90, 56
+  index: -1
+Taxi/adminn/23
+  rotate: false
+  xy: 1637, 590
+  size: 213, 214
+  orig: 356, 400
+  offset: 95, 59
+  index: -1
+Taxi/adminn/24
+  rotate: true
+  xy: 924, 2
+  size: 207, 212
+  orig: 356, 400
+  offset: 101, 61
+  index: -1
+Taxi/adminn/25
+  rotate: true
+  xy: 1138, 6
+  size: 203, 208
+  orig: 356, 400
+  offset: 102, 65
+  index: -1
+Taxi/adminn/26
+  rotate: true
+  xy: 1828, 390
+  size: 198, 202
+  orig: 356, 400
+  offset: 104, 64
+  index: -1
+Taxi/adminn/27
+  rotate: false
+  xy: 1852, 628
+  size: 192, 195
+  orig: 356, 400
+  offset: 106, 67
+  index: -1
+Taxi/adminn/29
+  rotate: false
+  xy: 1833, 207
+  size: 181, 181
+  orig: 356, 400
+  offset: 111, 77
+  index: -1
+Taxi/adminn/3
+  rotate: false
+  xy: 1153, 250
+  size: 244, 247
+  orig: 356, 400
+  offset: 83, 30
+  index: -1
+Taxi/adminn/31
+  rotate: false
+  xy: 1833, 26
+  size: 179, 179
+  orig: 356, 400
+  offset: 112, 79
+  index: -1
+Taxi/adminn/4
+  rotate: true
+  xy: 920, 499
+  size: 276, 274
+  orig: 356, 400
+  offset: 58, 26
+  index: -1
+Taxi/adminn/5
+  rotate: true
+  xy: 626, 99
+  size: 302, 296
+  orig: 356, 400
+  offset: 36, 24
+  index: -1
+Taxi/adminn/6
+  rotate: true
+  xy: 310, 46
+  size: 318, 314
+  orig: 356, 400
+  offset: 21, 26
+  index: -1
+Taxi/adminn/7
+  rotate: false
+  xy: 2, 697
+  size: 323, 325
+  orig: 356, 400
+  offset: 15, 31
+  index: -1
+Taxi/adminn/8
+  rotate: false
+  xy: 2, 366
+  size: 317, 329
+  orig: 356, 400
+  offset: 18, 38
+  index: -1
+Taxi/adminn/9
+  rotate: false
+  xy: 2, 31
+  size: 306, 333
+  orig: 356, 400
+  offset: 26, 39
+  index: -1

@@ -1,0 +1,20 @@
+
+Icon-Sam.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Icon-Cong/Icon-Sam/Icon-Sam-P/Icon-Sam-P/1
+  rotate: false
+  xy: 2, 2
+  size: 224, 226
+  orig: 226, 228
+  offset: 1, 1
+  index: -1
+Icon-Cong/Icon-Sam/Icon-Sam-P/Icon-Sam-P/2
+  rotate: false
+  xy: 228, 167
+  size: 144, 61
+  orig: 146, 63
+  offset: 1, 1
+  index: -1

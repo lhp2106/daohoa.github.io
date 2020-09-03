@@ -1,0 +1,41 @@
+
+Icon-TomCuaCa.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 2, 284
+  size: 224, 226
+  orig: 226, 228
+  offset: 1, 1
+  index: -1
+Icon-TomCuaCa-P/1
+  rotate: false
+  xy: 2, 56
+  size: 224, 226
+  orig: 226, 228
+  offset: 1, 1
+  index: -1
+Icon-TomCuaCa-P/2
+  rotate: false
+  xy: 228, 379
+  size: 168, 131
+  orig: 170, 133
+  offset: 1, 1
+  index: -1
+Icon-TomCuaCa-P/3 1
+  rotate: false
+  xy: 228, 321
+  size: 113, 56
+  orig: 115, 58
+  offset: 1, 1
+  index: -1
+Icon-TomCuaCa-P/3 2
+  rotate: false
+  xy: 2, 2
+  size: 148, 52
+  orig: 150, 54
+  offset: 1, 1
+  index: -1

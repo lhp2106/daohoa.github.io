@@ -1,0 +1,82 @@
+{
+"skeleton": { "hash": "SimYC4Y96jVdWP0kZqkYrChJokA", "spine": "3.6.53", "width": 0, "height": 0, "images": "../../" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "asf", "bone": "root" }
+],
+"skins": {
+	"default": {
+		"asf": {
+			"Taxi/adminn/1": { "width": 363, "height": 408 },
+			"Taxi/adminn/2": { "width": 363, "height": 408 },
+			"Taxi/adminn/3": { "width": 363, "height": 408 },
+			"Taxi/adminn/4": { "width": 363, "height": 408 },
+			"Taxi/adminn/5": { "width": 363, "height": 408 },
+			"Taxi/adminn/6": { "width": 363, "height": 408 },
+			"Taxi/adminn/7": { "width": 363, "height": 408 },
+			"Taxi/adminn/8": { "width": 363, "height": 408 },
+			"Taxi/adminn/9": { "width": 363, "height": 408 },
+			"Taxi/adminn/10": { "width": 363, "height": 408 },
+			"Taxi/adminn/11": { "width": 363, "height": 408 },
+			"Taxi/adminn/12": { "width": 363, "height": 408 },
+			"Taxi/adminn/13": { "width": 363, "height": 408 },
+			"Taxi/adminn/14": { "width": 363, "height": 408 },
+			"Taxi/adminn/15": { "width": 363, "height": 408 },
+			"Taxi/adminn/16": { "width": 363, "height": 408 },
+			"Taxi/adminn/17": { "width": 363, "height": 408 },
+			"Taxi/adminn/18": { "width": 363, "height": 408 },
+			"Taxi/adminn/19": { "width": 363, "height": 408 },
+			"Taxi/adminn/20": { "width": 363, "height": 408 },
+			"Taxi/adminn/21": { "width": 363, "height": 408 },
+			"Taxi/adminn/22": { "width": 363, "height": 408 },
+			"Taxi/adminn/23": { "width": 363, "height": 408 },
+			"Taxi/adminn/24": { "width": 363, "height": 408 },
+			"Taxi/adminn/25": { "width": 363, "height": 408 },
+			"Taxi/adminn/26": { "width": 363, "height": 408 },
+			"Taxi/adminn/27": { "width": 363, "height": 408 },
+			"Taxi/adminn/29": { "width": 363, "height": 408 },
+			"Taxi/adminn/31": { "width": 363, "height": 408 }
+		}
+	}
+},
+"animations": {
+	"Idle": {
+		"slots": {
+			"asf": {
+				"attachment": [
+					{ "time": 0, "name": "Taxi/adminn/1" },
+					{ "time": 0.0333, "name": "Taxi/adminn/2" },
+					{ "time": 0.0667, "name": "Taxi/adminn/3" },
+					{ "time": 0.1, "name": "Taxi/adminn/4" },
+					{ "time": 0.1333, "name": "Taxi/adminn/5" },
+					{ "time": 0.1667, "name": "Taxi/adminn/6" },
+					{ "time": 0.2, "name": "Taxi/adminn/7" },
+					{ "time": 0.2333, "name": "Taxi/adminn/8" },
+					{ "time": 0.2667, "name": "Taxi/adminn/9" },
+					{ "time": 0.3, "name": "Taxi/adminn/10" },
+					{ "time": 0.3333, "name": "Taxi/adminn/11" },
+					{ "time": 0.3667, "name": "Taxi/adminn/12" },
+					{ "time": 0.4, "name": "Taxi/adminn/13" },
+					{ "time": 0.4333, "name": "Taxi/adminn/14" },
+					{ "time": 0.4667, "name": "Taxi/adminn/15" },
+					{ "time": 0.5, "name": "Taxi/adminn/16" },
+					{ "time": 0.5333, "name": "Taxi/adminn/17" },
+					{ "time": 0.5667, "name": "Taxi/adminn/18" },
+					{ "time": 0.6, "name": "Taxi/adminn/19" },
+					{ "time": 0.6333, "name": "Taxi/adminn/20" },
+					{ "time": 0.6667, "name": "Taxi/adminn/21" },
+					{ "time": 0.7, "name": "Taxi/adminn/22" },
+					{ "time": 0.7333, "name": "Taxi/adminn/23" },
+					{ "time": 0.7667, "name": "Taxi/adminn/24" },
+					{ "time": 0.8, "name": "Taxi/adminn/25" },
+					{ "time": 0.8333, "name": "Taxi/adminn/26" },
+					{ "time": 0.8667, "name": "Taxi/adminn/27" },
+					{ "time": 0.9, "name": "Taxi/adminn/29" }
+				]
+			}
+		}
+	}
+}
+}

@@ -1,0 +1,230 @@
+
+ThanCa_Lobby.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+CT Ca
+  rotate: true
+  xy: 500, 278
+  size: 179, 211
+  orig: 181, 213
+  offset: 1, 1
+  index: -1
+CT choi thu
+  rotate: false
+  xy: 230, 13
+  size: 185, 44
+  orig: 187, 46
+  offset: 1, 1
+  index: -1
+CT khung bao 1
+  rotate: false
+  xy: 589, 712
+  size: 298, 85
+  orig: 300, 87
+  offset: 1, 1
+  index: -1
+CT khung bao 2
+  rotate: false
+  xy: 261, 191
+  size: 288, 56
+  orig: 290, 58
+  offset: 1, 1
+  index: -1
+CT khung bao 3
+  rotate: false
+  xy: 2, 213
+  size: 257, 357
+  orig: 259, 359
+  offset: 1, 1
+  index: -1
+CT nen
+  rotate: true
+  xy: 589, 799
+  size: 223, 321
+  orig: 225, 323
+  offset: 1, 1
+  index: -1
+CT neo
+  rotate: false
+  xy: 261, 249
+  size: 237, 257
+  orig: 239, 259
+  offset: 1, 1
+  index: -1
+CT ngoc
+  rotate: true
+  xy: 492, 43
+  size: 146, 61
+  orig: 148, 63
+  offset: 1, 1
+  index: -1
+CTnuoc
+  rotate: false
+  xy: 566, 459
+  size: 265, 118
+  orig: 267, 120
+  offset: 1, 1
+  index: -1
+HT Tac
+  rotate: false
+  xy: 551, 227
+  size: 76, 49
+  orig: 78, 51
+  offset: 1, 1
+  index: -1
+HT character
+  rotate: false
+  xy: 292, 748
+  size: 295, 274
+  orig: 297, 276
+  offset: 1, 1
+  index: -1
+HT hai
+  rotate: false
+  xy: 417, 13
+  size: 72, 44
+  orig: 74, 46
+  offset: 1, 1
+  index: -1
+HT nuoc
+  rotate: true
+  xy: 713, 197
+  size: 260, 130
+  orig: 262, 132
+  offset: 1, 1
+  index: -1
+NT Fx 2
+  rotate: false
+  xy: 555, 19
+  size: 196, 176
+  orig: 198, 178
+  offset: 1, 1
+  index: -1
+NT character
+  rotate: false
+  xy: 2, 572
+  size: 288, 450
+  orig: 290, 452
+  offset: 1, 1
+  index: -1
+NT fx
+  rotate: false
+  xy: 2, 9
+  size: 226, 202
+  orig: 228, 204
+  offset: 1, 1
+  index: -1
+NT neptune
+  rotate: true
+  xy: 789, 27
+  size: 168, 35
+  orig: 170, 37
+  offset: 1, 1
+  index: -1
+NT nuoc
+  rotate: false
+  xy: 230, 59
+  size: 260, 130
+  orig: 262, 132
+  offset: 1, 1
+  index: -1
+TCA Character
+  rotate: true
+  xy: 292, 508
+  size: 238, 272
+  orig: 240, 274
+  offset: 1, 1
+  index: -1
+TCA Tien
+  rotate: true
+  xy: 828, 622
+  size: 88, 42
+  orig: 90, 44
+  offset: 1, 1
+  index: -1
+TCA ca
+  rotate: true
+  xy: 833, 524
+  size: 53, 42
+  orig: 55, 44
+  offset: 1, 1
+  index: -1
+TCA gia
+  rotate: true
+  xy: 753, 3
+  size: 192, 34
+  orig: 194, 36
+  offset: 1, 1
+  index: -1
+TCA gia duoi
+  rotate: true
+  xy: 912, 746
+  size: 276, 96
+  orig: 278, 98
+  offset: 1, 1
+  index: -1
+TCA nuoc
+  rotate: false
+  xy: 566, 579
+  size: 260, 131
+  orig: 262, 133
+  offset: 1, 1
+  index: -1
+TCA nuoc 1
+  rotate: true
+  xy: 548, 2
+  size: 15, 18
+  orig: 17, 20
+  offset: 1, 1
+  index: -1
+TCA nuoc 2
+  rotate: true
+  xy: 500, 459
+  size: 47, 43
+  orig: 49, 45
+  offset: 1, 1
+  index: -1
+TCA nuoc 3
+  rotate: true
+  xy: 629, 230
+  size: 46, 70
+  orig: 48, 72
+  offset: 1, 1
+  index: -1
+TCA nuoc 4
+  rotate: false
+  xy: 833, 484
+  size: 34, 38
+  orig: 36, 40
+  offset: 1, 1
+  index: -1
+TCA nuoc 5
+  rotate: false
+  xy: 551, 197
+  size: 26, 28
+  orig: 28, 30
+  offset: 1, 1
+  index: -1
+TCA nuoc 6
+  rotate: false
+  xy: 828, 579
+  size: 32, 41
+  orig: 34, 43
+  offset: 1, 1
+  index: -1
+TCA nuoc 7
+  rotate: true
+  xy: 491, 8
+  size: 33, 55
+  orig: 35, 57
+  offset: 1, 1
+  index: -1
+bong bong
+  rotate: false
+  xy: 826, 160
+  size: 35, 35
+  orig: 35, 35
+  offset: 0, 0
+  index: -1

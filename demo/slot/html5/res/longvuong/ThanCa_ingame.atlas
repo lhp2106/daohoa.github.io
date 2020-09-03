@@ -1,0 +1,348 @@
+
+ThanCa_ingame.png
+size: 1024,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Bong bong/bong bong 1
+  rotate: false
+  xy: 2, 8
+  size: 35, 35
+  orig: 35, 35
+  offset: 0, 0
+  index: -1
+Layer 1
+  rotate: true
+  xy: 585, 563
+  size: 201, 167
+  orig: 203, 169
+  offset: 1, 1
+  index: -1
+Layer 10
+  rotate: false
+  xy: 920, 541
+  size: 64, 43
+  orig: 66, 45
+  offset: 1, 1
+  index: -1
+Layer 11
+  rotate: true
+  xy: 724, 1695
+  size: 351, 265
+  orig: 353, 267
+  offset: 1, 1
+  index: -1
+Layer 12
+  rotate: true
+  xy: 314, 160
+  size: 254, 75
+  orig: 256, 77
+  offset: 1, 1
+  index: -1
+Layer 13
+  rotate: false
+  xy: 724, 794
+  size: 188, 222
+  orig: 190, 224
+  offset: 1, 1
+  index: -1
+Layer 14
+  rotate: true
+  xy: 914, 813
+  size: 161, 94
+  orig: 163, 96
+  offset: 1, 1
+  index: -1
+Layer 15
+  rotate: false
+  xy: 910, 119
+  size: 112, 124
+  orig: 114, 126
+  offset: 1, 1
+  index: -1
+Layer 16
+  rotate: false
+  xy: 910, 33
+  size: 95, 84
+  orig: 97, 86
+  offset: 1, 1
+  index: -1
+Layer 17
+  rotate: false
+  xy: 2, 416
+  size: 365, 348
+  orig: 367, 350
+  offset: 1, 1
+  index: -1
+Layer 18
+  rotate: true
+  xy: 962, 730
+  size: 81, 59
+  orig: 83, 61
+  offset: 1, 1
+  index: -1
+Layer 20
+  rotate: false
+  xy: 2, 159
+  size: 310, 255
+  orig: 312, 257
+  offset: 1, 1
+  index: -1
+Layer 21
+  rotate: false
+  xy: 724, 1018
+  size: 176, 307
+  orig: 178, 309
+  offset: 1, 1
+  index: -1
+Layer 22
+  rotate: false
+  xy: 369, 423
+  size: 214, 341
+  orig: 216, 343
+  offset: 1, 1
+  index: -1
+Layer 23
+  rotate: true
+  xy: 907, 671
+  size: 121, 53
+  orig: 123, 55
+  offset: 1, 1
+  index: -1
+Layer 5
+  rotate: false
+  xy: 920, 586
+  size: 71, 72
+  orig: 73, 74
+  offset: 1, 1
+  index: -1
+Layer 6
+  rotate: false
+  xy: 920, 976
+  size: 102, 168
+  orig: 104, 170
+  offset: 1, 1
+  index: -1
+Layer 7
+  rotate: false
+  xy: 2, 45
+  size: 233, 112
+  orig: 235, 114
+  offset: 1, 1
+  index: -1
+Layer 8
+  rotate: true
+  xy: 962, 660
+  size: 68, 53
+  orig: 70, 55
+  offset: 1, 1
+  index: -1
+Layer 9
+  rotate: true
+  xy: 724, 1327
+  size: 366, 166
+  orig: 368, 168
+  offset: 1, 1
+  index: -1
+bg copy
+  rotate: true
+  xy: 2, 766
+  size: 1280, 720
+  orig: 1282, 722
+  offset: 1, 1
+  index: -1
+fx/Comp-1_00000_00017
+  rotate: true
+  xy: 902, 1146
+  size: 181, 120
+  orig: 270, 152
+  offset: 42, 12
+  index: -1
+fx/Comp-1_00000_00018
+  rotate: false
+  xy: 391, 147
+  size: 181, 121
+  orig: 270, 152
+  offset: 42, 11
+  index: -1
+fx/Comp-1_00000_00019
+  rotate: false
+  xy: 574, 132
+  size: 181, 123
+  orig: 270, 152
+  offset: 42, 9
+  index: -1
+fx/Comp-1_00000_00020
+  rotate: true
+  xy: 757, 227
+  size: 181, 124
+  orig: 270, 152
+  offset: 42, 8
+  index: -1
+fx/Comp-1_00000_00021
+  rotate: true
+  xy: 883, 245
+  size: 181, 125
+  orig: 270, 152
+  offset: 42, 7
+  index: -1
+fx/Comp-1_00000_00022
+  rotate: true
+  xy: 786, 44
+  size: 181, 122
+  orig: 270, 152
+  offset: 42, 10
+  index: -1
+fx/Comp-1_00000_00025
+  rotate: false
+  xy: 603, 4
+  size: 181, 126
+  orig: 270, 152
+  offset: 42, 6
+  index: -1
+fx/Comp-1_00000_00026
+  rotate: false
+  xy: 237, 2
+  size: 181, 128
+  orig: 270, 152
+  offset: 42, 4
+  index: -1
+fx/Comp-1_00000_00027
+  rotate: true
+  xy: 892, 1329
+  size: 181, 129
+  orig: 270, 152
+  offset: 42, 3
+  index: -1
+fx/Comp-1_00000_00029
+  rotate: false
+  xy: 391, 270
+  size: 181, 151
+  orig: 270, 152
+  offset: 42, 0
+  index: -1
+fx/Comp-1_00000_00030
+  rotate: false
+  xy: 585, 410
+  size: 181, 151
+  orig: 270, 152
+  offset: 42, 0
+  index: -1
+fx/Comp-1_00000_00031
+  rotate: false
+  xy: 574, 257
+  size: 181, 151
+  orig: 270, 152
+  offset: 42, 0
+  index: -1
+fx/Comp-1_00000_00032
+  rotate: true
+  xy: 754, 611
+  size: 181, 151
+  orig: 270, 152
+  offset: 42, 0
+  index: -1
+fx/Comp-1_00000_00033
+  rotate: true
+  xy: 768, 428
+  size: 181, 150
+  orig: 270, 152
+  offset: 42, 1
+  index: -1
+fx/Comp-1_00000_00034
+  rotate: true
+  xy: 892, 1512
+  size: 181, 130
+  orig: 270, 152
+  offset: 42, 2
+  index: -1
+fx/Comp-1_00000_00035
+  rotate: false
+  xy: 420, 2
+  size: 181, 128
+  orig: 270, 152
+  offset: 42, 4
+  index: -1
+
+ThanCa_ingame2.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Layer 2
+  rotate: false
+  xy: 368, 56
+  size: 144, 127
+  orig: 146, 129
+  offset: 1, 1
+  index: -1
+Layer 3
+  rotate: false
+  xy: 551, 297
+  size: 153, 142
+  orig: 155, 144
+  offset: 1, 1
+  index: -1
+Layer 4
+  rotate: false
+  xy: 706, 303
+  size: 117, 136
+  orig: 119, 138
+  offset: 1, 1
+  index: -1
+fx/Comp-1_00000_00023
+  rotate: false
+  xy: 368, 185
+  size: 181, 123
+  orig: 270, 152
+  offset: 42, 9
+  index: -1
+fx/Comp-1_00000_00024
+  rotate: false
+  xy: 185, 29
+  size: 181, 124
+  orig: 270, 152
+  offset: 42, 8
+  index: -1
+fx/Comp-1_00000_00028
+  rotate: false
+  xy: 2, 2
+  size: 181, 131
+  orig: 270, 152
+  offset: 42, 1
+  index: -1
+fx/Comp-1_00000_00036
+  rotate: false
+  xy: 368, 310
+  size: 181, 129
+  orig: 270, 152
+  offset: 42, 3
+  index: -1
+fx/Comp-1_00000_00037
+  rotate: false
+  xy: 185, 155
+  size: 181, 131
+  orig: 270, 152
+  offset: 42, 1
+  index: -1
+fx/Comp-1_00000_00038
+  rotate: false
+  xy: 2, 288
+  size: 181, 151
+  orig: 270, 152
+  offset: 42, 0
+  index: -1
+fx/Comp-1_00000_00039
+  rotate: false
+  xy: 2, 135
+  size: 181, 151
+  orig: 270, 152
+  offset: 42, 0
+  index: -1
+fx/Comp-1_00000_00040
+  rotate: false
+  xy: 185, 288
+  size: 181, 151
+  orig: 270, 152
+  offset: 42, 0
+  index: -1

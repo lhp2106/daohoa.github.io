@@ -1,0 +1,48 @@
+
+Icon-BaLa.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 2, 26
+  size: 226, 228
+  orig: 226, 228
+  offset: 0, 0
+  index: -1
+2 1
+  rotate: true
+  xy: 408, 148
+  size: 106, 96
+  orig: 106, 96
+  offset: 0, 0
+  index: -1
+2 2
+  rotate: true
+  xy: 408, 63
+  size: 83, 92
+  orig: 83, 92
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 230, 77
+  size: 176, 177
+  orig: 176, 177
+  offset: 0, 0
+  index: -1
+4 1
+  rotate: true
+  xy: 230, 2
+  size: 73, 61
+  orig: 73, 61
+  offset: 0, 0
+  index: -1
+4 2
+  rotate: false
+  xy: 293, 23
+  size: 46, 52
+  orig: 46, 52
+  offset: 0, 0
+  index: -1

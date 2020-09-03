@@ -1,0 +1,13 @@
+
+TienCa-BongBong.png
+size: 64,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Bong bong/bong bong 1
+  rotate: false
+  xy: 2, 2
+  size: 35, 35
+  orig: 35, 35
+  offset: 0, 0
+  index: -1
