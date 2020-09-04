@@ -1,0 +1,33 @@
+
+fish_nohu.png
+size: 614,614
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+text
+  rotate: false
+  xy: 2, 2
+  size: 300, 156
+  orig: 300, 156
+  offset: 0, 0
+  index: -1
+tien
+  rotate: false
+  xy: 2, 149
+  size: 570, 375
+  orig: 570, 375
+  offset: 0, 0
+  index: -1
+
+fish_nohu2.png
+size: 614,614
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+as
+  rotate: false
+  xy: 2, 2
+  size: 365, 365
+  orig: 365, 365
+  offset: 0, 0
+  index: -1

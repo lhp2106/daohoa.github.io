@@ -1,0 +1,431 @@
+body[data-page="playslot"][data-game="TAMGIOI"] #content:after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  width: 1011px;
+  height: 203px;
+  z-index: -1;
+  left: 128px;
+  background-image: url(../images/minigame/khung-vq79.png);
+  background-size: 100% 100%; }
+body[data-page="playslot"][data-game="TAMGIOI"] #content > .wrapper {
+  overflow: hidden; }
+body[data-page="playslot"][data-game="TAMGIOI"] #slotCanvas {
+  width: 555px;
+  height: 330px;
+  position: absolute;
+  left: 0;
+  bottom: 0; }
+body[data-page="playslot"][data-game="TAMGIOI"] #bg-wrap {
+  background-image: url(../images/minigame/background_thangioi.jpg);
+  height: 100% !important; }
+  body[data-page="playslot"][data-game="TAMGIOI"] #bg-wrap.bg-thangioi {
+    background-image: url(../images/minigame/background_thangioi.jpg); }
+  body[data-page="playslot"][data-game="TAMGIOI"] #bg-wrap.bg-tiengioi {
+    background-image: url(../images/minigame/background_tiengioi.jpg); }
+  body[data-page="playslot"][data-game="TAMGIOI"] #bg-wrap.bg-magioi {
+    background-image: url(../images/minigame/background_magioi.jpg); }
+body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap {
+  float: left;
+  min-height: 100px;
+  position: relative; }
+  body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(1), body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) {
+    height: 375px; }
+  body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(3), body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(4), body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(5) {
+    width: 33.3333%;
+    height: 195px; }
+  body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap .item-inner {
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative; }
+  body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(1) {
+    width: 555px; }
+    body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(1) .item-inner {
+      background-image: url(../images/minigame/canvas_tamgioi.png);
+      background-size: 100% auto;
+      background-position: bottom left; }
+  body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) {
+    width: 445px;
+    padding-left: 10px; }
+    body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner {
+      background-image: url(../images/minigame/bg-tg.png);
+      position: relative;
+      padding-top: 300px; }
+      body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .row1 {
+        position: absolute;
+        left: 0;
+        top: 52px; }
+        body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .row1 .col1 {
+          padding-left: 50px; }
+          body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .row1 .col1 span {
+            color: #ffffff;
+            position: absolute;
+            left: 10px;
+            top: 8px;
+            font-size: 25px; }
+          body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .row1 .col1 .t-money {
+            position: absolute;
+            top: 11px;
+            left: 280px;
+            color: #FFC107;
+            font-size: 20px;
+            padding-left: 18px; }
+            body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .row1 .col1 .t-money:after {
+              content: "";
+              position: absolute;
+              left: -14px;
+              width: 30px;
+              height: 30px;
+              background-image: url(../images/icon-gold.png);
+              background-size: 100% 100%;
+              top: -3px; }
+      body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .row2 {
+        position: absolute;
+        top: 103px;
+        left: 0; }
+        body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .row2 .col1 {
+          float: left;
+          padding-left: 15px;
+          width: 198px; }
+        body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .row2 .col2 {
+          float: left; }
+        body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .row2 .icons img {
+          width: 35px;
+          height: auto;
+          float: left;
+          margin-right: 3px; }
+      body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .row3 {
+        position: absolute;
+        top: 152px;
+        left: 0; }
+        body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .row3 .col {
+          float: left; }
+        body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .row3 .col1 {
+          padding-left: 8px;
+          width: 182px; }
+        body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .row3 .col2 {
+          width: 137px;
+          padding-left: 5px; }
+        body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .row3 .col3 {
+          width: 109px;
+          padding-left: 5px; }
+        body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .row3 .icons img {
+          width: 26px; }
+        body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .row3 .icons span {
+          font-size: 11px;
+          line-height: 28px; }
+      body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .row4 {
+        position: absolute;
+        top: 320px;
+        left: 0; }
+        body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .row4 .col {
+          float: left;
+          text-align: center; }
+        body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .row4 .col1 {
+          width: 165px; }
+        body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .row4 .col2 {
+          width: 130px; }
+        body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .row4 .col3 {
+          width: 125px; }
+        body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .row4 .icons {
+          text-align: center; }
+          body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .row4 .icons img {
+            width: 26px;
+            float: none;
+            display: inline-block;
+            margin: 0 -1px -3px -1px; }
+          body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .row4 .icons span {
+            display: block;
+            font-size: 11px;
+            line-height: 1.5em;
+            clear: left; }
+      body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .icons {
+        display: inline-block;
+        overflow: hidden; }
+        body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .icons img {
+          width: 40px;
+          height: auto;
+          float: left; }
+        body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .item-inner .icons span {
+          color: #FFC107;
+          font-size: 14px;
+          line-height: 38px;
+          padding-left: 3px; }
+    body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .t-money {
+      position: absolute;
+      top: 63px;
+      left: 280px;
+      color: #FFC107;
+      font-size: 20px;
+      padding-left: 18px;
+      display: none; }
+      body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2) .t-money:after {
+        content: "";
+        position: absolute;
+        left: -14px;
+        width: 30px;
+        height: 30px;
+        background-image: url(../images/icon-gold.png);
+        background-size: 100% 100%;
+        top: -3px; }
+    body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2).in-magioi .item-inner {
+      background-image: url(../images/minigame/bg-mg.png); }
+    body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2).in-tiengioi .item-inner {
+      background-image: url(../images/minigame/bg-tg.png); }
+    body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(2).in-thangioi .item-inner {
+      background-image: url(../images/minigame/bg-thg.png); }
+  body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(3) {
+    width: 365px;
+    padding-left: 50px; }
+    body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(3) .item-inner {
+      background-image: url(../images/minigame/dan_tran.png);
+      padding: 35px 8px 0 8px;
+      position: relative;
+      z-index: 5; }
+      body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(3) .item-inner .list-dong {
+        width: 100%; }
+        body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(3) .item-inner .list-dong .item {
+          float: left;
+          width: 20%;
+          cursor: pointer;
+          padding: 0 0 4px 4px; }
+          body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(3) .item-inner .list-dong .item .inner {
+            width: 100%;
+            text-align: center; }
+          body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(3) .item-inner .list-dong .item img {
+            display: block;
+            width: 100%;
+            height: 33px; }
+            body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(3) .item-inner .list-dong .item img.on {
+              display: none; }
+          body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(3) .item-inner .list-dong .item.active img {
+            display: none; }
+            body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(3) .item-inner .list-dong .item.active img.on {
+              display: block; }
+    body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(3) .group-button button {
+      position: absolute;
+      left: 0;
+      z-index: 3;
+      background-image: url(../images/minigame/btn-chondong.png);
+      background-size: 110% 100%;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      border: none;
+      width: 50px;
+      height: 32px;
+      font-weight: bold;
+      font-size: 11px; }
+      body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(3) .group-button button.active {
+        z-index: 8;
+        background-image: url(../images/minigame/btn-chondong_on.png); }
+      body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(3) .group-button button.btn-dongAll {
+        top: 35px; }
+      body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(3) .group-button button.btn-dongChan {
+        top: 70px; }
+      body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(3) .group-button button.btn-dongLe {
+        top: 105px; }
+      body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(3) .group-button button.btn-dongNone {
+        top: 140px; }
+  body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(4) {
+    width: 290px;
+    padding-left: 10px; }
+    body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(4) .item-inner {
+      background-image: url(../images/minigame/luan_ban.png);
+      padding: 40px 10px 10px 10px; }
+  body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(5) {
+    width: 345px;
+    padding-left: 10px; }
+    body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(5) .item-inner {
+      background-image: url(../images/minigame/bang_vinh_danh.png);
+      position: relative; }
+    body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(5) .group-button {
+      position: absolute;
+      top: 36px;
+      left: 0;
+      width: 100%;
+      text-align: center; }
+      body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(5) .group-button button {
+        background-color: transparent;
+        background-image: url(../images/minigame/btn-yellow.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        border: none;
+        font-size: 12px;
+        padding: 5px 12px;
+        font-weight: bold;
+        opacity: .5;
+        -webkit-transition: opacity 0.3s;
+        -moz-transition: opacity 0.3s;
+        -ms-transition: opacity 0.3s;
+        -o-transition: opacity 0.3s;
+        transition: opacity 0.3s; }
+        body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(5) .group-button button:hover, body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(5) .group-button button.active {
+          opacity: 1; }
+    body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(5) .item-content {
+      position: absolute;
+      top: 65px;
+      left: 0;
+      width: 100%;
+      height: 115px;
+      padding: 10px;
+      font-size: 13px;
+      overflow-y: auto;
+      color: #fff; }
+      body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(5) .item-content p {
+        margin: 0;
+        padding: 0;
+        padding-bottom: 5px; }
+      body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(5) .item-content .money {
+        color: #FFC107; }
+      body[data-page="playslot"][data-game="TAMGIOI"] .item-wrap:nth-child(5) .item-content .name {
+        color: #03A9F4; }
+body[data-page="playslot"][data-game="TAMGIOI"] .game-header {
+  height: 45px;
+  position: relative; }
+  body[data-page="playslot"][data-game="TAMGIOI"] .game-header .logo {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 75px;
+    background-image: url(../images/minigame/logo-tamgioi.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: 168px 0; }
+    body[data-page="playslot"][data-game="TAMGIOI"] .game-header .logo.logo-tiengioi {
+      background-image: url(../images/minigame/logo-tiengioi.png);
+      background-size: auto 100%;
+      height: 55px;
+      top: 0;
+      background-position: 187px 0; }
+    body[data-page="playslot"][data-game="TAMGIOI"] .game-header .logo.logo-thangioi {
+      background-image: url(../images/minigame/logo-thangioi.png);
+      background-size: auto 100%;
+      height: 55px;
+      top: 0;
+      background-position: 192px 0; }
+    body[data-page="playslot"][data-game="TAMGIOI"] .game-header .logo.logo-magioi {
+      background-image: url(../images/minigame/logo-magioi.png);
+      background-size: auto 100%;
+      height: 55px;
+      top: 0;
+      background-position: 236px 0; }
+  body[data-page="playslot"][data-game="TAMGIOI"] .game-header .quy-num {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    color: #FFC107;
+    background-image: url(../images/icon-gold.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 36px auto;
+    line-height: 45px;
+    padding-left: 36px;
+    min-width: 160px;
+    font-size: 22px; }
+  body[data-page="playslot"][data-game="TAMGIOI"] .game-header .btn-back {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    margin-top: 8px;
+    position: relative;
+    z-index: 100;
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+    body[data-page="playslot"][data-game="TAMGIOI"] .game-header .btn-back:hover {
+      -webkit-transform: scale(0.9, 0.9);
+      -moz-transform: scale(0.9, 0.9);
+      -ms-transform: scale(0.9, 0.9);
+      -o-transform: scale(0.9, 0.9);
+      transform: scale(0.9, 0.9); }
+  body[data-page="playslot"][data-game="TAMGIOI"] .game-header .sodu {
+    position: absolute;
+    height: 100%;
+    line-height: 45px;
+    top: 0;
+    left: 38px;
+    color: #FFC107;
+    background-image: url(../images/icon-gold.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 25px auto;
+    padding-left: 25px;
+    font-size: 14px; }
+
+
+
+
+
+
+
+
+
+#content{
+	top: 110px;
+	z-index: 7;
+    /* > header */
+}
+#content>.wrapper{
+	padding-left: 135px !important;
+}
+#content>.sukien{
+	position: absolute;
+	top: 120px;
+	left: 20px;
+	z-index: 99;
+	width: 110px;
+    height: 250px;
+    display: none;
+    background: transparent;
+}
+
+#content>.sukien:before{
+	content: "";
+	position: absolute;
+	top:0;
+	left:-12px;
+	width: 130%;
+	height: 100%;
+	background-image: url(../images/tamgioi/sukien.png);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	z-index: -999;
+}
+
+#content>.sukien .item{
+	position: absolute;
+    top: 120px;
+    left: 22px;
+    color: #fff;
+    width: 69px;
+
+    text-align: center;
+}
+
+#content>.sukien .item:last-child{
+	top: 185px;
+}
+
+#content>.sukien .item span{
+	display: block;
+	font-size: 13px;
+}
+
+#content>.sukien .item span.sk-hu{
+	padding-top: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFEB3B;
+}

@@ -1,0 +1,20 @@
+
+skeleton.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+fx
+  rotate: false
+  xy: 2, 2
+  size: 982, 423
+  orig: 982, 423
+  offset: 0, 0
+  index: -1
+text_luotquaymp
+  rotate: false
+  xy: 986, 321
+  size: 689, 104
+  orig: 689, 104
+  offset: 0, 0
+  index: -1

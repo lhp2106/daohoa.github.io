@@ -1,0 +1,378 @@
+<div class="wrapper" game="GOLDENMONKEY">
+    <div class="slot-wrap slot-goldenmonkey">
+        <div class="slot-wraptop">
+            <button class="btn-back" style="top: 18px;left: 22px;">
+                <img src="images/goldenmonkey/lobby/btn_back.png">
+            </button>
+            <button class="btn-vinhdanh" style="top: 18px;left: 1260px;">
+                <img src="images/goldenmonkey/lobby/btn_bxh.png">
+            </button>
+            
+            <button class="btn-caidat" style="top: 18px;left: 1410px;">
+                <img src="images/goldenmonkey/lobby/btn_caidat.png">
+            </button>
+            <div class="coin-wrap">
+                <img src="images/goldenmonkey/lobby/bggold.png">
+                <span class="coin"></span>
+            </div>
+            <div class="hu-wrap">
+                <img src="images/goldenmonkey/lobby/bghu.png">
+                <span class="coin"></span>
+            </div>
+        </div>
+        <div class="slot-lobby">
+            <div class="room0" style="top: 784px;left: 932px;">
+                <img src="images/goldenmonkey/lobby/p0.png">
+            </div>
+            <div class="room1" style="top: 326px;left: 700px;">
+                <img src="images/goldenmonkey/lobby/p100.png">
+                <span class="hu" style="top: 45px;"></span>
+            </div>
+            <div class="room2" style="top: 458px;left: 700px;">
+                <img src="images/goldenmonkey/lobby/p1000.png">
+                <span class="hu" style="top: 45px;"></span>
+            </div>
+            <div class="room3" style="top: 600px;left: 700px;">
+                <img src="images/goldenmonkey/lobby/p10000.png">
+                <span class="hu" style="top: 50px;"></span>
+            </div>
+            <img src="images/goldenmonkey/lobby/bg.png" style="position: absolute;top: 134px;left: 594px;">
+            <img src="images/goldenmonkey/lobby/logo.png" style="position: absolute;top: 353px;left: 30px;">
+        </div>
+        <div class="slot-gameplay">
+            <img src="images/goldenmonkey/play/khung0.png" class="khung" style="position: absolute;top: 125px;left: 180px;z-index: -1;">
+            <img src="images/goldenmonkey/play/khung3.png" style="position: absolute;top: 777px;left: 0;z-index: 1;">
+            <img src="images/goldenmonkey/play/khung1.png" class="khung" style="position: absolute;top: 0;left: 4px;z-index: 2;">
+            <img src="images/goldenmonkey/play/khung4.png" class="khung2" style="position: absolute;top: 0;left: 345px;z-index: 2;">
+            <div class="session"></div>
+            <div class="freespin-info">
+                Lượt quay miễn phí còn lại: <span class="freespin-num">0</span>
+            </div>
+            <div class="game-control">
+                <button class="btn-quay" style="top: 825px;left: 700px;">
+                    <img src="images/goldenmonkey/play/btn_quay_0.png">
+                    <img src="images/goldenmonkey/play/btn_quay_1.png">
+                </button>
+                <button class="btn-autoSpin" style="top: 845px;left: 965px;">
+                    <img src="images/goldenmonkey/play/btn_tuquay.png">
+                    <img src="images/goldenmonkey/play/btn_dung.png">
+                </button>
+                <div class="group-btndong">
+                    <div class="group-left">
+                        <button data-num="5"></button>
+                        <button data-num="9"></button>
+                        <button data-num="11"></button>
+                        <button data-num="10"></button>
+                        <button data-num="4"></button>
+                        <button data-num="12"></button>
+                        <button data-num="1"></button>
+                        <button data-num="3"></button>
+                        <button data-num="6"></button>
+                        <button data-num="7"></button>
+                        <button data-num="2"></button>
+                        <button data-num="8"></button>
+                        <button data-num="13"></button>
+                        <img src="images/goldenmonkey/play/lineL.png" style="position: absolute;top: 0;left: 0;z-index: -1;">
+                    </div>
+
+                    <div class="group-right">
+                        <button data-num="17"></button>
+                        <button data-num="25"></button>
+                        <button data-num="19"></button>
+                        <button data-num="16"></button>
+                        <button data-num="14"></button>
+                        <button data-num="21"></button>
+                        <button data-num="23"></button>
+                        <button data-num="18"></button>
+                        <button data-num="20"></button>
+                        <button data-num="22"></button>
+                        <button data-num="15"></button>
+                        <button data-num="24"></button>
+                        <img src="images/goldenmonkey/play/lineR.png" style="position: absolute;top: 0;left: 0;z-index: -1;">
+                    </div>
+                </div>
+                <span class="num-tongdat"></span>
+                <span class="num-vuathang">0</span>
+
+                <button class="btn-muccuoc" bet="100" style="top: 866px;left: 186px;">
+                    <img src="images/goldenmonkey/play/p100.png">
+                    <img src="images/goldenmonkey/play/p1k.png">
+                    <img src="images/goldenmonkey/play/p10k.png">
+                </button>
+
+                <button class="chooseLine" style="top: 866px;left: 350px;">
+                    <img src="images/goldenmonkey/play/btn_dong.png">
+                    <span class="num-lines"></span>
+                </button>
+
+                <button class="btn-help" style="top: 845px;left: 587px;">
+                    <img src="images/goldenmonkey/lobby/btn_help.png">
+                </button>
+            </div>
+            <canvas id="slotCandyCanvas" width="1290" height="645" style="touch-action: none; cursor: inherit;position: absolute;top: 132px;left: 200px; z-index: 0;"></canvas>
+            <div class="draw-lines"></div>
+            <div class="win-effect is-hide">
+                <div class="type-jackpot">
+                    <div class="winwrap">
+                        <img src="images/goldenmonkey/fx/coin.png">
+                        <img src="images/goldenmonkey/fx/light_3.png" class="animated tada infinite">
+                        <img src="images/goldenmonkey/fx/bg.png" class="nen">
+                        <img src="images/goldenmonkey/fx/text_nohu.png" class="title tada animated infinite">
+                        <div class="numwrap">
+                            <span data-text="+">+</span><span class="winnum">30.000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="type-bigwin">
+                    <div class="winwrap">
+                        <img src="images/goldenmonkey/fx/light_3.png" class="animated tada infinite">
+                        <img src="images/goldenmonkey/fx/bg.png" class="nen">
+                        <img src="images/goldenmonkey/fx/text_thanglon.png" class="title bounce animated infinite">
+                        <div class="numwrap">
+                            <span data-text="+">+</span><span class="winnum">30.000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="type-freespin">
+                    <div class="winwrap">
+                        <img src="images/goldenmonkey/fx/bg-sm.png" class="nen">
+                        <img src="images/goldenmonkey/fx/text_lqmp.png" class="title pulse animated infinite">
+                    </div>
+                </div>
+                <div class="type-bonus">
+                    <div class="winwrap">
+                        <img src="images/goldenmonkey/fx/bg-sm.png" class="nen">
+                        <img src="images/goldenmonkey/fx/text_bonusgame.png" class="title">
+                    </div>
+                </div>
+
+                <div class="type-normal">
+                    <div class="winwrap">
+                        <div class="numwrap">
+                            <span data-text="+">+</span><span class="winnum">30.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shortnotice zoomIn animated" style="display: none;">
+                <img src="images/goldenmonkey/play/notify.png">
+                <span class="mess"></span>
+            </div>
+        </div>
+
+        <div class="slot-popup slcaidat">
+            <img src="images/goldenmonkey/popup/bg_caidat.png" class="slpopup-bg">
+            <button class="btn-closePopup" style="top: 140px;left: 680px;">
+                <img src="images/goldenmonkey/popup/btn_close.png">
+            </button>
+
+            <div class="slpopup-content">
+                <label class="amthanh" style="top: 280px;">
+                    <img src="images/goldenmonkey/popup/check.png">
+                    <img src="images/goldenmonkey/popup/uncheck.png">
+                    Âm thanh
+                </label>
+                <label class="lsgd" style="top: 377px;">Lịch sử giao dịch</label>
+                <label class="lsh" style="top: 488px;">Lịch sử hũ</label>
+            </div>
+        </div>
+
+        <div class="slot-popup slbangthuong">
+            <img src="images/goldenmonkey/popup/bg_popup.png" class="slpopup-bg">
+            <img src="images/goldenmonkey/popup/title_bangthuong.png" class="slpopup-title">
+            <button class="btn-closePopup">
+                <img src="images/goldenmonkey/popup/btn-back.png">
+            </button>
+            <button class="btn-left">
+                <img src="images/goldenmonkey/popup/btn-left.png">
+            </button>
+            <button class="btn-right">
+                <img src="images/goldenmonkey/popup/btn-right.png">
+            </button>
+
+            <div class="slpopup-content" data-step="1">
+                <img src="images/goldenmonkey/popup/help/hd1.png">
+                <img src="images/goldenmonkey/popup/help/hd2.png">
+                <img src="images/goldenmonkey/popup/help/hd3.png">
+                <img src="images/goldenmonkey/popup/help/hd4.png">
+            </div>
+        </div>
+
+        <div class="slot-popup slchondong">
+            <img src="images/goldenmonkey/popup/bg_popup.png" class="slpopup-bg">
+            <img src="images/goldenmonkey/popup/title_chondong.png" class="slpopup-title">
+            <button class="btn-closePopup">
+                <img src="images/goldenmonkey/popup/btn-back.png">
+            </button>
+            <button class="btn-left">
+                <img src="images/goldenmonkey/popup/btn-left.png">
+            </button>
+            <button class="btn-right">
+                <img src="images/goldenmonkey/popup/btn-right.png">
+            </button>
+            <div class="slpopup-content">
+                <div class="lines">
+                    <div class="item"><button data-num="1"><img src="images/goldenmonkey/popup/chon_dong/chon/1.png"></button></div>
+                    <div class="item"><button data-num="2"><img src="images/goldenmonkey/popup/chon_dong/chon/2.png"></button></div>
+                    <div class="item"><button data-num="3"><img src="images/goldenmonkey/popup/chon_dong/chon/3.png"></button></div>
+                    <div class="item"><button data-num="4"><img src="images/goldenmonkey/popup/chon_dong/chon/4.png"></button></div>
+                    <div class="item"><button data-num="5"><img src="images/goldenmonkey/popup/chon_dong/chon/5.png"></button></div>
+                    <div class="item"><button data-num="6"><img src="images/goldenmonkey/popup/chon_dong/chon/6.png"></button></div>
+                    <div class="item"><button data-num="7"><img src="images/goldenmonkey/popup/chon_dong/chon/7.png"></button></div>
+                    <div class="item"><button data-num="8"><img src="images/goldenmonkey/popup/chon_dong/chon/8.png"></button></div>
+                    <div class="item"><button data-num="9"><img src="images/goldenmonkey/popup/chon_dong/chon/9.png"></button></div>
+                    <div class="item"><button data-num="10"><img src="images/goldenmonkey/popup/chon_dong/chon/10.png"></button></div>
+                    <div class="item"><button data-num="11"><img src="images/goldenmonkey/popup/chon_dong/chon/11.png"></button></div>
+                    <div class="item"><button data-num="12"><img src="images/goldenmonkey/popup/chon_dong/chon/12.png"></button></div>
+                    <div class="item"><button data-num="13"><img src="images/goldenmonkey/popup/chon_dong/chon/13.png"></button></div>
+                    <div class="item"><button data-num="14"><img src="images/goldenmonkey/popup/chon_dong/chon/14.png"></button></div>
+                    <div class="item"><button data-num="15"><img src="images/goldenmonkey/popup/chon_dong/chon/15.png"></button></div>
+                    <div class="item"><button data-num="16"><img src="images/goldenmonkey/popup/chon_dong/chon/16.png"></button></div>
+                    <div class="item"><button data-num="17"><img src="images/goldenmonkey/popup/chon_dong/chon/17.png"></button></div>
+                    <div class="item"><button data-num="18"><img src="images/goldenmonkey/popup/chon_dong/chon/18.png"></button></div>
+                    <div class="item"><button data-num="19"><img src="images/goldenmonkey/popup/chon_dong/chon/19.png"></button></div>
+                    <div class="item"><button data-num="20"><img src="images/goldenmonkey/popup/chon_dong/chon/20.png"></button></div>
+                    <div class="item"><button data-num="21"><img src="images/goldenmonkey/popup/chon_dong/chon/21.png"></button></div>
+                    <div class="item"><button data-num="22"><img src="images/goldenmonkey/popup/chon_dong/chon/22.png"></button></div>
+                    <div class="item"><button data-num="23"><img src="images/goldenmonkey/popup/chon_dong/chon/23.png"></button></div>
+                    <div class="item"><button data-num="24"><img src="images/goldenmonkey/popup/chon_dong/chon/24.png"></button></div>
+                    <div class="item"><button data-num="25"><img src="images/goldenmonkey/popup/chon_dong/chon/25.png"></button></div>
+                </div>
+
+                <div class="controlBottom">
+                    <button class="btn-chonChan"><img src="images/goldenmonkey/popup/btn_dongchan.png"></button>
+                    <button class="btn-chonLe" style="margin-right: 600px;"><img src="images/goldenmonkey/popup/btn_dongle.png"></button>
+                    <button class="btn-chonAll"><img src="images/goldenmonkey/popup/btn_tatca.png"></button>
+                    <button class="btn-chonNone"><img src="images/goldenmonkey/popup/btn_bochon.png"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="slot-popup slminigame">
+            <img src="images/goldenmonkey/popup/bg_popup.png" class="slpopup-bg">
+            <img src="images/goldenmonkey/popup/title_minigame.png" class="slpopup-title">
+            <div class="slpopup-content">
+                <div class="wrap1" style="display: none;">
+                    <p>Chọn biểu tượng để nhận giải thưởng ẩn sau<br>(kết thúc khi gặp phải đầu lâu)</p>
+
+                    <span class="bn-timmer">15s</span>
+                    <div class="w-nhanduoc"><span class="nhanduoc">500.000</span></div>
+
+                    <div class="items">
+                        <div class="item"><img src="images/goldenmonkey/bonus/item/1.png"></div>
+                    </div>
+                </div>
+                <div class="wrap2">
+                    <img src="images/goldenmonkey/bonus/bg-moruong.png" style="position: absolute;z-index: -1;top: -150px;left: 120px;">
+                    <div class="items-ruong">
+                        <div class="item active"><img src="images/goldenmonkey/bonus/ruong-lg.png"><img src="images/goldenmonkey/bonus/ruong_on.png"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slot-popup slvinhdanh">
+            <img src="images/goldenmonkey/popup/bg_popup.png" class="slpopup-bg">
+            <img src="images/goldenmonkey/popup/title_bangvinhdanh.png" class="slpopup-title">
+            <button class="btn-closePopup">
+                <img src="images/goldenmonkey/popup/btn-back.png">
+            </button>
+            <button class="btn-left">
+                <img src="images/goldenmonkey/popup/btn-left.png">
+            </button>
+            <button class="btn-right">
+                <img src="images/goldenmonkey/popup/btn-right.png">
+            </button>
+
+            <div class="slpopup-content">
+                <div class="table-header">
+                    <div>Thời gian</div>
+                    <div>Tài khoản</div>
+                    <div>Phòng</div>
+                    <div>Thắng</div>
+                    <div>Mô tả</div>
+                </div>
+                <div class="table-content"><table><tbody></tbody></table></div>
+                <div class="pagination"></div>
+            </div>
+        </div>
+
+        <div class="slot-popup sllichsu">
+            <img src="images/goldenmonkey/popup/bg_popup.png" class="slpopup-bg">
+            <img src="images/goldenmonkey/popup/title_lscuoc.png" class="slpopup-title">
+            <button class="btn-closePopup">
+                <img src="images/goldenmonkey/popup/btn-back.png">
+            </button>
+            <button class="btn-left">
+                <img src="images/goldenmonkey/popup/btn-left.png">
+            </button>
+            <button class="btn-right">
+                <img src="images/goldenmonkey/popup/btn-right.png">
+            </button>
+
+            <div class="slpopup-content">
+                <div class="table-header">
+                    <div>Thời gian</div>
+                    <div>Phiên</div>
+                    <div>Phòng</div>
+                    <div>Trừ</div>
+                    <div>Cộng</div>
+                    <div>Mô tả</div>
+                </div>
+                <div class="table-content"><table><tbody></tbody></table></div>
+                <div class="pagination"></div>
+            </div>
+        </div>
+
+        <div class="slot-popup sllichsuhu">
+            <img src="images/goldenmonkey/popup/bg_popup.png" class="slpopup-bg">
+            <img src="images/goldenmonkey/popup/title_lshu.png" class="slpopup-title">
+            <button class="btn-closePopup">
+                <img src="images/goldenmonkey/popup/btn-back.png">
+            </button>
+            <button class="btn-left">
+                <img src="images/goldenmonkey/popup/btn-left.png">
+            </button>
+            <button class="btn-right">
+                <img src="images/goldenmonkey/popup/btn-right.png">
+            </button>
+
+            <div class="slpopup-content">
+                <div class="table-header">
+                    <div>Thời gian</div>
+                    <div>Phiên</div>
+                    <div>Phòng</div>
+                    <div>Trừ</div>
+                    <div>Cộng</div>
+                    <div>Mô tả</div>
+                </div>
+                <div class="table-content"><table><tbody></tbody></table></div>
+                <div class="pagination"></div>
+            </div>
+        </div>
+
+
+        <div class="slot-popup popupCommon">
+            <img src="images/goldenmonkey/popup/bg_popup-sm.png" class="slpopup-bg">
+            <!-- <img src="images/goldenmonkey/popup/title_thongbao.png" class="slpopup-title"> -->
+            <button class="btn-closePopup" style="top: 131px;left: 823px;">
+                <img src="images/goldenmonkey/popup/btn_close.png">
+            </button>
+
+            <div class="slpopup-content">Vui lòng đăng nhập để chơi</div>
+        </div>
+    </div>
+    <div id="topHuGroup">
+        <button class="btn-tophusl">
+            <img src="images/goldenmonkey/tophu.png">
+            <img src="images/goldenmonkey/tophu2.png">
+        </button>
+        <div id="topHu-container" style="display: none;"></div>
+    </div>
+    <script type="text/javascript">
+        (function(){
+            var myplay = new GameGoldenMonkey();
+        })();
+    </script>
+</div>

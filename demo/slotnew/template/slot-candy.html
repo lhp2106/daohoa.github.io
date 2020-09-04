@@ -1,0 +1,431 @@
+<div class="wrapper" game="CANDY">
+    <div class="slot-wrap slot-candy">
+        <!-- <img src="images/candy/demo/1.png" class="img-coverrr"> -->
+        <div class="slot-wraptop">
+            <button class="btn-back">
+                <img src="images/candy/lobby/btn_back.png">
+            </button>
+            <button class="btn-vinhdanh">
+                <img src="images/candy/lobby/btn_bxh.png">
+            </button>
+            <button class="btn-lichsu">
+                <img src="images/candy/lobby/btn_ls.png">
+            </button>
+            
+            <button class="btn-caidat">
+                <img src="images/candy/lobby/btn_caidat.png">
+            </button>
+            <img src="images/candy/lobby/logogame.png" class="slot-title">
+            <div class="coin-wrap">
+                <img src="images/candy/lobby/coin.png">
+                <span class="coin"></span>
+            </div>
+            <div class="hu-wrap">
+                <img src="images/candy/lobby/hu.png">
+                <span class="coin"></span>
+            </div>
+        </div>
+        <div class="slot-lobby">
+            <div class="room1">
+                <img src="images/candy/lobby/p100.png">
+                <span class="hu"></span>
+            </div>
+            <div class="room2">
+                <img src="images/candy/lobby/p1000.png">
+                <span class="hu"></span>
+            </div>
+            <div class="room3">
+                <img src="images/candy/lobby/p10000.png">
+                <span class="hu"></span>
+            </div>
+            <button class="btn-trial">
+                <img src="images/candy/lobby/pchoithu.png">
+            </button>
+        </div>
+        <div class="slot-gameplay">
+            <div class="session"></div>
+            <div class="freespin-info">
+                Lượt quay miễn phí còn lại: <span class="freespin-num">0</span>
+            </div>
+            <div class="game-control">
+                <button class="btn-quay">
+                    <img src="images/candy/play/btn_quay_0.png">
+                </button>
+                <button class="btn-autoSpin">
+                    <img src="images/candy/play/btn_tuquay.png">
+                    <img src="images/candy/play/btn_dung.png">
+                </button>
+                <div class="group-btndong">
+                    <div class="group-left">
+                        <button data-num="4">
+                            <img src="images/candy/play/number/4.png">
+                        </button>
+                        <button data-num="2">
+                            <img src="images/candy/play/number/2.png">
+                        </button>
+                        <button data-num="20">
+                            <img src="images/candy/play/number/20.png">
+                        </button>
+
+                        <button data-num="16">
+                            <img src="images/candy/play/number/16.png">
+                        </button>
+                        <button data-num="10">
+                            <img src="images/candy/play/number/10.png">
+                        </button>
+                        <button data-num="1">
+                            <img src="images/candy/play/number/1.png">
+                        </button>
+                        <button data-num="11">
+                            <img src="images/candy/play/number/11.png">
+                        </button>
+                        <button data-num="17">
+                            <img src="images/candy/play/number/17.png">
+                        </button>
+                        <button data-num="3">
+                            <img src="images/candy/play/number/3.png">
+                        </button>
+                        <button data-num="5">
+                            <img src="images/candy/play/number/5.png">
+                        </button>
+                    </div>
+                    <div class="group-right">
+                        <button data-num="14">
+                            <img src="images/candy/play/number/14.png">
+                        </button>
+                        <button data-num="12">
+                            <img src="images/candy/play/number/12.png">
+                        </button>
+                        <button data-num="9">
+                            <img src="images/candy/play/number/9.png">
+                        </button>
+                        <button data-num="18">
+                            <img src="images/candy/play/number/18.png">
+                        </button>
+                        <button data-num="6">
+                            <img src="images/candy/play/number/6.png">
+                        </button>
+                        <button data-num="7">
+                            <img src="images/candy/play/number/7.png">
+                        </button>
+                        <button data-num="19">
+                            <img src="images/candy/play/number/19.png">
+                        </button>
+                        <button data-num="8">
+                            <img src="images/candy/play/number/8.png">
+                        </button>
+                        <button data-num="13">
+                            <img src="images/candy/play/number/13.png">
+                        </button>
+                        <button data-num="15">
+                            <img src="images/candy/play/number/15.png">
+                        </button>
+                    </div>
+                </div>
+                <span class="num-tongdat"></span>
+                <span class="num-vuathang">0</span>
+                <div class="chooseLine">
+                    <button class="btn-tru"></button>
+                    <span class="num-lines"></span>
+                </div>
+
+                <div class="mucCuoc">
+                    <span class="num-bet"></span>
+                </div>
+
+                <button class="btn-help">
+                    <img src="images/candy/lobby/btn_huongdan.png">
+                </button>
+            </div>
+            <canvas id="slotCandyCanvas" width="904" height="498" style="touch-action: none; cursor: inherit;"></canvas>
+            <div class="draw-lines"></div>
+            <img src="images/candy/play/khung.jpg" class="khung-game">
+            <img src="images/candy/play/khung_cut.png" class="khungcut-game">
+
+            <div class="win-effect is-hide">
+                <div class="type-jackpot">
+                    <div class="winwrap">
+                        <img src="images/candy/fx/coin.png">
+                        <img src="images/candy/fx/light_3.png">
+                        <img src="images/candy/fx/text_nohu.png">
+                        <div><span data-text="+">+</span><div class="numwrap"><span class="winnum">30.000</span></div><div class="bg_payline"><img src="images/candy/fx/bg.png"></div></div>
+                    </div>
+                </div>
+                <div class="type-bigwin">
+                    <div class="winwrap">
+                        <img src="images/candy/fx/light_3.png">
+                        <img src="images/candy/fx/text_thanglon.png">
+                        <div><span data-text="+">+</span><div class="numwrap"><span class="winnum">30.000</span></div><div class="bg_payline"><img src="images/candy/fx/bg.png"></div></div>
+                    </div>
+                </div>
+                <div class="type-freespin">
+                    <div class="winwrap">
+                        <img src="images/candy/fx/light_3.png">
+                        <img src="images/candy/fx/text_lqmp.png">
+                        <div><span data-text="+">+</span><div class="numwrap"><span class="winnum">30.000</span></div><div class="bg_payline"><img src="images/candy/fx/bg.png"></div></div>
+                    </div>
+                </div>
+                <div class="type-bonus">
+                    <div class="winwrap">
+                        <img src="images/candy/fx/light_3.png">
+                        <img src="images/candy/fx/text_bonusgame.png">
+                    </div>
+                </div>
+
+                <div class="type-normal">
+                    <div class="winwrap">
+                        <img src="images/candy/fx/text_lqmp.png">
+                        <div><span data-text="+">+</span><div class="numwrap"><span class="winnum">30.000</span></div><div class="bg_payline"><img src="images/candy/fx/bg.png"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shortnotice" style="display: none;">AAAAAA</div>
+        </div>
+
+        <div class="slot-popup slbangthuong">
+            <img src="images/candy/popup/bg_popup.png" class="slpopup-bg">
+            <img src="images/candy/popup/title_bangthuong.png" class="slpopup-title">
+            <button class="btn-closePopup">
+                <img src="images/candy/popup/btn_close.png">
+            </button>
+
+            <div class="slpopup-content">
+                <img src="images/candy/popup/bangthuong_p.png">
+            </div>
+        </div>
+
+        <div class="slot-popup slchondong">
+            <img src="images/candy/popup/bg_popup.png" class="slpopup-bg">
+            <img src="images/candy/popup/title_chondong.png" class="slpopup-title">
+            <button class="btn-closePopup">
+                <img src="images/candy/popup/btn_close.png">
+            </button>
+            <div class="slpopup-content">
+                <div class="lines">
+                    <div class="item"><button data-num="1"><img src="images/candy/popup/chon_dong/chon/1.png"></button></div>
+                    <div class="item"><button data-num="2"><img src="images/candy/popup/chon_dong/chon/2.png"></button></div>
+                    <div class="item"><button data-num="3"><img src="images/candy/popup/chon_dong/chon/3.png"></button></div>
+                    <div class="item"><button data-num="4"><img src="images/candy/popup/chon_dong/chon/4.png"></button></div>
+                    <div class="item"><button data-num="5"><img src="images/candy/popup/chon_dong/chon/5.png"></button></div>
+                    <div class="item"><button data-num="6"><img src="images/candy/popup/chon_dong/chon/6.png"></button></div>
+                    <div class="item"><button data-num="7"><img src="images/candy/popup/chon_dong/chon/7.png"></button></div>
+                    <div class="item"><button data-num="8"><img src="images/candy/popup/chon_dong/chon/8.png"></button></div>
+                    <div class="item"><button data-num="9"><img src="images/candy/popup/chon_dong/chon/9.png"></button></div>
+                    <div class="item"><button data-num="10"><img src="images/candy/popup/chon_dong/chon/10.png"></button></div>
+                    <div class="item"><button data-num="11"><img src="images/candy/popup/chon_dong/chon/11.png"></button></div>
+                    <div class="item"><button data-num="12"><img src="images/candy/popup/chon_dong/chon/12.png"></button></div>
+                    <div class="item"><button data-num="13"><img src="images/candy/popup/chon_dong/chon/13.png"></button></div>
+                    <div class="item"><button data-num="14"><img src="images/candy/popup/chon_dong/chon/14.png"></button></div>
+                    <div class="item"><button data-num="15"><img src="images/candy/popup/chon_dong/chon/15.png"></button></div>
+                    <div class="item"><button data-num="16"><img src="images/candy/popup/chon_dong/chon/16.png"></button></div>
+                    <div class="item"><button data-num="17"><img src="images/candy/popup/chon_dong/chon/17.png"></button></div>
+                    <div class="item"><button data-num="18"><img src="images/candy/popup/chon_dong/chon/18.png"></button></div>
+                    <div class="item"><button data-num="19"><img src="images/candy/popup/chon_dong/chon/19.png"></button></div>
+                    <div class="item"><button data-num="20"><img src="images/candy/popup/chon_dong/chon/20.png"></button></div>
+                </div>
+
+                <div class="controlBottom">
+                    <button class="btn-chonChan"><img src="images/candy/popup/btn_dongchan.png"></button>
+                    <button class="btn-chonLe"><img src="images/candy/popup/btn_dongle.png"></button>
+                    <button class="btn-chonNone"><img src="images/candy/popup/btn_bochon.png"></button>
+                    <button class="btn-chonAll"><img src="images/candy/popup/btn_tatca.png"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="slot-popup slminigame">
+            <img src="images/candy/popup/bg_popup.png" class="slpopup-bg">
+            <img src="images/candy/popup/title_minigame.png" class="slpopup-title">
+            <button class="btn-closePopup">
+                <img src="images/candy/popup/btn_close.png">
+            </button>
+            <div class="slpopup-content">
+                <span class="bn-timmer">15s</span>
+                <div class="w-xn">Hệ số: <span class="bn-xn">x3</span></div>
+                <div class="w-conlai">Số lần còn lại: <span class="conlai">0</span></div>
+                <div class="w-nhanduoc">Tiền nhận được: <span class="nhanduoc">500.000</span></div>
+                <div class="items">
+                    <div class="item">
+                        <img src="images/candy/popup/hu_0.png">
+                        <img src="images/candy/popup/hu_1.png">
+                        <span>+100.000</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/candy/popup/hu_0.png">
+                        <img src="images/candy/popup/hu_1.png">
+                        <span>+100.000</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/candy/popup/hu_0.png">
+                        <img src="images/candy/popup/hu_1.png">
+                        <span>+100.000</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/candy/popup/hu_0.png">
+                        <img src="images/candy/popup/hu_1.png">
+                        <span>+100.000</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/candy/popup/hu_0.png">
+                        <img src="images/candy/popup/hu_1.png">
+                        <span>+100.000</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/candy/popup/hu_0.png">
+                        <img src="images/candy/popup/hu_1.png">
+                        <span>+100.000</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/candy/popup/hu_0.png">
+                        <img src="images/candy/popup/hu_1.png">
+                        <span>+100.000</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/candy/popup/hu_0.png">
+                        <img src="images/candy/popup/hu_1.png">
+                        <span>+100.000</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/candy/popup/hu_0.png">
+                        <img src="images/candy/popup/hu_1.png">
+                        <span>+100.000</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/candy/popup/hu_0.png">
+                        <img src="images/candy/popup/hu_1.png">
+                        <span>+100.000</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/candy/popup/hu_0.png">
+                        <img src="images/candy/popup/hu_1.png">
+                        <span>+100.000</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/candy/popup/hu_0.png">
+                        <img src="images/candy/popup/hu_1.png">
+                        <span>+100.000</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/candy/popup/hu_0.png">
+                        <img src="images/candy/popup/hu_1.png">
+                        <span>+100.000</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/candy/popup/hu_0.png">
+                        <img src="images/candy/popup/hu_1.png">
+                        <span>+100.000</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/candy/popup/hu_0.png">
+                        <img src="images/candy/popup/hu_1.png">
+                        <span>+100.000</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/candy/popup/hu_0.png">
+                        <img src="images/candy/popup/hu_1.png">
+                        <span>+100.000</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/candy/popup/hu_0.png">
+                        <img src="images/candy/popup/hu_1.png">
+                        <span>+100.000</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/candy/popup/hu_0.png">
+                        <img src="images/candy/popup/hu_1.png">
+                        <span>+100.000</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/candy/popup/hu_0.png">
+                        <img src="images/candy/popup/hu_1.png">
+                        <span>+100.000</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/candy/popup/hu_0.png">
+                        <img src="images/candy/popup/hu_1.png">
+                        <span>+100.000</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/candy/popup/hu_0.png">
+                        <img src="images/candy/popup/hu_1.png">
+                        <span>+100.000</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/candy/popup/hu_0.png">
+                        <img src="images/candy/popup/hu_1.png">
+                        <span>+100.000</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/candy/popup/hu_0.png">
+                        <img src="images/candy/popup/hu_1.png">
+                        <span>+100.000</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/candy/popup/hu_0.png">
+                        <img src="images/candy/popup/hu_1.png">
+                        <span>+100.000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slot-popup slvinhdanh">
+            <img src="images/candy/popup/bg_popup.png" class="slpopup-bg">
+            <img src="images/candy/popup/title_bangvinhdanh.png" class="slpopup-title">
+            <button class="btn-closePopup">
+                <img src="images/candy/popup/btn_close.png">
+            </button>
+
+            <div class="slpopup-content">
+                <div class="table-header">
+                    <div>Thời gian</div>
+                    <div>Tài khoản</div>
+                    <div>Phòng</div>
+                    <div>Thắng</div>
+                    <div>Mô tả</div>
+                </div>
+                <div class="table-content"><table><tbody></tbody></table></div>
+                <div class="pagination"></div>
+            </div>
+        </div>
+
+        <div class="slot-popup sllichsu">
+            <img src="images/candy/popup/bg_popup.png" class="slpopup-bg">
+            <img src="images/candy/popup/title_lscuoc.png" class="slpopup-title">
+            <button class="btn-closePopup">
+                <img src="images/candy/popup/btn_close.png">
+            </button>
+
+            <div class="slpopup-content">
+                <div class="table-header">
+                    <div>Thời gian</div>
+                    <div>Phiên</div>
+                    <div>Phòng</div>
+                    <div>Trừ</div>
+                    <div>Cộng</div>
+                    <div>Mô tả</div>
+                </div>
+                <div class="table-content"><table><tbody></tbody></table></div>
+                <div class="pagination"></div>
+            </div>
+        </div>
+
+
+        <div class="slot-popup popupCommon" style="display: none;">
+            <img src="images/candy/popup/bg_popup.png" class="slpopup-bg">
+            <button class="btn-closePopup">
+                <img src="images/candy/popup/btn_close.png">
+            </button>
+
+            <div class="slpopup-content">Vui lòng đăng nhập để chơi</div>
+        </div>
+
+    </div>
+    <div id="topHu-container" style="display: none;"></div>
+    <script type="text/javascript">
+        (function(){
+            var myplay = new GameCandy();
+        })();
+    </script>
+</div>

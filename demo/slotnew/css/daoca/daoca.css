@@ -1,0 +1,1080 @@
+body #content{
+    height: 100%;
+    overflow-y: hidden !important;
+}
+
+body #bg-wrap{
+    position: fixed;
+    z-index: -1;
+    height: 100%!important;
+}
+
+body{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body #page-wrap{
+    height:auto;
+}
+@font-face {
+    font-family: 'BalooBhaina-Regular';
+    src: url('../../fonts/BalooBhaina-Regular.eot');
+    src: url('../../fonts/BalooBhaina-Regular.woff2') format('woff2'),
+    url('../../fonts/BalooBhaina-Regular.woff') format('woff'),
+    url('../../fonts/BalooBhaina-Regular.ttf') format('truetype'),
+    url('../../fonts/BalooBhaina-Regular.svg#BalooBhaina-Regular') format('svg'),
+    url('../../fonts/BalooBhaina-Regular.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#content .wrapper-daoca{
+    color:white;
+    width: 1200px!important;
+    margin: 0 auto;
+}
+
+#bg-wrap{
+    background-image: url(../../images/daoca/bkg.jpg) !important;
+    background-attachment: inherit !important;
+}
+
+#bg-wrap.wrap-daoca{
+    background-image : url(../../images/daoca/bkg.jpg) !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:#fff;
+    font-size:13px;
+    font-family: arial,tahoma,sans-serif;
+    background-color: black;
+    background-position: top center;
+    height: 100%!important;
+}
+
+#content.content-daoca{
+    height: 100%;
+}
+
+.wrapper.wrapper-daoca{
+    width: 1263px;
+    height: 786px;
+}
+
+
+.text-style {
+    font-family: 'BalooBhaina-Regular', cursive;
+}
+.slot-fish-island {
+    width:1136px;
+    margin:0 auto;
+    position: relative;
+    top: 34px;
+}
+.slot-fish-island .ingame-phong1 {
+    background-image: url(../../images/daoca/ingame_bkg.png);
+    width:746px;
+    height:420px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.slot-fish-island  .top-bar {
+    background-image: url(../../images/daoca/header.png);
+    width:746px;
+    height:47px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.slot-fish-island  .coin-bar {
+    background-image: url(../../images/daoca/coin_bkg.png);
+    width:178px;
+    height:35px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top:7px;
+    left:87px;
+}
+.slot-fish-island  .back-btn {
+    position: absolute;
+    top: 6px;
+    left: 23px;
+    cursor: pointer;
+    z-index: 6;
+}
+.slot-fish-island  .coin-bar>img,.slot-fish-island  .hu-room>img {
+    position: absolute;
+    left:2px;
+    top:1px;
+}
+.slot-fish-island  .coin-bar>p ,.slot-fish-island  .hu-room>p {
+    color:#ffce4b;
+    font-size:18px;
+    width:178px;
+    position: absolute;
+    top: -8px;
+    text-align: center;
+}
+.slot-fish-island  .coin-bar .btn-napthe {
+    position: absolute;
+    right: -4px;
+    top: -1px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.slot-fish-island  .title-room {
+    position: absolute;
+    text-align: center;
+    width: 746px;
+    top: 6px;
+}
+
+.slot-fish-island  .hu-room {
+    background-image: url(../../images/daoca/coin_bkg.png);
+    width:178px;
+    height:35px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top:7px;
+    right: 100px;
+}
+.slot-fish-island .vinhdanh-setting-btn {
+    position: absolute;
+    top: 6px;
+    right: 17px;
+    z-index:4 ;
+}
+.slot-fish-island .vinhdanh-setting-btn img {
+    cursor: pointer;
+}
+.slot-fish-island .main-game {
+    background-image: url(../../images/daoca/game_bkg.png);
+    width:532px;
+    height:309px;
+    background-repeat: no-repeat;
+    margin:0 auto;
+    position: relative;
+    top: 2px;
+}
+.slot-fish-island .left-dong {
+    position: absolute;
+    top:26px;
+    left: -6px;
+    z-index: 1;
+}
+.slot-fish-island .left-dong .number-dong p {
+    background-image: url(../../images/daoca/line.png);
+    width:22px;
+    height:22px;
+    text-align: center;
+    background-repeat: no-repeat;
+    line-height: 27px;
+    font-size:16px;
+    text-shadow: 0 0 3px #000;
+    z-index: 10;
+    position: relative;
+
+}
+.slot-fish-island .left-dong .number-dong img {
+    position: absolute;
+    top:0;
+    display: none;
+    left:-1px;
+}
+.slot-fish-island .right-dong .number-dong img {
+    position: absolute;
+    top: 0;
+    left: -501px;
+}
+/*.slot-fish-island .left-dong .number-dong:hover img {*/
+    /*display: block;*/
+/*}*/
+.slot-fish-island .left-dong .number-dong:nth-of-type(6) img {
+    top: -114px;
+}
+.slot-fish-island .left-dong .number-dong:nth-of-type(7) img {
+    top: -116px;
+}
+.slot-fish-island .left-dong .number-dong:nth-of-type(8) img {
+    top: -65px;
+}
+.slot-fish-island .left-dong .number-dong:nth-of-type(10) img {
+    top: -197px;
+}
+.slot-fish-island .right-dong .number-dong:nth-of-type(2) img {
+    top: -1px;
+    left: -498px;
+}
+.slot-fish-island .right-dong .number-dong:nth-of-type(3) img {
+    top: -1px;
+    left: -498px;
+}
+.slot-fish-island .right-dong .number-dong:nth-of-type(4) img {
+    top: -43px;
+    left: -499px;
+}
+.slot-fish-island .right-dong .number-dong:nth-of-type(5) img {
+    top: -74px;
+    left: -498px;
+}
+.slot-fish-island .right-dong .number-dong:nth-of-type(6) img {
+    top: -1px;
+    left: -498px;
+}
+.slot-fish-island .right-dong .number-dong:nth-of-type(7) img {
+    top: -112px;
+    left: -498px;
+
+}
+.slot-fish-island .right-dong .number-dong:nth-of-type(8) img {
+    top: -61px;
+    left: -498px;
+}
+.slot-fish-island .right-dong .number-dong:nth-of-type(9) img {
+    top: -168px;
+    left: -499px;
+}
+.slot-fish-island .right-dong .number-dong:nth-of-type(10) img {
+    top: -217px;
+    left: -501px;
+}
+
+.slot-fish-island .left-dong div {
+    margin: -14px 0;
+    position: relative;
+    cursor: pointer;
+}
+.slot-fish-island .left-dong div:nth-of-type(4),.slot-fish-island .left-dong div:nth-of-type(8) {
+    margin: 27px 0 -14px;
+}
+.slot-fish-island .right-dong {
+    position: absolute;
+    right: 0;
+    left: 515px;
+    top: 26px;
+}
+.slot-fish-island  .items-slot #daoca_canvas {
+    position: absolute;
+    width: 500px;
+    height: 275px;
+    top: 20px;
+    float: left;
+    left: 15px;
+    z-index: 10;
+}
+.slot-fish-island  .items-slot ul li {
+    list-style: none;
+    display: inline-block;
+    float: left;
+    margin-right: 16px;
+    margin-top: 6px;
+
+}
+.slot-fish-island  .bottom-bar {
+    background-image: url(../../images/daoca/bottom_bar.png);
+    width: 758px;
+    height: 64px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 314px;
+    left: -107px;
+}
+
+.slot-fish-island   .bottom-bar .mucphong-btn {
+    background-image: url(../../images/daoca/dong.png);
+    width: 85px;
+    height: 46px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 5px;
+    left: 64px;
+    text-align: center;
+    line-height: 3px;
+    font-size: 15px;
+}
+
+.slot-fish-island   .bottom-bar .dong-btn {
+    background-image: url(../../images/daoca/dong.png);
+    width: 85px;
+    height: 46px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 5px;
+    left: 164px;
+    text-align: center;
+    line-height: 3px;
+    font-size: 15px;
+}
+.slot-fish-island  .info-cuoc {
+    background-image: url(../../images/daoca/tongdat_bkg.png);
+    width: 236px;
+    height: 48px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 5px;
+    left: 258px;
+}
+.slot-fish-island  .info-cuoc ul {
+    position: absolute;
+    top: -9px;
+    left: -18px;
+    line-height: 0;
+    font-size: 14px;
+}
+.slot-fish-island  .info-cuoc ul li {
+    list-style: none;
+    display: inline-block;
+    width: 200px;
+    margin: -3px 0;
+}
+
+.slot-fish-island  .info-cuoc ul li p {
+    display: inline-block;
+}
+.slot-fish-island  .info-cuoc ul li p:last-child {
+    float:right;
+}
+.slot-fish-island .tuquay-btn  {
+    background-image: url(../../images/daoca/tuquay.png);
+    width: 95px;
+    height: 44px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 6px;
+    right: 156px;
+    cursor: pointer;
+
+}
+
+.slot-fish-island .dung-btn  {
+    background-image: url(../../images/daoca/nut_dung.png);
+    width: 95px;
+    height: 44px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 6px;
+    right: 156px;
+    cursor: pointer;
+
+}
+
+
+.slot-fish-island .quay-btn  {
+    background-image: url(../../images/daoca/quay_btn.png);
+    width: 122px;
+    height: 53px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 2px;
+    right: 26px;
+    cursor: pointer;
+
+}
+.slot-fish-island .huongdan-btn {
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    cursor: pointer;
+    cursor: pointer;
+}
+
+.slot-fish-island  .bangthuong  {
+    background-image: url(../../images/daoca/bangthuong_bkg.png);
+    width: 379px;
+    height: 455px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -34px;
+    right: 3px;
+}
+.slot-fish-island  .bangthuong>img {
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    bottom: 16px;
+    left: 17px;
+}
+.slot-fish-island  .bangthuong ul li {
+    list-style: none;
+    margin: -15px 0;
+    width:340px;
+}
+.slot-fish-island  .bangthuong ul li:nth-of-type(1) p {
+    color:#ffdb4f;
+}
+.slot-fish-island  .bangthuong ul li:nth-of-type(2) p {
+    color:#f322ff;
+}
+.slot-fish-island  .bangthuong ul li:nth-of-type(3) p {
+    color:#5bdfff;
+}
+.slot-fish-island  .bangthuong ul li span {
+    float:right;
+    position: relative;
+    top: 19px;
+    font-size: 20px;
+    color:#ffce4b;
+}
+.slot-fish-island  .bangthuong ul {
+    margin-top: 56px;
+    font-size: 18px;
+    position: relative;
+    left: -22px;
+}
+.slot-fish-island  .bangthuong ul li p {
+    display: inline-block;
+}
+.slot-fish-island  .bangthuong ul li img {
+    width: 20px;
+    vertical-align: sub;
+    margin-right: 7px;
+
+}
+.slot-fish-island  .line-select {
+    background-image: url(../../images/daoca/chondong.png);
+    width: 434px;
+    height: 251px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 422px;
+    left: 0;
+}
+.slot-fish-island  .chat {
+    background-image: url(../../images/daoca/chat.png);
+    width: 308px;
+    height: 251px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 427px;
+    left: 440px;
+}
+.slot-fish-island   .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #fff;
+    background-color: rgb(255, 163, 4);
+}
+.slot-fish-island    .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    position: relative;
+    width: 7px;
+}
+
+
+.slot-fish-island  .vinhdanh {
+    background-image: url(../../images/daoca/vinhdanh_bkg.png);
+    width: 383px;
+    height: 251px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 428px;
+    right: 0;
+}
+.slot-fish-island .line-select ul {
+    position: relative;
+    top: 24px;
+    left: -11px;
+}
+.slot-fish-island .line-select ul li {
+    list-style: none;
+    margin: 1px 1px;
+    display: inline-block;
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.daoca-dong-active{
+    opacity: 1 !important;
+}
+
+.slot-fish-island .line-select ul li.active {
+    opacity: 1;
+}
+.slot-fish-island .line-btn {
+    position: relative;
+    top: 12px;
+    text-align: center;
+}
+.slot-fish-island .line-btn div {
+    background-image: url(../../images/daoca/dong_btn.png);
+    width: 93px;
+    height: 38px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    text-align: center;
+    line-height: 41px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.slot-fish-island .chat-mess {
+    height: 168px;
+    margin: 0 auto;
+    width: 271px;
+    margin-top: 23px;
+    overflow: hidden;
+    position:relative;
+}
+.slot-fish-island .chat-mess  .mCSB_inside > .mCSB_container {
+    margin-right:18px;
+}
+
+
+.slot-fish-island .chat-mess  p span {
+    color:#fdb246;
+}
+.slot-fish-island .chat-mess  p {
+    margin: 0 ;
+}
+.slot-fish-island .chat-input {
+    position: absolute;
+    top: 200px;
+    left: 17px;
+}
+.slot-fish-island .chat-input input {
+    height:29px;
+    border:none;
+    width:264px;
+    padding-left:10px;
+    border-radius: 80px;
+}
+.slot-fish-island .chat-input>img {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    cursor: pointer;
+}
+.slot-fish-island .vinhdanh>ul {
+    position: relative;
+    top: 3px;
+}
+.slot-fish-island .vinhdanh>ul>li {
+    display: inline-block;
+    list-style: none;
+    font-size: 18px;
+    margin: 0 10px;
+    color: #afafaf;
+    text-shadow: 0 0 5px #000;
+    cursor: pointer;
+}
+.slot-fish-island .vinhdanh>ul>li.active, .slot-fish-island .vinhdanh>ul>li:hover {
+    color:#fff33a;
+}
+.slot-fish-island .vinhdanh .vinhdanh-content {
+    padding: 0 10px;
+    margin: 0 auto;
+    width: 340px;
+    margin-top: 34px;
+}
+.slot-fish-island .vinhdanh .vinhdanh-pin p {
+    margin:0;
+}
+.slot-fish-island .vinhdanh  .vinhdanh-slide {
+    margin-top: 4px;
+    overflow: hidden;
+}
+.slot-fish-island .vinhdanh .vinhdanh-content p span {
+    color: #fdb246;
+}
+
+.slot-fish-island .lobby {
+    background-image: url(../../images/daoca/loby_bkg.jpg);
+    width:746px;
+    height:420px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.slot-fish-island .lobby .dsphong {
+    text-align: center;
+    margin-top: 70px;
+}
+.slot-fish-island .lobby .dsphong div {
+    display: inline-block;
+    margin: 0 12px;
+    position: relative;
+    cursor: pointer;
+}
+.slot-fish-island .lobby .dsphong div:hover  {
+
+    animation: lobby-ico linear 0.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 50% 50%;
+    -webkit-animation: lobby-ico linear 0.5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-transform-origin: 50% 50%;
+    -moz-animation: lobby-ico linear 0.5s;
+    -moz-animation-iteration-count: infinite;
+    -moz-transform-origin: 50% 50%;
+    -o-animation: lobby-ico linear 0.5s;
+    -o-animation-iteration-count: infinite;
+    -o-transform-origin: 50% 50%;
+    -ms-animation: lobby-ico linear 0.5s;
+    -ms-animation-iteration-count: infinite;
+    -ms-transform-origin: 50% 50%;
+}
+
+@keyframes lobby-ico{
+    0% {
+        transform:  translate(0px,0px)  ;
+    }
+    48% {
+        transform:  translate(0px,-20px)  ;
+    }
+    100% {
+        transform:  translate(0px,0px)  ;
+    }
+}
+
+@-moz-keyframes lobby-ico{
+    0% {
+        -moz-transform:  translate(0px,0px)  ;
+    }
+    48% {
+        -moz-transform:  translate(0px,-20px)  ;
+    }
+    100% {
+        -moz-transform:  translate(0px,0px)  ;
+    }
+}
+
+@-webkit-keyframes lobby-ico {
+    0% {
+        -webkit-transform:  translate(0px,0px)  ;
+    }
+    48% {
+        -webkit-transform:  translate(0px,-20px)  ;
+    }
+    100% {
+        -webkit-transform:  translate(0px,0px)  ;
+    }
+}
+
+@-o-keyframes lobby-ico {
+    0% {
+        -o-transform:  translate(0px,0px)  ;
+    }
+    48% {
+        -o-transform:  translate(0px,-20px)  ;
+    }
+    100% {
+        -o-transform:  translate(0px,0px)  ;
+    }
+}
+
+@-ms-keyframes lobby-ico {
+    0% {
+        -ms-transform:  translate(0px,0px)  ;
+    }
+    48% {
+        -ms-transform:  translate(0px,-20px)  ;
+    }
+    100% {
+        -ms-transform:  translate(0px,0px)  ;
+    }
+}
+.slot-fish-island .lobby .dsphong div span {
+    position: absolute;
+    top: 198px;
+    font-size: 23px;
+    text-align: center;
+    width: 180px;
+    left: -22px;
+    color: #ffcd3a;
+}
+
+.slot-fish-island  .fish-bonus {
+    background-image: url(../../images/daoca/dapso_bkg.png);
+    width: 687px;
+    height: 368px;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 10;
+    top: 31px;
+    left: 30px
+}
+.slot-fish-island  .fish-bonus>img {
+    position: absolute;
+    left: 217px;
+    top: 10px;
+}
+.slot-fish-island  .fish-bonus .fish-bonus-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    cursor: pointer;
+}
+.slot-fish-island  .fish-bonus .dapso-items {
+    margin-top: -6px;
+}
+.slot-fish-island  .fish-bonus .dapso-items ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 6px 2px;
+    cursor: pointer;
+    position: relative;
+}
+.slot-fish-island  .fish-bonus .dapso-items ul li:hover {
+    animation: bonus-ani linear 0.6s;
+    animation-iteration-count: infinite;
+    transform-origin: 50% 50%;
+    -webkit-animation: bonus-ani linear 0.6s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-transform-origin: 50% 50%;
+    -moz-animation: bonus-ani linear 0.6s;
+    -moz-animation-iteration-count: infinite;
+    -moz-transform-origin: 50% 50%;
+    -o-animation: bonus-ani linear 0.6s;
+    -o-animation-iteration-count: infinite;
+    -o-transform-origin: 50% 50%;
+    -ms-animation: bonus-ani linear 0.6s;
+    -ms-animation-iteration-count: infinite;
+    -ms-transform-origin: 50% 50%;
+}
+
+@keyframes bonus-ani{
+    0% {
+        transform:  translate(0px,0px)  ;
+    }
+    50% {
+        transform:  translate(0px,-5px)  ;
+    }
+    100% {
+        transform:  translate(0px,0px)  ;
+    }
+}
+
+@-moz-keyframes bonus-ani{
+    0% {
+        -moz-transform:  translate(0px,0px)  ;
+    }
+    50% {
+        -moz-transform:  translate(0px,-5px)  ;
+    }
+    100% {
+        -moz-transform:  translate(0px,0px)  ;
+    }
+}
+
+@-webkit-keyframes bonus-ani {
+    0% {
+        -webkit-transform:  translate(0px,0px)  ;
+    }
+    50% {
+        -webkit-transform:  translate(0px,-5px)  ;
+    }
+    100% {
+        -webkit-transform:  translate(0px,0px)  ;
+    }
+}
+
+@-o-keyframes bonus-ani {
+    0% {
+        -o-transform:  translate(0px,0px)  ;
+    }
+    50% {
+        -o-transform:  translate(0px,-5px)  ;
+    }
+    100% {
+        -o-transform:  translate(0px,0px)  ;
+    }
+}
+
+@-ms-keyframes bonus-ani {
+    0% {
+        -ms-transform:  translate(0px,0px)  ;
+    }
+    50% {
+        -ms-transform:  translate(0px,-5px)  ;
+    }
+    100% {
+        -ms-transform:  translate(0px,0px)  ;
+    }
+}
+
+.slot-fish-island  .fish-bonus .fish-bonus-info {
+    text-align: center;
+    position: relative;
+    left: -44px;
+    padding-top: 46px;
+}
+.slot-fish-island  .fish-bonus .fish-bonus-info ul li {
+    display: inline-block;
+    margin: 0px 29px;
+    font-size: 19px;
+    margin-top: 7px;
+}
+.slot-fish-island  .fish-bonus .fish-bonus-info ul li span {
+    color:#ffce4b;
+}
+
+.slot-fish-island .fish-ruongbau {
+    background-image: url(../../images/daoca/bonus_bkg2.png);
+    width: 672px;
+    height: 352px;
+    position: absolute;
+    top: 8px;
+    text-align: center;
+    left: 6px;
+    z-index: 11;
+    font-size: 20px;
+}
+.slot-fish-island .fish-ruongbau ul li {
+    display: inline-block;
+    cursor: pointer;
+}
+.slot-fish-island .fish-ruongbau ul li p {
+    margin-top:0;
+    color:#ffce4b;
+}
+
+.slot-fish-island .fish-ruongbau>p {
+    margin:0;
+}
+.slot-fish-island .fish-ruongbau>p>span {
+    color:#ffce4b;
+}
+.slot-fish-island .fish-ruongbau>p:first-child {
+    margin-top:80px;
+}
+
+.slot-fish-island .thongbao-popup {
+    background-image: url(../../images/daoca/popup_thongbao.png);
+    height: 214px;
+    position: absolute;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 0 20px;
+    width: 400px;
+    z-index: 11;
+}
+.slot-fish-island .thongbao-popup h3 {
+    font-size: 20px;
+}
+.slot-fish-island .thongbao-popup p {
+    font-size: 18px;
+    height: 56px;
+}
+.slot-fish-island .thongbao-popup p span {
+    color: #ffce4b;
+}
+.slot-fish-island .thongbao-popup .thongbao-popup-close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    cursor: pointer;
+}
+.slot-fish-island .thongbao-popup  .thongbao-btn  {
+    position: absolute;
+    bottom: 0;
+    width: 192px;
+    left: 100px;
+    bottom: 20px;
+    text-align: center;
+}
+.slot-fish-island .thongbao-popup  .thongbao-btn div {
+    display: inline-block;
+    background-image: url(../../images/daoca/dong_btn.png);
+    width: 93px;
+    height: 38px;
+    background-repeat: no-repeat;
+    line-height: 43px;
+    font-size: 15px;
+    cursor: pointer;
+
+
+}
+.slot-fish-island .choithu-mode {
+    background-image: url(../../images/daoca/choithu_bkg.png);
+    width:244px;
+    height:29px;
+    position: absolute;
+    top:0;
+    left:150px;
+    z-index: 16;
+}
+.slot-fish-island .choithu-mode p {
+    display: inline-block;
+    font-size:16px;
+}
+.slot-fish-island .choithu-mode p:first-child {
+    position: absolute;
+    left: 25px;
+    top: -10px;
+}
+.slot-fish-island .choithu-mode p:nth-of-type(2) {
+    position: absolute;
+    top: -10px;
+    right: 42px;
+}
+.slot-fish-island .choithu-mode img {
+    position: absolute;
+    top: 4px;
+    right: 22px;
+    width: 17px;
+}
+.slot-fish-island  .quaymp-mode {
+    background-image: url(../../images/daoca/mienphi_bkg.png);
+    width:250px;
+    height:27px;
+    position: absolute;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: 144px;
+    text-align: center;
+    z-index: 19;
+}
+.slot-fish-island  .quaymp-mode p {
+    display: inline-block;
+    font-size:16px;
+    margin-top:8px;
+    margin-left: 14px;
+}
+
+.daoca-hold{
+    -webkit-filter:brightness(124%);
+    filter: brightness(150%) !important;
+}
+
+.ruong_duoc_chon{
+    -webkit-filter:brightness(124%);
+    filter: brightness(200%) !important;
+}
+
+.hover-btn:hover {
+    -webkit-filter:brightness(124%);
+    filter: brightness(150%) !important;
+}
+
+.slot-fish-island .settings-btn {
+    background-image: url(../../images/daoca/setting_bkg.png);
+    width:176px;
+    height:140px;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: 10;
+    top: 51px;
+    right: 20px;
+}
+.slot-fish-island .settings-btn ul li {
+    list-style: none;
+    line-height: 5px;
+}
+.slot-fish-island .settings-btn ul li p {
+    display: inline-block;
+}
+.slot-fish-island .settings-btn .select-icon {
+    background-image: url(../../images/daoca/setting_check.png);
+    width:25px;
+    height:23px;
+    background-repeat: no-repeat;
+    float:right;
+    display: inline-block;
+    cursor: pointer;
+}
+.slot-fish-island .settings-btn .select-icon-active {
+    background-image: url(../../images/daoca/setting_check_active.png);
+}
+.slot-fish-island .settings-btn ul {
+    width: 143px;
+    position: relative;
+    left: -24px;
+    font-size:16px;
+}
+.slot-fish-island  .lsnh-phantrang div {
+    display: inline-block;
+}
+.slot-fish-island .lsnh-popup {
+    background-image: url(../../images/daoca/lsnh_bkg.png);
+    width:843px;
+    height:452px;
+    background-repeat: no-repeat;
+    text-align: center;
+    position: absolute;
+}
+.slot-fish-island .lsnh-popup .thongbao-popup-close {
+    position: absolute;
+    top: 16px;
+    right: 36px;
+    cursor: pointer;
+}
+.slot-fish-island .lsnh-popup h3 {
+    font-size: 24px;
+    margin-bottom: 2px;
+    margin-top: 29px;
+
+}
+.slot-fish-island .lsnh-popup table {
+    width:100%;
+    text-align: center;
+    padding: 0 40px;
+}
+.slot-fish-island .lsnh-popup table thead {
+    background: #242c6f;
+    font-size: 16px;
+    line-height: 30px;
+    color: #34ffee;
+}
+.slot-fish-island .lsnh-popup .lsnh-content table {
+    padding:0 40px;
+}
+.slot-fish-island .lsnh-content {
+    width: 801px;
+    padding-left: 41px;
+    height: 320px;
+    position:relative;
+}
+.slot-fish-island .lsnh-content table {
+    padding:0 !important;
+}
+.slot-fish-island .lsnh-content table tr {
+    line-height: 36px;
+}
+.slot-fish-island .lsnh-content table tr:nth-of-type(2n+0) {
+    background: rgba(57, 68, 160, 0.88)
+}
+.slot-fish-island .lsnh-content  .mCSB_inside > .mCSB_container {
+    margin-right: 0;
+}
+
+.slot-fish-island .lsnh-phantrang {
+    font-size:20px;
+}
+.slot-fish-island .lsnh-phantrang div {
+    margin:0 10px;
+    cursor: pointer;
+}
+.slot-fish-island .lsnh-phantrang div:hover {
+    color:#ffac22;
+}
+.slot-fish-island .lsnh-phantrang img {
+    vertical-align: middle;
+    cursor: pointer;
+}
+.slot-fish-island .lsnh-phantrang .active {
+    color:#ffac22;
+}
+
+.slot-fish-island  .huongdan-popup  {
+    font-size: 16px;
+    width: 740px;
+    margin: 0 auto;
+    text-align: left;
+    height: 348px;
+}
+
+.money_dapso{
+    color: #ffce4b;
+    position: absolute;
+    top: 3px;
+    text-align: center;
+    font-size: 15px;
+    display: block;
+    width: 100%;
+}
+
+.popup-thangmienphi {
+    width: 746px;
+    height: 420px;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 20;
+}
+
+.slot-fish-island  .huongdan-popup  p {}

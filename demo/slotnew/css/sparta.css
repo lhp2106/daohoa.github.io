@@ -1,0 +1,361 @@
+body[data-page="playslot"][data-game="SPARTA"] #content .sparta-button li:nth-child(1) p{
+    top: 27px !important;
+    font-size: 22px !important;
+    font-weight: bold;
+    left: 5px;
+}
+
+body[data-page="playslot"][data-game="SPARTA"] #content .sparta-button li:nth-child(2) p{
+    top: 27px !important;
+    font-size: 22px !important;
+    left: 11px;
+    font-weight: bold;
+}
+
+#content {
+    height: 100%;
+    overflow-y: hidden !important;
+    padding-top: 60px;
+}
+
+body[data-page="playslot"][data-game="SPARTA"] #bg-wrap{
+    position: absolute;
+    z-index: -1;
+}
+
+body[data-page="playslot"][data-game="SPARTA"]{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body[data-page="playslot"][data-game="SPARTA"] #page-wrap{
+    height:auto;
+}
+
+.main-notify{
+    margin: 0px 0 -45px 0!important;
+    z-index: 9;
+    display: none!important;
+}
+
+.main-notify .money{
+    color: #FFC107;
+    font-weight: bold;
+}
+
+.main-notify .name{
+    color: #00BCD4;
+    font-weight: bold;
+}
+
+.main-notify .item{
+    padding: 0 50px;
+}
+
+.detail-content{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 100;
+}
+
+.detail-content .detail-inner{
+    width:100%;
+    height:100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.detail-content .close-detail{
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    background: transparent;
+    margin: 0px;
+    padding: 3px 2px 0px 2px;
+    border: none;
+    background-color: #9C27B0;
+    z-index: 9999;
+}
+
+.detail-content .close-detail img{
+    width: 15px;
+    height: 15px;
+}
+
+.mh-popup{
+    position: fixed!important;
+}
+
+#vinhdanh, #giaodich{
+    position: relative;
+}
+
+#vinhdanh .sparta-top-vinhdanh p{
+    font-size: 14px!important;
+    padding: 0 0 5px 0!important;
+}
+
+#vinhdanh .sparta-top-vinhdanh{
+    opacity: 0;
+    visibility: hidden;
+}
+
+#vinhdanh>.sparta-top-vinhdanh{
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    z-index: 99;
+    padding: 5px;
+    left: 1px;
+    right: 2px;
+    top: 1px;
+    background: #000;
+    color:#ccc;
+}
+
+#vinhdanh .sparta-top-vinhdanh span{
+    color: #fee8ac;
+    font-weight: 700;
+}
+
+.sparta-line li{
+    cursor: pointer;
+}
+
+.sparta-line-main {position: absolute; width: 780px; top: 130px;}
+.sparta-line-main li img {    width: 665px;}
+.sparta-line-main li {        position: absolute;
+    left: 32px;
+}
+.sparta-line-main li:first-child {    top: 175px;
+    right: 29px;
+    left: inherit;}
+.sparta-line-main li:nth-child(2) {top: 55px;}
+.sparta-line-main li:nth-child(3) {    top: 255px;}
+.sparta-line-main li:nth-child(4) {        top: 36px;}
+.sparta-line-main li:nth-child(5) {        top: 40px;
+    right: 21px;
+    left: inherit;}
+.sparta-line-main li:nth-child(6) {            top: 57px;
+    right: 23px;
+    left: inherit;}
+.sparta-line-main li:nth-child(7) {top: 140px;}
+.sparta-line-main li:nth-child(8) {top: 40px;}
+.sparta-line-main li:nth-child(9) {    top: 22px;}
+.sparta-line-main li:nth-child(10) {    top: 26px;}
+.sparta-line-main li:nth-child(11) {    top: 65px;
+    right: 22px;
+    left: inherit;}
+.sparta-line-main li:nth-child(12) {top: 52px;
+    right: 27px;
+    left: inherit;}
+.sparta-line-main li:nth-child(13) {    top: 182px;
+    right: 23px;
+    left: inherit;}
+.sparta-line-main li:nth-child(14) {    top: 50px;}
+.sparta-line-main li:nth-child(15) {    top: 135px;}
+.sparta-line-main li:nth-child(16) {    top: 65px;
+    right: 24px;
+    left: inherit;}
+.sparta-line-main li:nth-child(17) {    top: 113px;}
+.sparta-line-main li:nth-child(18) {    top: 15px;
+    right: 26px;
+    left: inherit;}
+.sparta-line-main li:nth-child(19) {    top: 60px;
+    right: 24px;
+    left: inherit;}
+.sparta-line-main li:nth-child(20) {    top: 15px;}
+.sparta-line-main li:nth-child(21) {
+    top: 32px;}
+.sparta-line-main li:nth-child(22) {    top: 44px;
+    right: 25px;
+    left: inherit;}
+.sparta-line-main li:nth-child(23) {    top: 19px;}
+.sparta-line-main li:nth-child(24) {    top: 50px;
+    right: 26px;
+    left: inherit;}
+.sparta-line-main li:last-child {    top: 30px;
+    right: 22px;
+    left: inherit;}
+
+.sparta-button li:nth-child(3) p{
+    color: #FDBE03 !important;
+}
+
+.sparta-button li:nth-child(4) p{
+    color: #FDBE03 !important;
+}
+
+body[data-page="playslot"][data-game="SPARTA"] #content .sparta-textboxchat{
+    border: none !important;
+    color: #462a2a;
+}
+
+.sparta-button li .sparta-x2btn {width: 30px; height: 30px; background-color: #F00; font-size: 18px; line-height: 30px; text-transform: uppercase; border-radius: 50px; position: absolute; right: -10px; top: -15px; color: #fff; text-align: center; font-weight: bold;text-decoration: none;}
+.sparta-button li .sparta-x2btn:hover {background-color: #C00;}
+
+.disable-btn {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: 1;
+}
+
+.sparta-colum li{
+    cursor: pointer;
+}
+
+.sparta-money-bonus-item{
+    position: absolute;
+    text-align: center;
+    left: 0;
+    color: #B32A00;
+    font-weight: bold;
+    font-size: 18px;
+    width: 100%;
+    top: 37px;
+}
+
+.sparta-thanglon img {
+    width: 316px !important;
+}
+
+.sparta-button li p {
+    /*color: white !important;*/
+}
+
+.sparta-time-auto-bonus{
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    color: #b32a00;
+    font-size: 21px;
+    top: 330px;
+    z-index: 1;
+    font-weight: bold;
+    left: 39px;
+}
+
+.sparta-point-tongthang{
+    position: absolute;
+    width: 100%;
+    text-align: right !important;
+    color: #b32a00;
+    font-size: 32px !important;
+    top: 321px !important;
+    z-index: 1;
+    font-weight: bold;
+    right: 34px !important;
+}
+
+.sparta-vatpham li a  {
+    height: 87px !important;
+}
+
+.sparta-vatpham li a img {
+    max-height: 85px;
+    width: auto !important;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.sparta-infowin p:last-of-type {
+    color: #b32a00;
+    font-size: 19px !important;
+    padding: 5px 0 0 0;
+}
+
+.sparta-thanglon {
+    top: 269px !important;
+}
+
+.sparta-thang {
+    top: 337px !important;
+}
+
+.sparta-thang li img {
+    height: 102px;
+}
+
+.sparta-thang li.cham img {
+    width: 20px;
+    margin-bottom: 3px;
+    height: auto !important;
+}
+
+#content .wrapper {
+    height: 900px !important;
+}
+
+.minigame-chon li {
+    cursor: pointer;
+}
+
+.minigame-dathang p {
+    font-size: 21px !important;
+}
+
+.minigame-x2 p{
+    font-size: 21px !important;
+}
+
+.sparta-button li .sparta-congtru {position: absolute;cursor: pointer; top: 5px; font-size: 30px; text-align: center; line-height: 25px; background-color: #C00; width: 25px; height: 25px; border-radius: 100px;}
+.sparta-button li .sparta-congtru span {color: #fff;}
+.sparta-button li .sparta-congtru:first-of-type {left: 5px;}
+.sparta-button li .sparta-congtru:last-of-type {right: 0; line-height: 20px;}
+
+.sparta-bgdark {width: 100%; height: 428px; margin: 0 auto; position: absolute; left: 0; top: 124px; z-index: 2; background-color: rgba(0,0,0,0.75); border-radius: 5px;}
+.sparta-win {position: relative; width: 450px; margin: 70px auto;}
+.sparta-infowin {position: absolute; width: 100%; text-align: center; top: 70px; z-index: 1;}
+.sparta-bgwin {position: absolute; width: 100%;}
+
+
+#content>.sukien{
+    position: absolute;
+    top: 540px;
+    left: 15px;
+    z-index: 99;
+    width: 110px;
+    height: 250px;
+    display: none;
+}
+
+#content>.sukien:before{
+    content: "";
+    position: absolute;
+    top:-2px;
+    left:-6px;
+    width: 113%;
+    height: 100%;
+    z-index: -999;
+    background-image: url(../images/sparta/sukien.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+#content .sukien .item{
+    position: absolute;
+    top: 120px;
+    left: 22px;
+    color: #fff;
+    width: 69px;
+
+    text-align: center;
+}
+
+#content .sukien .item:last-child{
+    top: 185px;
+}
+
+#content .sukien .item span{
+    display: block;
+    font-size: 13px;
+}
+
+#content .sukien .item span.sk-hu{
+    padding-top: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFEB3B;
+}

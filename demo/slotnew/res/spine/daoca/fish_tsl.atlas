@@ -1,0 +1,27 @@
+
+fish_tsl.png
+size: 614,614
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+tsl
+  rotate: false
+  xy: 2, 82
+  size: 408, 153
+  orig: 408, 153
+  offset: 0, 0
+  index: -1
+tsl_bkg
+  rotate: false
+  xy: 2, 239
+  size: 577, 305
+  orig: 577, 305
+  offset: 0, 0
+  index: -1
+tsl_bom
+  rotate: false
+  xy: 2, 2
+  size: 79, 82
+  orig: 79, 82
+  offset: 0, 0
+  index: -1

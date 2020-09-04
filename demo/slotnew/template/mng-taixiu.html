@@ -1,0 +1,371 @@
+<div class="minigame-item item-taixiu">
+	<div class="item-content mhScaleLit">
+		<div class="text-top">
+			<img src="images/taixiu/text-top.png" style="position: absolute;top: 0;left: 180px;">
+		</div>
+		<span class="session">Phiên: 456789</span>
+		<div class="tai-wrap">
+			<div class="user"></div>
+			<img src="images/taixiu/tai.png" class="icon">
+			<div class="money"></div>
+			<input type="text" class="input-tai" placeholder="Đặt cược" disabled>
+			<p class="cuoc-tai"></p>
+		</div>
+		<div class="xiu-wrap">
+			<div class="user"></div>
+			<img src="images/taixiu/xiu.png" class="icon">
+			<div class="money"></div>
+			<input type="text" class="input-xiu" placeholder="Đặt cược" disabled>
+			<p class="cuoc-xiu"></p>
+		</div>
+
+		<div id="game-taixiu">
+			<div class="kq-num">15</div>
+			<div class="clock-small" style="display: block;">00</div>
+			<div class="clock-big" style="display: none;"><div style="background-position: -82px -192px; width: 78px; height: 98px;"></div><div class="mht" style="background-position: -82px -192px; width: 78px; height: 98px;"></div></div>
+			<div class="vung ui-draggable" style="position: relative;"></div>
+			<div class="effect"></div>
+			<div class="dice dice555"></div>
+		</div>
+
+		<div class="control">
+			<button class="btn-vinhdanh" style="top: 100px;left: 10px;">
+				<img src="images/taixiu/btn_vinhdanh.png">
+			</button>
+
+			<button class="btn-chat" style="top: 289px;left: 704px;">
+				<img src="images/taixiu/btn_chat.png">
+			</button>
+			
+			<button class="btn-lichsu" style="left: -26px;top: 190px;">
+				<img src="images/taixiu/btn_info.png">
+			</button>
+			<button class="btn-huongdan" style="left: 715px;top: 190px;">
+				<img src="images/taixiu/btn_help.png">
+			</button>
+			<button class="btn-closeGame" style="left: 673px;top: 99px;">
+				<img src="images/taixiu/btn_close.png">
+			</button>
+
+			<button class="btn-nan" style="top: 366px;left: 639px;">
+				<img src="images/taixiu/btn_nan_0.png">
+				<img src="images/taixiu/btn_nan_1.png">
+			</button>
+			<button class="btn-soicau" style="top: 289px;left: -10px;">
+				<img src="images/taixiu/btn_thongke.png">
+			</button>
+
+			<div class="cuoc-wrap">
+				<div class="group-button">
+					<button class="btn-cuocMoney" data-money="1000">
+						<img src="images/taixiu/btn_money_1.png">
+						<span>1K</span>
+					</button>
+					<button class="btn-cuocMoney" data-money="5000">
+						<img src="images/taixiu/btn_money_1.png">
+						<span>5K</span>
+					</button>
+					<button class="btn-cuocMoney" data-money="10000">
+						<img src="images/taixiu/btn_money_1.png">
+						<span>10K</span>
+					</button>
+					<button class="btn-cuocMoney" data-money="50000">
+						<img src="images/taixiu/btn_money_1.png">
+						<span>50K</span>
+					</button>
+					<button class="btn-cuocMoney" data-money="100000">
+						<img src="images/taixiu/btn_money_1.png">
+						<span>100K</span>
+					</button>
+					<button class="btn-cuocMoney" data-money="500000">
+						<img src="images/taixiu/btn_money_1.png">
+						<span>500K</span>
+					</button>
+					<button class="btn-cuocMoney" data-money="1000000">
+						<img src="images/taixiu/btn_money_1.png">
+						<span>1M</span>
+					</button>
+					<button class="btn-cuocMoney" data-money="2000000">
+						<img src="images/taixiu/btn_money_1.png">
+						<span>2M</span>
+					</button>
+				</div>
+
+				<div class="group-button">
+					<button class="btn-tattay">
+						<img src="images/taixiu/btn_tattay.png">
+					</button>
+					<button class="btn-agree">
+						<img src="images/taixiu/btn_dongy.png">
+					</button>
+					<button class="btn-cancel">
+						<img src="images/taixiu/btn_huy.png">
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="his"></div>
+
+		<img src="images/taixiu/bg3.png" style="position: absolute;top: 92px;left: 0;z-index: -999999;">
+
+		<div class="soicau-wrap">
+			<div class="tab1-wrap show">
+				<p>Phiên gần nhất: <span class="newest-id">#123456</span></p>
+				<p class="newest-info">Tài 15(4-6-5)</p>
+				<div class="control">
+					<label class="xx1">
+						<input type="checkbox" name="" >
+						Xúc xắc 1
+					</label>
+
+					<label class="xx2">
+						<input type="checkbox" name="" >
+						Xúc xắc 2
+					</label>
+
+					<label class="xx3">
+						<input type="checkbox" name="" >
+						Xúc xắc 3
+					</label>
+
+					<button class="btn-tab2">
+						<img src="images/btn_right.png">
+					</button>
+				</div>
+
+				<div class="table-wrap">
+					<div class="table-inner">
+						<ul>
+							<li>18</li>
+							<li>15</li>
+							<li>12</li>
+							<li>9</li>
+							<li>6</li>
+							<li>3</li>
+						</ul>
+						<div class="table-content">
+							<canvas id="canvas-soicau1" width="593px" height="158px"></canvas>	
+							<div class="total-wrap"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="table-wrap">
+					<div class="table-inner">
+						<ul>
+							<li>6</li>
+							<li>5</li>
+							<li>4</li>
+							<li>3</li>
+							<li>2</li>
+							<li>1</li>
+						</ul>
+						<div class="table-content">
+							<canvas id="canvas-soicau2" width="593px" height="158px"></canvas>		
+						</div>
+					</div>
+				</div>
+
+				<div class="des">
+					<span class="des-tong">__Tổng</span>
+					<span class="des-xx1">__Xúc Xắc 1</span>
+					<span class="des-xx2">__Xúc Xắc 2</span>
+					<span class="des-xx3">__Xúc Xắc 3</span>
+				</div>
+
+			</div>
+
+			<div class="tab2-wrap">
+				<div class="control">
+					<button class="btn-tab1">
+						<img src="images/btn_left.png">
+					</button>
+				</div>
+
+				<div class="group-button">
+					<button class="btn-tainum">Tài 12</button>
+					<button class="btn-xiunum">Xỉu 12</button>
+				</div>
+
+				<div class="table-wrap">
+					<div class="table-inner">
+						<div class="table-content">
+							<div id="canvas-soicau3"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="group-button">
+					<button class="btn-tainum">Tài 12</button>
+					<button class="btn-xiunum">Xỉu 12</button>
+				</div>
+
+				<div class="table-wrap">
+					<div class="table-inner">
+						<div class="table-content">
+							<div id="canvas-soicau4">
+								<div class="column">
+									<span class="is-tai"></span>
+									<span class="is-tai"></span>
+									<span class="is-xiu"></span>
+									<span class="is-tai"></span>
+									<span class="is-xiu"></span>
+								</div>
+								<div class="column">
+									<span class="is-tai"></span>
+									<span class="is-tai"></span>
+									<span class="is-tai"></span>
+									<span class="is-tai"></span>
+									<span class="is-tai"></span>
+								</div>
+								<div class="column">
+									<span class="is-tai"></span>
+									<span class="is-tai"></span>
+									<span class="is-xiu"></span>
+									<span class="is-tai"></span>
+									<span class="is-xiu"></span>
+								</div>
+								<div class="column">
+									<span class="is-tai"></span>
+									<span class="is-tai"></span>
+									<span class="is-tai"></span>
+									<span class="is-tai"></span>
+									<span class="is-tai"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<button class="btn-closeSoiSau">
+				<img src="images/btn-close.png">
+			</button>
+		</div>
+
+		<div class="thongke-wrap">
+			<div class="popup-wrapper">
+				<div class="popup-inner">
+					<div class="popup-header">
+						<h2>Thống kê</h2>
+					</div>
+
+					<div class="popup-content">
+						<div class="phien-info">
+							Phiên <span>#221266</span> (27/06/2017)
+						</div>
+
+						<div class="phien-kq">
+							<div class="icon-tai"></div>
+							<div class="dices">
+								<div class="dice dice1"></div>
+								<div class="dice dice2"></div>
+								<div class="dice dice3"></div>
+								<span class="total">6</span>
+							</div>
+							<div class="icon-xiu"></div>
+						</div>
+
+						<div class="cuoc-wrap">
+							<div class="cuoc-tai">
+								<div class="inner-head">
+									<div>Thời gian</div>
+									<div>Tài Khoản</div>
+									<div>Hoàn</div>
+									<div>Cược</div>
+								</div>
+								<div class="inner-content">
+									<table>
+									    <tbody>
+									        <tr>
+									            <td>10:48</td>
+									            <td>kaka167</td>
+									            <td>6210</td>
+									            <td>100K</td>
+									        </tr>
+									    </tbody>
+									</table>
+								</div>
+							</div>
+
+							<div class="cuoc-xiu">
+								<div class="inner-head">
+									<div>Thời gian</div>
+									<div>Tài Khoản</div>
+									<div>Hoàn</div>
+									<div>Cược</div>
+								</div>
+								<div class="inner-content">
+									<table>
+									    <tbody>
+									        <tr>
+									            <td>10:48</td>
+									            <td>kaka167</td>
+									            <td>6210</td>
+									            <td>100K</td>
+									        </tr>
+									    </tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="phien-footer">
+							<div class="ft-tai">
+								<span>20,000,000</span>/<span>270,000,000</span>
+							</div>
+							Tổng HOÀN/ĐẶT
+							<div class="ft-xiu">
+								<span>0</span>/<span>270,000,000</span>
+							</div>
+						</div>
+						<div class="pagination">
+							<button class="btn-prev">
+								<img src="images/btn_left.png">
+							</button>
+
+							<button class="btn-next">
+								<img src="images/btn_right.png">
+							</button>
+						</div>
+					</div>
+
+					<div class="popup-footer"></div>
+
+					<button class="close-popup">
+						<img src="images/btn-close.png"/>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="txchat-wrap" style="display: none;">
+			<img src="images/taixiu/bgchat.png">
+			<div class="chat-content">
+				<div class="chat-inner"></div>
+			</div>
+			<input type="text" name="" placeholder="Nhập nội dung chat..." class="chat-input">
+		</div>
+
+		<div class="event-phuonghoang">
+			<img src="images/minigame/taixiu/sukien/text_nvphuonghoang.png" class="text-sk">
+			<img src="images/minigame/taixiu/sukien/day_thang.png" class="bg_thang">
+			<img src="images/minigame/taixiu/sukien/day_thua.png" class="bg_thua">
+			<span class="thang-count">9</span>
+			<span class="thua-count">9</span>
+			<span class="thang-rank">9</span>
+			<span class="thua-rank">9</span>
+			<p style="color: #fff;top: 156px;font-size: 12px;left: 175px;">HẠNG</p>
+			<p style="color: #fff;top: 156px;font-size: 12px;left: 246px;">HẠNG</p>
+			<div class="img-bird">
+				<img src="images/minigame/taixiu/sukien/phuong_hoang_lua.png">
+				<img src="images/minigame/taixiu/sukien/phuong_hoang_bang.png">
+			</div>
+			<div class="progress">
+				<img src="images/minigame/taixiu/sukien/bar_0.png" class="bg">
+				<img src="images/minigame/taixiu/sukien/line.png" style="position: absolute;top: 9px;height: 18px;left: 31px;">
+				<div class="bar"><img src="images/minigame/taixiu/sukien/bar_1.png"></div>
+			</div>
+		</div>
+	</div>
+</div>

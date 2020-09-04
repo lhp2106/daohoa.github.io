@@ -1,0 +1,34 @@
+{
+"skeleton": { "hash": "a8ur4aVUR5kkIxk/SDujeItAThI", "spine": "3.6.39", "width": 241, "height": 290, "images": "" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "length": 109, "y": 134 }
+],
+"slots": [
+	{ "name": "fire_0", "bone": "bone", "attachment": "fire_0" }
+],
+"skins": {
+	"default": {
+		"fire_0": {
+			"fire_0": { "width": 241, "height": 290 },
+			"fire_1": { "width": 241, "height": 290 },
+			"fire_2": { "width": 241, "height": 290 },
+			"fire_3": { "width": 241, "height": 290 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"fire_0": {
+				"attachment": [
+					{ "time": 0, "name": "fire_0" },
+					{ "time": 0.1667, "name": "fire_1" },
+					{ "time": 0.3333, "name": "fire_2" },
+					{ "time": 0.5, "name": "fire_3" }
+				]
+			}
+		}
+	}
+}
+}

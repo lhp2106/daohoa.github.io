@@ -1,0 +1,25 @@
+<font>
+	<info face="thang-export" size="149" />
+	<common lineHeight="149" scaleW="382" scaleH="373" pages="1" />
+	<pages>
+		<page id="0" file="thang-export.png" />
+	</pages>
+	<chars count="14">
+		<char id="46" x="0" y="329" width="43" height="43" xoffset="0" yoffset="108" xadvance="52" /><!-- . -->
+		<char id="44" x="306" y="221" width="47" height="68" xoffset="0" yoffset="110" xadvance="56" /><!-- , -->
+		<char id="48" x="0" y="0" width="105" height="110" xoffset="0" yoffset="42" xadvance="114" /><!-- 0 -->
+		<char id="49" x="306" y="113" width="75" height="107" xoffset="0" yoffset="41" xadvance="84" /><!-- 1 -->
+		<char id="50" x="106" y="0" width="101" height="108" xoffset="0" yoffset="41" xadvance="110" /><!-- 2 -->
+		<char id="51" x="209" y="0" width="101" height="112" xoffset="0" yoffset="41" xadvance="110" /><!-- 3 -->
+		<char id="52" x="0" y="220" width="104" height="108" xoffset="0" yoffset="41" xadvance="113" /><!-- 4 -->
+		<char id="53" x="105" y="220" width="103" height="109" xoffset="0" yoffset="41" xadvance="112" /><!-- 5 -->
+		<char id="54" x="209" y="113" width="96" height="107" xoffset="0" yoffset="42" xadvance="105" /><!-- 6 -->
+		<char id="55" x="105" y="111" width="103" height="108" xoffset="0" yoffset="41" xadvance="112" /><!-- 7 -->
+		<char id="56" x="0" y="111" width="104" height="108" xoffset="0" yoffset="41" xadvance="113" /><!-- 8 -->
+		<char id="57" x="209" y="221" width="96" height="107" xoffset="0" yoffset="42" xadvance="105" /><!-- 9 -->
+		<char id="32" x="0" y="0" width="0" height="0" xoffset="0" yoffset="0" xadvance="62" /><!--   -->
+		<char id="9" x="0" y="0" width="0" height="0" xoffset="0" yoffset="0" xadvance="496" /><!-- 	 -->
+	</chars>
+	<kernings count="0">
+	</kernings>
+</font>

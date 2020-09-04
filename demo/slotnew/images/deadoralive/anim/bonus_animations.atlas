@@ -1,0 +1,139 @@
+
+bonus_animations.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+D
+  rotate: false
+  xy: 331, 132
+  size: 36, 32
+  orig: 36, 32
+  offset: 0, 0
+  index: -1
+I
+  rotate: false
+  xy: 260, 121
+  size: 16, 29
+  orig: 16, 29
+  offset: 0, 0
+  index: -1
+L
+  rotate: false
+  xy: 450, 151
+  size: 27, 31
+  orig: 27, 31
+  offset: 0, 0
+  index: -1
+W
+  rotate: false
+  xy: 375, 150
+  size: 73, 32
+  orig: 73, 32
+  offset: 0, 0
+  index: -1
+blink
+  rotate: false
+  xy: 460, 131
+  size: 16, 18
+  orig: 16, 18
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 2, 8
+  size: 107, 128
+  orig: 107, 128
+  offset: 0, 0
+  index: -1
+eye
+  rotate: true
+  xy: 496, 229
+  size: 22, 9
+  orig: 22, 9
+  offset: 0, 0
+  index: -1
+frame_new
+  rotate: false
+  xy: 2, 117
+  size: 170, 134
+  orig: 170, 134
+  offset: 0, 0
+  index: -1
+frame_up
+  rotate: false
+  xy: 278, 242
+  size: 172, 9
+  orig: 172, 9
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 174, 152
+  size: 102, 99
+  orig: 102, 99
+  offset: 0, 0
+  index: -1
+hoop 2
+  rotate: false
+  xy: 438, 123
+  size: 20, 25
+  orig: 20, 25
+  offset: 0, 0
+  index: -1
+hoop front
+  rotate: false
+  xy: 408, 120
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+lewa reka
+  rotate: true
+  xy: 375, 184
+  size: 56, 93
+  orig: 56, 93
+  offset: 0, 0
+  index: -1
+prawa reka
+  rotate: true
+  xy: 278, 166
+  size: 74, 95
+  orig: 74, 95
+  offset: 0, 0
+  index: -1
+wild_glow
+  rotate: true
+  xy: 132, 2
+  size: 113, 32
+  orig: 113, 32
+  offset: 0, 0
+  index: -1
+wlos 1
+  rotate: false
+  xy: 278, 122
+  size: 51, 42
+  orig: 51, 42
+  offset: 0, 0
+  index: -1
+wlos 3
+  rotate: true
+  xy: 174, 125
+  size: 25, 84
+  orig: 25, 84
+  offset: 0, 0
+  index: -1
+wlos 4
+  rotate: false
+  xy: 470, 198
+  size: 24, 53
+  orig: 24, 53
+  offset: 0, 0
+  index: -1
+wlos2
+  rotate: true
+  xy: 369, 131
+  size: 17, 37
+  orig: 17, 37
+  offset: 0, 0
+  index: -1

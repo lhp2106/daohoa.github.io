@@ -1,0 +1,22 @@
+info face=font size=48 bold=0 italic=0 charset= unicode= stretchH=100 smooth=1 aa=1 padding=2,2,2,2 spacing=0,0 outline=0
+common lineHeight=61 base=35 scaleW=326 scaleH=42 pages=1 packed=0
+page id=0 file="font_so_do.png"
+chars count=17
+char id=48 x=2 y=2 width=18 height=38 xoffset=2 yoffset=0 xadvance=19 page=0 chnl=15
+char id=49 x=22 y=2 width=11 height=36 xoffset=0 yoffset=1 xadvance=12 page=0 chnl=15
+char id=50 x=35 y=2 width=18 height=37 xoffset=1 yoffset=0 xadvance=19 page=0 chnl=15
+char id=51 x=55 y=2 width=17 height=38 xoffset=1 yoffset=0 xadvance=18 page=0 chnl=15
+char id=52 x=74 y=2 width=19 height=36 xoffset=1 yoffset=1 xadvance=19 page=0 chnl=15
+char id=53 x=95 y=2 width=17 height=37 xoffset=2 yoffset=1 xadvance=18 page=0 chnl=15
+char id=54 x=114 y=2 width=18 height=38 xoffset=2 yoffset=0 xadvance=19 page=0 chnl=15
+char id=55 x=134 y=2 width=17 height=36 xoffset=0 yoffset=1 xadvance=15 page=0 chnl=15
+char id=56 x=153 y=2 width=17 height=38 xoffset=1 yoffset=0 xadvance=18 page=0 chnl=15
+char id=57 x=172 y=2 width=18 height=38 xoffset=1 yoffset=0 xadvance=19 page=0 chnl=15
+char id=46 x=192 y=2 width=7 height=7 xoffset=3 yoffset=29 xadvance=10 page=0 chnl=15
+char id=44 x=201 y=2 width=8 height=14 xoffset=2 yoffset=29 xadvance=10 page=0 chnl=15
+char id=75 x=211 y=2 width=20 height=36 xoffset=3 yoffset=1 xadvance=20 page=0 chnl=15
+char id=77 x=233 y=2 width=24 height=36 xoffset=3 yoffset=1 xadvance=27 page=0 chnl=15
+char id=66 x=259 y=2 width=18 height=36 xoffset=3 yoffset=1 xadvance=20 page=0 chnl=15
+char id=43 x=279 y=2 width=30 height=31 xoffset=6 yoffset=6 xadvance=40 page=0 chnl=15
+char id=45 x=311 y=2 width=13 height=6 xoffset=2 yoffset=20 xadvance=15 page=0 chnl=15
+char id=32 x=0 y=0 width=0 height=0 xoffset=2 yoffset=20 xadvance=10 page=0 chnl=15

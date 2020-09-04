@@ -1,0 +1,28 @@
+<font>
+	<info face="tien_thang-export" size="117" />
+	<common lineHeight="117" scaleW="300" scaleH="321" pages="1" />
+	<pages>
+		<page id="0" file="tien_thang-export.png" />
+	</pages>
+	<chars count="17">
+		<char id="43" x="0" y="96" width="86" height="86" xoffset="0" yoffset="29" xadvance="93" /><!-- + -->
+		<char id="45" x="0" y="275" width="50" height="29" xoffset="0" yoffset="66" xadvance="57" /><!-- - -->
+		<char id="46" x="89" y="273" width="35" height="36" xoffset="0" yoffset="80" xadvance="42" /><!-- . -->
+		<char id="44" x="51" y="273" width="37" height="47" xoffset="0" yoffset="81" xadvance="44" /><!-- , -->
+		<char id="48" x="164" y="0" width="70" height="89" xoffset="0" yoffset="28" xadvance="77" /><!-- 0 -->
+		<char id="49" x="87" y="96" width="49" height="85" xoffset="0" yoffset="30" xadvance="56" /><!-- 1 -->
+		<char id="50" x="222" y="90" width="67" height="89" xoffset="0" yoffset="29" xadvance="74" /><!-- 2 -->
+		<char id="51" x="91" y="0" width="72" height="93" xoffset="0" yoffset="24" xadvance="79" /><!-- 3 -->
+		<char id="52" x="0" y="183" width="75" height="85" xoffset="0" yoffset="30" xadvance="82" /><!-- 4 -->
+		<char id="53" x="150" y="184" width="70" height="90" xoffset="0" yoffset="26" xadvance="77" /><!-- 5 -->
+		<char id="54" x="150" y="94" width="71" height="89" xoffset="0" yoffset="28" xadvance="78" /><!-- 6 -->
+		<char id="55" x="235" y="0" width="64" height="88" xoffset="0" yoffset="27" xadvance="71" /><!-- 7 -->
+		<char id="56" x="221" y="184" width="67" height="89" xoffset="0" yoffset="28" xadvance="74" /><!-- 8 -->
+		<char id="57" x="76" y="183" width="73" height="89" xoffset="0" yoffset="28" xadvance="80" /><!-- 9 -->
+		<char id="75" x="0" y="0" width="90" height="95" xoffset="0" yoffset="20" xadvance="97" /><!-- K -->
+		<char id="32" x="0" y="0" width="0" height="0" xoffset="0" yoffset="0" xadvance="45" /><!--   -->
+		<char id="9" x="0" y="0" width="0" height="0" xoffset="0" yoffset="0" xadvance="360" /><!-- 	 -->
+	</chars>
+	<kernings count="0">
+	</kernings>
+</font>

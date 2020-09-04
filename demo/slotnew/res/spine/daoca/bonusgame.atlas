@@ -1,0 +1,27 @@
+
+bonusgame.png
+size: 614,614
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+as
+  rotate: false
+  xy: 2, 216
+  size: 357, 357
+  orig: 357, 357
+  offset: 0, 0
+  index: -1
+bonus
+  rotate: false
+  xy: 2, 2
+  size: 74, 74
+  orig: 74, 74
+  offset: 0, 0
+  index: -1
+bonusgame
+  rotate: false
+  xy: 2, 74
+  size: 454, 142
+  orig: 454, 142
+  offset: 0, 0
+  index: -1

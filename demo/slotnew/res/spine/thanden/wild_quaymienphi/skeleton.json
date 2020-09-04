@@ -1,0 +1,58 @@
+{
+"skeleton": { "hash": "IGe6cg/yrFWTrxOK8x849NZVzI8", "spine": "3.6.43", "width": 201, "height": 206, "images": "" },
+"bones": [
+	{ "name": "root", "y": -68.38 },
+	{ "name": "bone", "parent": "root", "length": 79.65, "rotation": -2.51, "x": -0.78, "y": 69.15 }
+],
+"slots": [
+	{ "name": "root", "bone": "bone", "attachment": "9" }
+],
+"skins": {
+	"default": {
+		"root": {
+			"1": { "x": 0.75, "y": 0.72, "rotation": 2.51, "width": 201, "height": 206 },
+			"2": { "x": 0.75, "y": 0.72, "rotation": 2.51, "width": 201, "height": 206 },
+			"3": { "x": 0.75, "y": 0.72, "rotation": 2.51, "width": 201, "height": 206 },
+			"4": { "x": 0.75, "y": 0.72, "rotation": 2.51, "width": 201, "height": 206 },
+			"5": { "x": 0.75, "y": 0.72, "rotation": 2.51, "width": 201, "height": 206 },
+			"6": { "x": 0.75, "y": 0.72, "rotation": 2.51, "width": 201, "height": 206 },
+			"7": { "x": 0.75, "y": 0.72, "rotation": 2.51, "width": 201, "height": 206 },
+			"8": { "x": 0.75, "y": 0.72, "rotation": 2.51, "width": 201, "height": 206 },
+			"9": { "x": 0.75, "y": 0.72, "rotation": 2.51, "width": 201, "height": 206 },
+			"10": { "x": 0.75, "y": 0.72, "rotation": 2.51, "width": 201, "height": 206 },
+			"11": { "x": 0.75, "y": 0.72, "rotation": 2.51, "width": 201, "height": 206 },
+			"12": { "x": 0.75, "y": 0.72, "rotation": 2.51, "width": 201, "height": 206 },
+			"13": { "x": 0.75, "y": 0.72, "rotation": 2.51, "width": 201, "height": 206 },
+			"14": { "x": 0.75, "y": 0.72, "rotation": 2.51, "width": 201, "height": 206 },
+			"15": { "x": 0.75, "y": 0.72, "rotation": 2.51, "width": 201, "height": 206 },
+			"16": { "x": 0.75, "y": 0.72, "rotation": 2.51, "width": 201, "height": 206 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"root": {
+				"attachment": [
+					{ "time": 0, "name": "1" },
+					{ "time": 0.0667, "name": "2" },
+					{ "time": 0.1333, "name": "3" },
+					{ "time": 0.2, "name": "4" },
+					{ "time": 0.2667, "name": "5" },
+					{ "time": 0.3333, "name": "6" },
+					{ "time": 0.4, "name": "7" },
+					{ "time": 0.4667, "name": "8" },
+					{ "time": 0.5333, "name": "9" },
+					{ "time": 0.6, "name": "10" },
+					{ "time": 0.6667, "name": "11" },
+					{ "time": 0.7333, "name": "12" },
+					{ "time": 0.8, "name": "13" },
+					{ "time": 0.8667, "name": "14" },
+					{ "time": 0.9333, "name": "15" },
+					{ "time": 1, "name": "16" }
+				]
+			}
+		}
+	}
+}
+}

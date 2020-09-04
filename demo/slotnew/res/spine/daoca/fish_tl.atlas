@@ -1,0 +1,20 @@
+
+fish_tl.png
+size: 614,614
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+tl_bkg
+  rotate: false
+  xy: 2, 106
+  size: 366, 369
+  orig: 366, 369
+  offset: 0, 0
+  index: -1
+tl_text
+  rotate: false
+  xy: 2, 2
+  size: 358, 106
+  orig: 358, 106
+  offset: 0, 0
+  index: -1

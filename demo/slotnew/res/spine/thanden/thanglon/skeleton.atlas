@@ -1,0 +1,48 @@
+
+skeleton.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+light2
+  rotate: false
+  xy: 2, 342
+  size: 668, 648
+  orig: 668, 648
+  offset: 0, 0
+  index: -1
+text_thanglon
+  rotate: false
+  xy: 672, 822
+  size: 656, 168
+  orig: 656, 168
+  offset: 0, 0
+  index: -1
+thanglon_1
+  rotate: false
+  xy: 2, 2
+  size: 656, 168
+  orig: 656, 168
+  offset: 0, 0
+  index: -1
+thanglon_2
+  rotate: false
+  xy: 672, 652
+  size: 656, 168
+  orig: 656, 168
+  offset: 0, 0
+  index: -1
+thanglon_3
+  rotate: false
+  xy: 1330, 822
+  size: 656, 168
+  orig: 656, 168
+  offset: 0, 0
+  index: -1
+thanglon_4
+  rotate: false
+  xy: 2, 172
+  size: 656, 168
+  orig: 656, 168
+  offset: 0, 0
+  index: -1

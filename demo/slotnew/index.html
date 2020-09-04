@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-title" content="ThanDen.Club" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<link rel="apple-touch-icon" href="img/webapp/touch-icon-iphone.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/webapp/touch-icon-ipad.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/webapp/touch-icon-iphone-retina.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="img/webapp/touch-icon-ipad-retina.png">
+
+	<title>SlotNew2</title>
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="icon" type="image/png" href="favicon.png"/>
+	<meta name="keywords" content="BossVIP, Game bai, danh bai online, xoc dia, tien len mien nam, Sam, Loc, choi phom, lieng online, choi ta la, binh xap xam, mau binh, xi to, poker, game ba cay, ba cay online">
+	<meta name="description" content="Cổng chơi game dân gian mới nhất với đầy đủ các game cực hot như: Tiến lên miền nam, ba cây, tá lả, mậu binh... ">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<style type="text/css" id="scale-view"></style>
+	<style type="text/css" id="style-bigslot"></style>
+</head>
+
+<body class="on-loading home-page">
+	<div id="page-wrap">
+		<header id="header"></header>
+
+		<div id="content" style="z-index: 3;"></div>
+
+		<footer id="footer">
+			<button class="btn-cover btn-hotro" style="bottom: 80px;left: 122px;"><img src="images/footer/vongquay.png"></button>
+			<button class="btn-cover btn-hotro" style="bottom: 80px;left: 277px;"><img src="images/footer/sukien.png"></button>
+			<button class="btn-cover btn-hotro" style="bottom: 80px;left: 406px;"><img src="images/footer/napxu.png"></button>
+			<button class="btn-cover btn-hotro" style="bottom: 80px;left: 795px;"><img src="images/footer/cuahang.png"></button>
+			<button class="btn-cover btn-hotro" style="bottom: 80px;left: 945px;"><img src="images/footer/facebook.png"></button>
+			<button class="btn-cover btn-hotro" style="bottom: 80px;left: 1084px;"><img src="images/footer/hotro.png"></button>
+			<img src="images/footer/bg.png" style="bottom: 65px;left: 0;z-index: 1;">
+			<img src="images/footer/duoicung.png" style="bottom: 0;left: 0;z-index: 1;">
+		</footer>
+	</div>
+
+	<div class="loader-wrap">
+		<div class="loader-inner">
+			<img src="images/loading/logo_big.png"/>
+			<img src="images/loading/text.png" style="margin-top: -15px;margin-bottom: 15px;" />
+			<img src="images/loading/icon_loading.png" class="icon-loading" />
+		</div>
+		<div id="progress-bar">
+			<span></span>
+		</div>
+		<span style="position: absolute; right: 10px; bottom: 10px; color: yellow;" class="version">&nbsp;</span>
+	</div>
+
+	<div id="bg-wrap"></div>
+
+	<div id="popups" class="mhScale"></div>
+
+	<div id="menu-minigame" class="">
+		<div class="mainBtn mhScale">
+			<div class="btninner">
+				<img src="images/minigame/menu/mng_btn.png">
+				<span class="timmer">00:00</span>
+				<div class="kqTX tada animated infinite">
+					<img src="images/taixiu/tai.png">
+					<img src="images/taixiu/xiu.png">
+				</div>
+			</div>
+		</div>
+		<div class="mainMenu">
+			<div class="menu-outer mhScale">
+				<div class="menuinner">
+					<img src="images/minigame/menu/bg_minigame.png">
+					<button data-gameid="BAUCUA" style="left: 82px;top: 338px;">
+						<img src="images/minigame/menu/baucua.png">
+						<span>Bầu Cua</span>
+					</button>
+					<button data-gameid="TAIXIU" style="left: 83px;top: 154px;">
+						<img src="images/minigame/menu/taixiu.png">
+						<span>Tài Xỉu</span>
+					</button>
+					<button data-gameid="CAOTHAP" style="left: 430px;top: 340px;">
+						<img src="images/minigame/menu/caothap.png">
+						<span>Cao Thấp</span>
+					</button>
+					<button data-gameid="MINIPOKER" style="left: 260px;top: 443px;">
+						<img src="images/minigame/menu/minipoker.png">
+						<span>Minipoker</span>
+					</button>
+					<button data-gameid="TPS" style="left: 430px;top: 155px;">
+						<img src="images/minigame/menu/hoaqua.png">
+						<span>Gems</span>
+					</button>
+					<button data-gameid="SIEUXE" style="left: 254px;top: 51px;">
+						<img src="images/minigame/menu/cars.png">
+						<span>MC Queen</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--<script src="libs/tween/RequestAnimationFrame.js"></script>-->
+	<script src="libs/pixi.min.js"></script>
+	<script src="libs/pixi-display.js"></script>
+	<script src="libs/pixi-action.js"></script>
+	<script src="libs/pixi-sound.min.js"></script>
+	<script src="libs/pixi-particles.js"></script>
+	<!--<script src="js/ui/SpawnAction.js"></script>-->
+	<script src="libs/tween/Tween.js"></script>
+
+	<script src="libs/PointMath.js"></script>
+
+	<script type="text/javascript">
+		//https://github.com/pixijs/pixi.js/issues/3500
+		//FIX pixi-timer,pixi-action CAN'T LOAD WITH NEW VERSION
+		window.PIXI = PIXI;
+		window.PIXI[ "default" ] = PIXI;
+	</script>
+	<script src="libs/smoothie.js"></script>
+	<script src="libs/stats.js"></script> <!--fps-->
+	<script src="libs/pixi-timer.js"></script>
+	<script src="libs/pixi-spine.js"></script>
+	<script src="libs/memorystorage.min.js"></script>
+	<!-- <script src="libs/TweenLite.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+
+	<script src="libs/smoothie.js"></script>
+	<script src="js/htmlDialog/jquery.min.js"></script>
+	<script src="js/htmlDialog/jquery.scrollbar.js"></script>
+	<script src="js/htmlDialog/jquery-ui.js"></script>
+	<script src="js/htmlDialog/jquery.touch.min.js"></script>
+	<script src="js/htmlDialog/AudioDevice.js"></script>
+
+
+	<script src="js/project_min.js"></script>
+	<script src="js/Config.js"></script>
+	<script src="js/loadjs.js"></script>
+	<script src="app.js"></script>
+	<script>
+		$(document).ready(function(){
+			var jsListFile=[];
+			if (gts_congfig.MIN_ALL_PROJECT) {
+				jsListFile=[
+					"mh.min.js",
+					"game.min.js"
+
+				];
+				console.log("MIN_ALL_PROJECT game");
+			} else {
+				jsListFile = gtsMinList.mh;
+				jsListFile = jsListFile.concat(gtsMinList.jsList);
+			}
+
+			loadList(jsListFile, 0, function()
+			{
+				// code that applies after all URLs in jsList have loaded
+				MhAppFunc();
+			});
+		});
+
+
+	</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+		n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+			document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+	fbq('init', '473411826484577');
+	fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+			   src="https://www.facebook.com/tr?id=473411826484577&ev=PageView&noscript=1"
+		/></noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KHZLGTR');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHZLGTR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+</body>
+</html>
