@@ -332,13 +332,17 @@
                 <file name="src/Socket/MiniGameClient.js"/>
                 <file name="src/Socket/TopHuClient.js"/>
                 <file name="src/Socket/LobbyClient.js"/>
+                <file name="src/plugin/BauCuaPlugin.js"/>
                 <file name="src/game/GameScene.js"/>
                 <file name="src/game/GameTLMN.js"/>
                 <file name="src/game/GamePoker.js"/>
                 <file name="src/game/ET.js"/>
                 <file name="src/game/Minipoker.js"/>
                 <file name="src/game/TaiXiu.js"/>
+                <file name="src/game/BauCua.js"/>
+                <file name="src/game/SieuXe.js"/>
                 <file name="src/game/DeadOrAlive.js"/>
+                <file name="src/game/TayDuKy.js"/>
                 <file name="src/game/RungRam.js"/>
                 <file name="src/gameConfig.js"/>
                 <file name="src/app.js"/>
