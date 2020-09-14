@@ -342,6 +342,7 @@
                 <file name="src/game/BauCua.js"/>
                 <file name="src/game/SieuXe.js"/>
                 <file name="src/game/DeadOrAlive.js"/>
+                <file name="src/game/DiceDiceDice.js"/>
                 <file name="src/game/TayDuKy.js"/>
                 <file name="src/game/RungRam.js"/>
                 <file name="src/gameConfig.js"/>

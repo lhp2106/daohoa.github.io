@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>0_dicedicedice.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,384},{189,128}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{189,128}}</string>
+				<key>sourceSize</key>
+				<string>{189,128}</string>
+			</dict>
+
+			<key>1_dicedicedice.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{189,128},{189,128}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{189,128}}</string>
+				<key>sourceSize</key>
+				<string>{189,128}</string>
+			</dict>
+
+			<key>2_dicedicedice.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{189,0},{189,128}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{189,128}}</string>
+				<key>sourceSize</key>
+				<string>{189,128}</string>
+			</dict>
+
+			<key>3_dicedicedice.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{189,256},{189,128}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{189,128}}</string>
+				<key>sourceSize</key>
+				<string>{189,128}</string>
+			</dict>
+
+			<key>4_dicedicedice.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,256},{189,128}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{189,128}}</string>
+				<key>sourceSize</key>
+				<string>{189,128}</string>
+			</dict>
+
+			<key>5_dicedicedice.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,128},{189,128}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{189,128}}</string>
+				<key>sourceSize</key>
+				<string>{189,128}</string>
+			</dict>
+
+			<key>6_dicedicedice.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{189,128}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{189,128}}</string>
+				<key>sourceSize</key>
+				<string>{189,128}</string>
+			</dict>
+
+		</dict>
+
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>size</key>
+			<string>{378,512}</string>
+			<key>textureFileName</key>
+			<string>sprites.png</string>
+			</dict>
+		</dict>
+</plist>
