@@ -2,14 +2,34 @@
     "packageUrl" : "https://daohoa.github.io/B78Dev/resource/",
     "remoteManifestUrl" : "https://daohoa.github.io/B78Dev/resource/project.manifest",
     "remoteVersionUrl" : "https://daohoa.github.io/B78Dev/resource/version.manifest",
-    "version" : "1.1.2",
+    "version" : "1.0.1",
     "engineVersion" : "3.x",
     "assets" : {
-    	"06-24.zip" : {
+    	"09-17-0.zip" : {
     		"md5" : "...",
     		"compressed" : true,
-    		"size" : 75197829
-    	}
+    		"size" : 272658
+    	},
+        "09-17-1.zip" : {
+            "md5" : "...",
+            "compressed" : true,
+            "size" : 26199792
+        },
+        "09-17-2.zip" : {
+            "md5" : "...",
+            "compressed" : true,
+            "size" : 9521510
+        },
+        "09-17-3.zip" : {
+            "md5" : "...",
+            "compressed" : true,
+            "size" : 45848537
+        },
+        "09-17-4.zip" : {
+            "md5" : "...",
+            "compressed" : true,
+            "size" : 20918972
+        }
     },
     "searchPaths" : [
     ]
