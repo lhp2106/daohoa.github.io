@@ -2,12 +2,13 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Fish</title>
+    <title>Cocos2d-html5 Hello World test</title>
     <link rel="icon" type="image/GIF" href="res/favicon.ico"/>
 
     <meta name="viewport"
         content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1"/>
 
+    <!--https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="format-detection" content="telephone=no">
@@ -23,6 +24,10 @@
     <meta name="full-screen" content="yes"/>
     <meta name="x5-fullscreen" content="true"/>
     <meta name="360-fullscreen" content="true"/>
+
+    <!-- force screen orientation on some browser -->
+    <!-- <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-orientation" content="portrait"> -->
 
     <meta name="browsermode" content="application">
     <meta name="x5-page-mode" content="app">
@@ -62,7 +67,6 @@ body {
 
   display: flex;
   flex-direction: column;
-  background: #000;
 }
 
 #Cocos2dGameContainer {
@@ -84,35 +88,9 @@ canvas {
 </style>
 </head>
 <body>
-
-<!--<script src="res/loading.js"></script>-->
+<script src="res/loading.js"></script>
 <canvas id="gameCanvas" width="480" height="720"></canvas>
-<script>
-    (function () {
-        var nav = window.navigator;
-        var ua = nav.userAgent.toLowerCase();
-        var uaResult = /android (\d+(?:\.\d+)+)/i.exec(ua) || /android (\d+(?:\.\d+)+)/i.exec(nav.platform);
-        if (uaResult) {
-            var browserCheck = ua.match(/(qzone|micromessenger|qq)(mobile)?(browser)?\/?([\d.]+)/i);
-            if (browserCheck) {
-                var browserVersion = parseFloat(browserCheck[4] || 0);
-                if (browserVersion < 6.2) {
-                    var gameCanvas = document.getElementById("gameCanvas");
-                    var ctx = gameCanvas.getContext('2d');
-                    ctx.fillStyle = '#000000';
-                    ctx.fillRect(0, 0, 1, 1);
-                }
-            }
-        }
-    })();
 
-    var Dialog = {
-      
-    }
-</script>
-
-
-<!-- <script src="publish/html5/cocos.min.js"></script> -->
 <script cocos src="game.min.js"></script>
 </body>
 </html>
