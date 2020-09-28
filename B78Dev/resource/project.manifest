@@ -5,10 +5,10 @@
     "version" : "1.0.6",
     "engineVersion" : "3.x",
     "assets" : {
-    	"09-28_1.zip" : {
+    	"09-28_2.zip" : {
     		"md5" : "...",
     		"compressed" : true,
-    		"size" : 412311
+    		"size" : 411333
     	},
         "09-17-1.zip" : {
             "md5" : "...",
