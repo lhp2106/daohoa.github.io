@@ -1,8 +1,8 @@
 {
-    "packageUrl" : "https://daohoa.github.io/B78Dev1/resource/",
-    "remoteManifestUrl" : "https://daohoa.github.io/B78Dev1/resource/project.manifest",
-    "remoteVersionUrl" : "https://daohoa.github.io/B78Dev1/resource/version.manifest",
-    "version": "1.1.0",
+    "packageUrl" : "http://www.tranhdau.net/resource23/",
+    "remoteManifestUrl" : "http://www.tranhdau.net/resource23/project.manifest",
+    "remoteVersionUrl" : "http://www.tranhdau.net/resource23/version.manifest",
+    "version": "1.0.0",
     "engineVersion": "3.x",
     "assets": {
     },
