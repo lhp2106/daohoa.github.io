@@ -1,34 +1,19 @@
 {
-    "packageUrl" : "https://daohoa.github.io/B78Dev/resource/",
-    "remoteManifestUrl" : "https://daohoa.github.io/B78Dev/resource/project.manifest",
-    "remoteVersionUrl" : "https://daohoa.github.io/B78Dev/resource/version.manifest",
-    "version" : "1.0.6",
+    "packageUrl" : "http://www.tranhdau.net/resource/",
+    "remoteManifestUrl" : "http://www.tranhdau.net/resource/project.manifest",
+    "remoteVersionUrl" : "http://www.tranhdau.net/resource/version.manifest",
+    "version" : "1.1.0",
     "engineVersion" : "3.x",
     "assets" : {
-    	"09-28_2.zip" : {
+    	"src22.zip" : {
     		"md5" : "...",
     		"compressed" : true,
-    		"size" : 411333
+    		"size" : 274888
     	},
-        "09-17-1.zip" : {
+        "res.zip" : {
             "md5" : "...",
             "compressed" : true,
-            "size" : 26199792
-        },
-        "09-17-2.zip" : {
-            "md5" : "...",
-            "compressed" : true,
-            "size" : 9521510
-        },
-        "09-17-3.zip" : {
-            "md5" : "...",
-            "compressed" : true,
-            "size" : 45848537
-        },
-        "09-17-4.zip" : {
-            "md5" : "...",
-            "compressed" : true,
-            "size" : 20918972
+            "size" : 124079033
         }
     },
     "searchPaths" : [
